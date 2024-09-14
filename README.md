@@ -30,8 +30,11 @@ Open the index file in your browser of choice.
 ## Credits
 Creator:
 C - Connie [KingYin Sham]
+
 M - Mahaittidon [Mahaittidon Natchanon]
+
 Y - YiTing [YiTing Lai Elaine]
+
 K - Keith [Keith Lie]
 
 ## License
