@@ -28,12 +28,12 @@ Open the index file in your browser of choice.
 14 September 2024
 
 ## Credits
-Creator:
-C - Connie [KingYin Sham]
+Creator: <br>
+C - Connie [KingYin Sham] <br>
 
-M - Mahaittidon [Mahaittidon Natchanon]
+M - Mahaittidon [Mahaittidon Natchanon] <br>
 
-Y - YiTing [YiTing Lai Elaine]
+Y - YiTing [YiTing Lai Elaine] <br>
 
 K - Keith [Keith Lie]
 
