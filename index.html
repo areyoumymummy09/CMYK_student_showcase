@@ -1,39 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/grid.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
     <title>Industry Night 2025</title>
-</head>
-<body>
-    <header></header>
+  </head>
+  <body>
+    <div class="off-screen-menu">
+      <button>Book a seat</button>
+      <ul>
+        <li><a href="#">Event</a></li>
+        <li><a href="#">Honor</a></li>
+        <li><a href="#">About IDP</a></li>
+        <li><a href="#">Portfolio</a></li>
+      </ul>
+    </div>
+    <nav>
+      <a href="#">
+        <img
+          src="images/Fanshawe_logo.png"
+          height="80px"
+          class="logo"
+          alt="hero image"
+        />
+      </a>
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <header id="header" class="col-span-full m-col-start-1 m-col-end-4">
+      <a href="#">
+        <img
+          src="images/Fanshawe_logo.png"
+          height="80px"
+          class="logo"
+          alt="Fanshawe image"
+        />
+      </a>
+      <div id="sticky-nav-con">
+        <ul id="navbar">
+          <li><a href="#">Event</a></li>
+          <li><a href="#">Honor</a></li>
+          <li><a href="#">About IDP</a></li>
+          <li><a href="#">Portfolio</a></li>
+        </ul>
+        <button type="submit">Book a seat</button>
+      </div>
+    </header>
     <main>
-<!-- 1-Main Hero -->
+      <!-- 1-Main Hero -->
+      <div class="container">
+        <div>
+          <img
+            src="images/hero_image.png"
+            height="80px"
+            class="logo"
+            alt="Fanshawe logo"
+          />
+          <div class="hero-title">
+            <h1>Fanshawe Interactive</h1>
+          </div>
+          <div class="hero-text">
+            <h2>The Design Showcase with newest digital designers</h2>
+          </div>
+          <div class="hero-text">
+            <h2>
+              Interactive Media Design &amp; User Experience Design Program
+              School of Media &amp;Design Arts
+            </h2>
+          </div>
 
-<!-- 2-Industry Night Video -->
+          <div class="hero-button">
+            <button type="submit">Explore More</button>
+          </div>
+        </div>
+      </div>
+      <!-- 2-Industry Night Video -->
 
-<!-- 3-Industry Night Content -->
-        <!-- 7 showcases, 72 portfolios, networking, opportunities -->
-        <!-- Date, run-down/itinerary, Venue -->
+      <div class="col-start-2 col-end-4 m-col-span-4" id="video-showcase">
+        <h2 class="hidden">Industry Night Video</h2>
+        <div class="industry-night-video">
+          <div class="industry-night">
+            <h1>The Industry Night</h1>
+            <video controls preload="metadata" poster="images/placeholder.jpg">
+              <source src="video/video.mp4" type="video/mp4" />
+              <source src="video/video.webm" type="video/webm" />
+              <p>
+                Ooops, something went wrong. You may be using an outdate browser
+                or have javascript disabled.
+              </p>
+            </video>
+          </div>
+        </div>
+      </div>
+      <!-- 3-Industry Night Content -->
+      <div class="col-start-2 col-end-4 m-col-span-4" id="content">
+        <h2 class="hidden">Industry Night Details</h2>
+        <div class="industry-night-details">
+          <img
+            src="images/industry-night-image.png"
+            alt="industry-night-image"
+          />
+          <div class="industry-night-text">
+            <h2>7 Showcases</h2>
+            <p>
+              Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+            <h2>72 Portfolios</h2>
+            <p>
+              Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+            <h2>Networking</h2>
+            <p>
+              Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+            <h2>Opportunity</h2>
+            <p>
+              Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+          </div>
+        </div>
+      </div>
 
-<!-- 4-Our Crowning Achievement -->
-        <!-- Honorable Achiever -->
-        <!-- Honorable Nominee -->
-        <!-- Behind the Scene -->
+      <!-- Date, run-down/itinerary, Venue -->
+      <div class="col-start-2 col-end-4 m-col-span-4" id="event-detail">
+        <h2 class="hidden">Event Details</h2>
+        <div class="event-detail">
+          <div class="event-detail-date">
+            <h2>Date</h2>
+            <p>18<sup>th</sup> April 2024</p>
+          </div>
 
-<!-- 5-Testimonial -->
+          <div class="event-detail-schedule">
+            <h2>Schedule</h2>
+            <p class="time">4 30 PM</p>
+            <p>Industry members&amp;Guests arrival</p>
+            <p>Student Portfolio Viewing<br />Level 4 Labs</p>
+            <p>Culinary Delights &amp;Networking<br />The Chef&apos;s Table</p>
+            <p class="time">06 00 PM</p>
+            <p>Spotlight Presentations<br />Good Foundation Inc. Theatre</p>
+          </div>
 
-<!-- 6-Developer - CMYK -->
+          <div class="event-detail-venue">
+            <h2>Venue</h2>
+          </div>
+        </div>
+      </div>
 
-<!-- 7-Portfolio 72 students -->
+      <div class="col-start-2 col-end-4 m-col-span-4" id="foundation-content">
+        <img
+          src="images/Srishti_Foundation_Section.png"
+          alt="Foundation Image"
+        />
+        <div class="cooperation">IN COOPERATION WITH</div>
+        <div class="objective">OBJECTIVE</div>
+        <h1 class="foundation-title">SRISHTI FOUNDATION</h1>
+        <h2 class="foundation-subtitle">
+          Transforming Communities, Enhancing Lives
+        </h2>
+        <p class="foundation-description">
+          Srishti Foundation, an Indian NGO supporting children and families
+          through education, healthcare, and empowerment. The foundation
+          collaborates with communities to rebrand and design their
+          communication.
+        </p>
+      </div>
 
-<!-- 8-About IDP -->
+      <!-- The Crowning -->
+      <div class="col-start-2 col-end-4 m-col-span-4" id="crowning">
+        <h2 class="hidden">The Crowning</h2>
+        <div class="crowning-detail">
+          <div class="crowning-content">
+            <h2>The Crowning</h2>
+            <h3>ACHIVEMENTS</h3>
+            <p>
+              This project by Level 4 students involves designing a marketing
+              campaign for the Srishti Foundation’s Brothers in Arms Memorial.
+              The memorial honors Indian and Canadian WWI soldiers with a serene
+              green space and stone memorial for reflection.
+            </p>
+          </div>
+
+          <div class="col-start-2 col-end-4 m-col-span-4" id="finalist">
+            <div class="finalist-header">Finalists</div>
+
+            <div class="finalist-image-container">
+              <img
+                src="images/finalist-bkgd1.png"
+                alt="finalist background image"
+              />
+              <img src="images/finalist-1.png" alt="finalist Portfolio 1" />
+              <img
+                src="images/finalist-bkgd2.png"
+                alt="finalist background image 2"
+              />
+            </div>
+
+            <div class="finalist-info">
+              <div class="finalist-text">Finalist 1</div>
+              <div class="finalist-members">
+                Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine .
+                Keith Lie
+              </div>
+              <button type="submit">Check It Out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Honorable Achiever -->
+      <div class="col-start-2 col-end-4 m-col-span-4" id="honorable-content">
+        <h2 class="hidden">Honorable</h2>
+        <div class="honorable-content">
+          <div class="honorable-conetent-title">
+            <h2>Honorable</h2>
+          </div>
+
+          <div class="honorable-container">
+            <div class="honorable-box">
+              <img src="images/honorable-image-1.png" alt="honorable 1" />
+            </div>
+
+            <div class="honorable-box">
+              <img src="images/honorable-image-2.png" alt="honorable 2" />
+            </div>
+
+            <div class="honorable-info"></div>
+            <div class="team-text">Team 1</div>
+            <div class="team-members">
+              Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine .
+              Keith Lie
+            </div>
+            <button class="button">Check It Out</button>
+            <div class="team-text">Team 2</div>
+            <div class="team-members">
+              Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine .
+              Keith Lie
+            </div>
+          </div>
+        </div>
+
+        <!--4-Gallery -->
+        <div class="col-span-full" id="gallery">
+          <h2 class="hidden">Gallery</h2>
+          <ul class="gallery-content">
+            <li>
+              <img src="images/gallery_1.png" alt="gallery_image 1" />
+            </li>
+            <li>
+              <img src="images/gallery_2.png" alt="gallery_image 2" />
+            </li>
+            <li>
+              <img src="images/gallery_3.png" alt="gallery_image 3" />
+            </li>
+            <li>
+              <img src="images/gallery_4.png" alt="gallery_image 4" />
+            </li>
+            <li>
+              <img src="images/gallery_5.png" alt="gallery_image 5" />
+            </li>
+            <li>
+              <img src="images/gallery_6.png" alt="gallery_image 6" />
+            </li>
+            <li>
+              <img src="images/gallery_7.png" alt="gallery_image 7" />
+            </li>
+            <li>
+              <img src="images/gallery_8.png" alt="gallery_image 8" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 5-Testimonial -->
+      <div class="col-span-full" id="testimonial-container">
+        <h2 class="hidden">Testimonial</h2>
+        <div class="testimonial-title">
+          <h2>TESTINONIALS</h2>
+          <h3>FEEDBACK</h3>
+        </div>
+
+        <div class="testimonials">
+          <div class="card1">
+            <div class="circle">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum.
+              </p>
+
+              <div class="client-info">
+                <img
+                  src=".//images/client-photo.png"
+                  alt="Client Photo"
+                  class="client-photo"
+                />
+                <div>
+                  <p class="client-name">Client Name</p>
+                  <p class="client-title">Title</p>
+                </div>
+              </div>
+
+              <div class="card2"></div>
+              <div class="circle"></div>
+              <p>
+                Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum.
+              </p>
+              <div class="client-info">
+                <img
+                  src=".//images/client-photo.png"
+                  alt="Client Photo"
+                  class="client-photo"
+                />
+                <div>
+                  <p class="client-name">Client Name</p>
+                  <p class="client-title">Title</p>
+                </div>
+              </div>
+
+              <div class="card3">
+                <div class="circle"></div>
+                <p>
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum.
+                </p>
+                <div class="client-info">
+                  <img
+                    src=".//images/client-photo.png"
+                    alt="Client Photo"
+                    class="client-photo"
+                  />
+                  <div>
+                    <p class="client-name">Client Name</p>
+                    <p class="client-title">Title</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card4"></div>
+              <div class="circle"></div>
+              <p>
+                Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum.
+              </p>
+              <div class="client-info">
+                <img
+                  src=".//images/client-photo.png"
+                  alt="Client Photo"
+                  class="client-photo"
+                />
+                <div>
+                  <p class="client-name">Client Name</p>
+                  <p class="client-title">Title</p>
+                </div>
+              </div>
+
+              <div class="card5">
+                <div class="circle"></div>
+                <p>
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum.
+                </p>
+                <div class="client-info">
+                  <img
+                    src=".//images/client-photo.png"
+                    alt="Client Photo"
+                    class="client-photo"
+                  />
+                  <div>
+                    <p class="client-name">Client Name</p>
+                    <p class="client-title">Title</p>
+                  </div>
+                </div>
+
+                <div class="card6"></div>
+                <div class="circle"></div>
+                <p>
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum.
+                </p>
+                <div class="client-info">
+                  <img
+                    src=".//images/client-photo.png"
+                    alt="Client Photo"
+                    class="client-photo"
+                  />
+                  <div>
+                    <p class="client-name">Client Name</p>
+                    <p class="client-title">Title</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6-Developer - CMYK -->
+      <div class="col-span-full" id="CMYK-developer">
+        <h2 class="hidden">DEVS</h2>
+
+        <div class="dev-content">
+          <h2 class="title">DEVS</h2>
+        </div>
+
+        <div class="three-circles">
+          <div class="white-circle">
+            <div class="letter">C</div>
+          </div>
+
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="name-section">
+            <p class="name">Connie KingYin Sham</p>
+            <p class="website">connie.ca</p>
+          </div>
+          <div class="dev-image">
+            <img src=".//images/dev-image.png" alt="developer image" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 7-Portfolio 72 students -->
+      <div class="col-span-full" id="72students-portfolio">
+        <h2 class="hidden">All students portfolio</h2>
+        <div class="portfolio-content">
+          <div class="portfolio-content-text">
+            <h2>PORTFOILIOS</h2>
+            <div class="search-bar">
+              <input type="text" placeholder="Search" />
+              <button>Search</button>
+            </div>
+          </div>
+
+          <div class="image-gallery">
+            <img src=".//images/image-gallery-1.png" alt="Portfolio Image 1" />
+            <img src=".//images/image-gallery-2.png" alt="Portfolio Image 2" />
+          </div>
+
+          <div class="showroom">SHOWROOMS</div>
+
+          <div class="portfolio-list">
+            <p class="highlight">Corey Rosser</p>
+            <p>Jakob Vaccaro</p>
+            <p>Zain Septimus</p>
+            <p>Makenna Dunn</p>
+
+            <p>Alfonso Donin</p>
+            <p>Nolan Culhane</p>
+            <p>Justin Philips</p>
+            <p>Haylie Black</p>
+
+            <p>Terry Korsgaard</p>
+            <p>Omar Geidt</p>
+            <p>Kadin Levin</p>
+            <p>Zain Rhiel</p>
+
+            <p>Emerson Philips</p>
+            <p>Jakob Lubin</p>
+            <p>Ryan Gouse</p>
+            <p>Rayna Mark</p>
+
+            <p>Alfredo Siphron</p>
+            <p>Angel Rhiel Madsen</p>
+            <p>Cooper Schleifer</p>
+            <p>Jaydon Sanches</p>
+
+            <p>Corey Dokidis</p>
+            <p>Charlie Geidt</p>
+            <p>Jaydon Donin</p>
+            <p>Carter Clemons</p>
+
+            <p>Charlie Dias</p>
+            <p>Jaylon Philips</p>
+            <p>Terry Ekstrom Bothman</p>
+            <p>Cristofer Kane</p>
+
+            <p>Zaire Aminoff</p>
+            <p>Jaylon Franci</p>
+            <p>Davis Levin</p>
+            <p>Ruben Diaz</p>
+
+            <p>Brandon Levin</p>
+            <p>Cooper Torff</p>
+            <p>Leo Rhiel Madsen</p>
+            <p>Tiana Gomez</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8-About IDP -->
+
+      <div class="col-span-full" id="about-idp">
+        <h2 class="hidden">About IDP</h2>
+        <div class="about-idp-content">
+          <div class="about-idp-content-text">
+            <h2>About us</h2>
+            <h1>FANSHAWE Interactive</h1>
+            <p class="course-description">
+              Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+              lobortis.
+            </p>
+
+            <!--Services Section -->
+            <div class="services-container">
+              <div class="services-box">
+                <section class="hidden">We Design</section>
+                <img src=".//images/we-design.png" alt="We design" />
+              </div>
+
+              <div class="services-box">
+                <section class="hidden">We Code</section>
+                <img src=".//images/we-code.png" alt="We code" />
+              </div>
+
+              <div class="services-box">
+                <section class="hidden">We Build</section>
+                <img src=".//images/we-build.png" alt="We build" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-full" id="message_idp">
+            <p>
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+              lobortis.
+            </p>
+          </div>
+
+          <div class="col-span-full" id="idp-description">
+            <h3>
+              Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+              lobortis. Ut commodo efficitur neque.
+            </h3>
+          </div>
+
+          <div class="col-span-full" id="idp-signature">
+            <img src="images/idp-signature.png" alt="idp signature" />
+            <h3>Marco Deluca</h3>
+            <h4>PROGRAME COORDINATOR</h4>
+            <button type="submit">Explore More</button>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer></footer>
-    
-<script src="js/main.js"></script>
-</body>
+    <footer class="footer">
+      <div class="col">
+        <img
+          src="./images/fanshawe_icon_footer.png"
+          class="logo"
+          alt="hero image"
+          style="height: 80px"
+        />
+
+        <img
+          src="./images/instagram_icon.png"
+          class="social-media"
+          alt="instagram icon"
+          style="height: 80px"
+        />
+
+        <img
+          src="./images/youtube_icon.png"
+          class="social-media"
+          alt="youtube icon"
+          style="height: 80px"
+        />
+
+        <img
+          src="./images/facebook_icon.png"
+          class="social-media"
+          alt="social media icon"
+          style="height: 80px"
+        />
+
+        <p>&copy;2024 Fanshawe College</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
