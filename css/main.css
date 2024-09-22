@@ -664,33 +664,123 @@ h3 {
   size-adjust: 120%;
 }
 
-/*Footer*/
-footer {
-  display: flex;
+/* About IDP */
+#about-idp h2 {
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+  font-family: sans-serif;
+  color: #1a1a1a;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+#about-idp h1 {
+  text-align: center;
+  font-size: 4.0rem;
+  font-weight: 500;
+  line-height: 3.8rem;
+  padding-bottom: 30px;
+  letter-spacing: 0.1rem;
+}
+
+.course-description {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.services-container {
   align-items: center;
-  justify-content: space-between;
-  padding: 40px 60px;
-  flex-direction: row;
-  background-color: #e2231a;
+}
+
+.services-box {
+  margin: 0 20px;
   text-align: center;
 }
 
-footer .col {
+.services-box h3 {
+  position:relative;
+  top: 50px;
+  font-size: 2.5rem;
+}
+
+.services-box img {
+  border-radius: 10px;
+}
+
+#idp-description {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+#idp-description h3 {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+#idp-signature {
+  padding-bottom: 50px;
+}
+
+#idp-signature h3 {
+  padding-top: 1.0rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#idp-weblink {
   display: flex;
+  justify-content: center; 
   align-items: center;
-  gap: 20px;
+  padding-bottom: 50px;
+}
+
+#idp-weblink button {
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 22px;
+  border: 0.5px solid #65656b;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+#idp-weblink button:hover {
+  background-color: #646469;
   color: white;
 }
 
-footer .logo {
-  margin-right: 50%; /* Space between the logo and the social media icons */
+/*footer*/
+footer {
+  background-color: #e2231a;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-footer .social-media {
+#footer-logo img {
+  height: 3rem;
+}
+
+.social-media a {
+  text-decoration: none;
+}
+
+.social-media img {
+  height: 1.2rem;
   margin-right: 20px;
 }
 
 footer p {
   color: white;
-  font-size: 14px;
+  font-size: 1.2rem;
+}
+
+.row {
+  display: flex; 
+  justify-content: space-evenly;
+  align-items: center;
 }
