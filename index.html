@@ -248,67 +248,77 @@
 
         <div class="finalist-display">
           <div class="finalist-image-container">
-            <div class="image-overlay">
-              <img
-                src="images/finalist-bkgd1.png"
-                alt="finalist background image 1"
-                class="background-img"
-              />
+            <div id="slider-container">
+              <div class="image-slider">
+                <img
+                  src="images/finalist-1.png"
+                  alt="finalist Portfolio 1"
+                  class="main-img"
+                />
+                <img
+                  src="images/finalist-bkgd2.png"
+                  alt="finalist Portfolio 2"
+                  class="main-img"
+                />
+              </div>
             </div>
-            <div class="foreground">
-              <img
-                src="images/finalist-1.png"
-                alt="finalist Portfolio 1"
-                class="main-img"
-              />
-            </div>
-            <div class="finalist-text">
-              <h1>Finalist 1</h1>
+
+            <div class="finalist-info">
+              <div class="finalist-text">
+                <h3>Finalist 1</h3>
+              </div>
               <div class="finalist-members">
                 Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine .
                 Keith Lie
+
+                <button type="submit">Check It Out</button>
               </div>
-              <button type="submit">Check It Out</button>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Honorable Achiever -->
-      <div class="col-start-2 col-end-4 m-col-span-4" id="honorable-content">
+      <div id="honorable-content">
         <h2 class="hidden">Honorable</h2>
         <div class="honorable-content">
-          <div class="honorable-conetent-title">
-            <h2>Honorable</h2>
-          </div>
+          <h2>Honorable</h2>
 
           <div class="honorable-container">
             <div class="honorable-box">
-              <img src="images/honorable-image-1.png" alt="honorable 1" />
+              <img src="images/honorable-img_1.png" alt="honorable 1" />
+
+              <div class="team-info">
+                <div class="team-text">Team 1</div>
+                <div class="team-members">
+                  Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine
+                  . Keith Lie
+                </div>
+                <button class="button">Check It Out</button>
+              </div>
             </div>
 
+            <!-- Team 2 -->
             <div class="honorable-box">
-              <img src="images/honorable-image-2.png" alt="honorable 2" />
-            </div>
+              <img src="images/honorable_img_2.png" alt="honorable 2" />
 
-            <div class="honorable-info"></div>
-            <div class="team-text">Team 1</div>
-            <div class="team-members">
-              Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine .
-              Keith Lie
-            </div>
-            <button class="button">Check It Out</button>
-            <div class="team-text">Team 2</div>
-            <div class="team-members">
-              Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine .
-              Keith Lie
+              <div class="team-info">
+                <div class="team-text">Team 2</div>
+                <div class="team-members">
+                  Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine
+                  . Keith Lie
+                </div>
+                <button class="button">Check It Out</button>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!--4-Gallery -->
-        <div class="col-span-full" id="gallery">
-          <h2 class="hidden">Gallery</h2>
+      <!--Gallery -->
+      <div class="col-span-full" id="gallery">
+        <h2 class="hidden">Gallery</h2>
+        <div class="top-row">
           <ul class="gallery-content">
             <li>
               <img src="images/gallery_1.png" alt="gallery_image 1" />
@@ -322,6 +332,11 @@
             <li>
               <img src="images/gallery_4.png" alt="gallery_image 4" />
             </li>
+          </ul>
+        </div>
+
+        <div class="down-row">
+          <ul class="gallery-content">
             <li>
               <img src="images/gallery_5.png" alt="gallery_image 5" />
             </li>
