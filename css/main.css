@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /* General Rules */
 img,
 embed,
@@ -76,8 +80,8 @@ p{
 #header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 80px;
+  justify-content: center; /* Center the content horizontally */
+  padding: 20px 20px;
   z-index: 1000;
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
@@ -87,25 +91,30 @@ p{
   left: 0;
 }
 
-#header img {
-  margin-left: 0px;
-}
-
 #sticky-nav-con {
   display: flex;
-  width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* Space between elements */
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#sticky-nav-con img {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 #navbar {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
+
 #navbar li {
   list-style: none;
-  padding: 0 10px;
+  padding: 0 5px;
   position: relative;
   text-align: center;
 }
@@ -113,23 +122,21 @@ p{
 #navbar li a {
   text-decoration: none;
   text-align: center;
-  margin: 0 15px;
+  margin: 0 10px;
   font-family: sans-serif;
   font-size: 16px;
   color: #1a1a1a;
 }
 
 #header button {
-  position: absolute;
   display: flex;
   width: 125px;
   padding: 10px 15px;
   justify-content: center;
-  right: 2%;
+  right: 0;
   gap: 10px;
   flex-shrink: 0;
   border-radius: 22px;
-  border-color: none;
   color: white;
   background: var(--Fan-Red, #e2231a);
 }
@@ -142,7 +149,7 @@ p{
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 90vh;
+  min-height: 70vh;
   font-weight: 700;
   width: 100%;
 }
@@ -200,7 +207,7 @@ p{
 }
 
 .hero-button button {
-  display: inline-flex;
+  display: flex;
   width: 136px;
   padding: 10px 15px;
   justify-content: center;
@@ -496,10 +503,10 @@ p{
 }
 
 .image-slider {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: max-content;
+  width: auto;
 }
 
 .main-img {
@@ -587,7 +594,7 @@ p{
 }
 
 .honorable-container {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: max-content;
@@ -674,6 +681,125 @@ p{
 
 .gallery-content img {
   size-adjust: 120%;
+}
+/*Testmonials*/
+
+#testimonial-container {
+  background-image: url("/images/testimonal_bkgd_layer.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 40px;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 15px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-box,
+.middle-box,
+.right-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.left-box,
+.right-box {
+  position: relative;
+  margin-bottom: 10px;
+  transform: translateY(130px);
+}
+
+.testimonial-title {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 1%;
+
+  align-items: flex-start;
+}
+
+.testimonial-title h2 {
+  font-size: 100px;
+  margin-left: 2%;
+  color: white;
+}
+
+.testimonial-title h3 {
+  font-size: 35px;
+  margin-left: 55%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Testimonial card styling*/
+
+.card {
+  width: 368px;
+  height: 520px;
+  border-radius: 18px;
+  background: #fff;
+  padding: 20px 20px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.circle-top {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #a9a9a9;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: #333;
+  margin-top: 80px;
+  text-align: left;
+  line-height: 1.5;
+}
+.client-info {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.client-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.client-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.client-title {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
 }
 
 /* About IDP */
