@@ -831,6 +831,18 @@ p{
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .services-container {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-container-m {
+    display: none;
+  }
+}
+
 .services-box {
   margin: 0 20px;
   text-align: center;
@@ -842,8 +854,47 @@ p{
   font-size: 2.5rem;
 }
 
-.services-box img {
+.services-box p {
+  background-color: #e2231a;
+  opacity: 70%;
+  color: white;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px 15px;
+  position: relative;
+  top: -200px;
+  display: none;
+}
+
+.services-box:hover p {
+  display: block;
+  cursor: pointer;
+}
+
+.services-box img, .services-box-m img {
   border-radius: 10px;
+}
+
+.services-box-m img {
+  width: 100%;
+}
+
+.services-box-m {
+  text-align: center;
+}
+
+.services-box-m h3 {
+  font-size: 2.5rem;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.services-box-m p {
+  padding-bottom: 40px;
+}
+
+.services-box-m p :last-child{
+  padding-bottom: 60px;
 }
 
 #idp-description {
@@ -861,10 +912,20 @@ p{
   padding-bottom: 50px;
 }
 
+#idp-signature img {
+  padding-top: 20px;
+}
+
 #idp-signature h3 {
   padding-top: 1.0rem;
   font-family: sans-serif;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  #idp-signature {
+    text-align: centre;
+  }
 }
 
 #idp-weblink {
@@ -903,13 +964,13 @@ footer {
   height: 3rem;
 }
 
-.social-media a {
+.social-media a ,.social-media-m a{
   text-decoration: none;
 }
 
-.social-media img {
+.social-media img, .social-media-m img {
   height: 1.2rem;
-  margin-right: 20px;
+  margin: 15px;
 }
 
 footer p {
@@ -921,4 +982,25 @@ footer p {
   display: flex; 
   justify-content: space-evenly;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+
+  .footer-m {
+    gap: 20px;
+    align-items: center;
+  }
+
+  .footer-m p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-m {
+    display: none;
+  }
 }
