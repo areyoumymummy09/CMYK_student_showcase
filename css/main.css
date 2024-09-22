@@ -45,6 +45,18 @@ h3 {
   font-size: 25px;
 }
 
+h4 {
+  font-family: "VOLTUNE", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 25px;
+}
+
+
+p{
+  font-family: sans-serif;
+}
+
 @font-face {
   font-family: "VOLTUNE";
   src: url("../font/Voltune/VOLTUNE.woff") format("woff"),
