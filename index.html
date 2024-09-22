@@ -594,7 +594,7 @@
 
        <div class="grid-con" id="about-idp">
         <h2 class="hidden">About IDP</h2>
-        <div class="about-idp-content t-col-start-4 t-col-end-10">
+        <div class="about-idp-content col-span-full t-col-start-4 t-col-end-10">
           <div class="about-idp-content-text">
             <h2>ABOUT US</h2>
             <h1 class="fan-red">FANSHAWE <br>Interactive</h1>
@@ -611,45 +611,92 @@
           
             <!--Services Section -->
             <div class="services-container grid-con">
-              <div class="services-box t-col-start-1 t-col-end-5">
+              <div class="services-box col-span-full t-col-start-1 t-col-end-5">
                 <section class="hidden">We Design</section>
                 <h3>WE DESIGN</h3>
                 <img src=".//images/we-design.png" alt="We design" />
+                <p id="message_idp">
+                  Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis. Class
+                  aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                  inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+                  lobortis.
+                </p>
               </div>
-
-              <div class="services-box t-col-start-5 t-col-end-9">
+            
+              <div class="services-box col-span-full t-col-start-5 t-col-end-9">
                 <section class="hidden">We Code</section>
                 <h3>WE CODE</h3>
                 <img src=".//images/we-code.png" alt="We code" />
+                <p id="message_idp">
+                  Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis. Class
+                  aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                  inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+                  lobortis.
+                </p>
               </div>
-
-              <div class="services-box t-col-start-9 t-col-end-13">
+            
+              <div class="services-box col-span-full t-col-start-9 t-col-end-13">
                 <section class="hidden">We Build</section>
                 <h3>WE BUILD</h3>
                 <img src=".//images/we-build.png" alt="We build" />
+                <p id="message_idp">
+                  Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis. Class
+                  aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                  inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+                  lobortis.
+                </p>
+              </div>
+            </div>
+            
+
+              <!-- Services box- mobile version -->
+              <div class="services-container-m hidden grid-con">
+                  <div class="services-box-m col-span-full">
+                    <section class="hidden">We Design</section>
+                    <img src=".//images/we-design-350.png" alt="We design" />
+                    <h3>WE DESIGN</h3>
+                    <p>Vorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Nunc vulputate libero et velit interdum, ac aliquet odio 
+                      mattis. Class aptent taciti sociosqu ad litora torquent per 
+                      conubia nostra, per inceptos himenaeos.</p>
+                  </div>
+
+                  <div class="services-box-m col-span-full">
+                    <section class="hidden">We Code</section>
+                    <img src=".//images/we-code-350.png" alt="We code" />
+                    <h3>WE CODE</h3>
+                    <p>Vorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Nunc vulputate libero et velit interdum, ac aliquet odio 
+                      mattis. Class aptent taciti sociosqu ad litora torquent per 
+                      conubia nostra, per inceptos himenaeos.</p>
+                  </div>
+
+                  <div class="services-box-m col-span-full">
+                    <section class="hidden">We Build</section>
+                    <img src=".//images/we-build-350.png" alt="We build" />
+                    <h3>WE BUILD</h3>
+                    <p>Vorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Nunc vulputate libero et velit interdum, ac aliquet odio 
+                      mattis. Class aptent taciti sociosqu ad litora torquent per 
+                      conubia nostra, per inceptos himenaeos.</p>
+                  </div>
               </div>
 
-          <div class="t-col-start-4 t-col-end-10 hidden" id="message_idp">
-            <p>
-              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis. Class
-              aptent taciti sociosqu ad litora torquent per conubia nostra, per
-              inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-              lobortis.
-            </p>
-          </div>
+          
 
-          <div class="t-col-start-4 t-col-end-10" id="idp-description">
-            <h3>
+          <div class="grid-con" id="idp-description">
+            <h3 class="col-span-full t-col-start-4 t-col-end-10">
               Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis. Class
               aptent taciti sociosqu ad litora torquent per conubia nostra, per
               inceptos himenaeos. Curabitur tempus urna at turpis condimentum
               lobortis. Ut commodo efficitur neque.
             </h3>
-          </div>
 
-          <div class="t-col-start-8 t-col-end-12" id="idp-signature">
+          <div class="col-start-2 col-end-4 t-col-start-7 t-col-end-10" id="idp-signature">
             <img src="images/idp-signature.png" alt="idp signature"/>
             <h3>Marco Deluca</h3>
             <h4 class="fan-red">PROGRAME COORDINATOR</h4>
@@ -667,7 +714,9 @@
 
     <footer class="footer row">
       <div id="footer-logo">
-        <img src="./images/fanshawe_icon_footer.png" alt="Fanshawe Logo">
+        <a href="https://www.fanshawec.ca/">
+          <img src="./images/fanshawe_icon_footer.png" alt="Fanshawe Logo">
+        </a>
       </div>
 
       <div class="social-media">
@@ -675,16 +724,43 @@
           <img src="./images/instagram_icon.png" atl="Fanshawe Instagram">
         </a>
 
-        <a href="https://www.instagram.com/fanshawecollege/?hl=en"> 
+        <a href="https://www.youtube.com/myfanshawe"> 
           <img src="./images/youtube_icon.png" atl="Fanshawe youtube">
         </a>
 
-        <a href="https://www.instagram.com/fanshawecollege/?hl=en"> 
+        <a href="https://www.facebook.com/FanshaweCollege/"> 
           <img src="./images/facebook_icon.png" atl="Fanshawe Facebook">
         </a>
       </div>
 
       <div >
+        <p>&copy;2024 Fanshawe College</p>
+      </div>
+
+    </footer>
+
+    <footer class="footer-m grid-con">
+      <div id="footer-logo" class="col-span-full">
+        <a href="https://www.fanshawec.ca/">
+          <img src="./images/fanshawe_icon_footer.png" alt="Fanshawe Logo">
+        </a>
+      </div>
+
+      <div class="social-media-m col-span-full">
+        <a href="https://www.instagram.com/fanshawecollege/?hl=en"> 
+          <img src="./images/instagram_icon.png" atl="Fanshawe Instagram">
+        </a>
+
+        <a href="https://www.youtube.com/myfanshawe"> 
+          <img src="./images/youtube_icon.png" atl="Fanshawe youtube">
+        </a>
+
+        <a href="https://www.facebook.com/FanshaweCollege/"> 
+          <img src="./images/facebook_icon.png" atl="Fanshawe Facebook">
+        </a>
+      </div>
+
+      <div class="col-span-full">
         <p>&copy;2024 Fanshawe College</p>
       </div>
 
