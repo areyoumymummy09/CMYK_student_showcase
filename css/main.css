@@ -831,13 +831,13 @@ p{
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .services-container {
     display: none;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .services-container-m {
     display: none;
   }
