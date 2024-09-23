@@ -951,34 +951,3 @@ h3 {
 .portfolio-list p:hover {
   font-weight: bold;
 }
-
-/*Footer*/
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px 60px;
-  flex-direction: row;
-  background-color: #e2231a;
-  text-align: center;
-}
-
-footer .col {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  color: white;
-}
-
-footer .logo {
-  margin-right: 50%; /* Space between the logo and the social media icons */
-}
-
-footer .social-media {
-  margin-right: 20px;
-}
-
-footer p {
-  color: white;
-  font-size: 14px;
-}
