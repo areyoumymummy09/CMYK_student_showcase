@@ -524,9 +524,9 @@ h3 {
   justify-content: left;
 }
 
-.finalist-header {
-  font-size: 50px;
-  color: red;
+.finalist-header h3 {
+  font-size: 80px;
+  color: Black;
   text-align: left;
   margin-left: 3%;
   padding-bottom: 3%;
@@ -567,14 +567,14 @@ h3 {
 
 /*Honorable*/
 #honorable-content {
-  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-x: auto;
   position: relative;
-  width: 100%; /* Full width of the parent container */
-  max-width: 1440px; /* Max width for larger screens */
+  width: 100%;
+  max-width: 1440px;
   height: auto;
   margin: 0 auto;
-  scroll-behavior: smooth; /* Smooth scrolling effect */
-  white-space: nowrap; /* Prevent line breaks between images */
+  scroll-behavior: smooth;
+  white-space: nowrap;
 }
 
 .honorable-content h2 {
@@ -890,12 +890,11 @@ h3 {
   padding-left: 3%;
 }
 
-.portfolio-content-text h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-right: 3%;
-  margin-left: 40px;
-  margin-top: 30px;
+.portfolio-content-text-h3 {
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  padding-right: 50px;
 }
 
 .search-bar {
@@ -912,7 +911,7 @@ h3 {
   padding-left: 10px;
   font-size: 16px;
   border: none;
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
   background-color: transparent;
   outline: none;
 }
@@ -921,13 +920,38 @@ h3 {
   grid-column: span 3;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  padding-left: 80px;
 }
 .image-gallery img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
+
+.portfolio-list-container {
+  background-color: #efefef;
+}
+.portfolio-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 4 columns */
+  grid-gap: 5px;
+  padding: 20 20;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-left: 20%;
+}
+
+.portfolio-list p {
+  margin: 0;
+  font-size: 16px;
+  margin-top: 3%;
+  transition: font-weight 0.2s ease;
+}
+
+.portfolio-list p:hover {
+  font-weight: bold;
+}
+
 /*Footer*/
 footer {
   display: flex;
