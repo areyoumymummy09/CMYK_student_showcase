@@ -904,6 +904,10 @@ h3 {
   padding-right: 50px;
 }
 
+.portfolio-list {
+  cursor: pointer;
+}
+
 .search-bar {
   margin-top: 10px;
   margin-left: 3%;
