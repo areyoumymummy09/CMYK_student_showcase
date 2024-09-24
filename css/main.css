@@ -164,21 +164,21 @@ h3 {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centers the image */
-  z-index: 0; /* Image behind the text */
+  transform: translate(-50%, -50%);
+  z-index: 0;
   width: 100%;
 }
 
 .image-overlay img {
-  width: auto; /* Full width image */
-  max-width: 600px; /* Adjust to desired size */
+  width: auto;
+  max-width: 600px;
   height: auto;
   opacity: 0.7;
 }
 
 .hero-title {
   position: relative;
-  z-index: 1; /* Places the title above the image */
+  z-index: 1;
 }
 
 .hero-title h1 {
@@ -346,7 +346,7 @@ h3 {
 }
 .event-detail-venue p {
   justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 
 /*Coorperation objective*/
@@ -356,7 +356,6 @@ h3 {
   align-items: top;
   gap: 10 px;
   min-height: 100vh;
-  height: 10%;
   width: 100%;
   justify-content: flex-start;
   background-image: url("/images/Srishti_Foundation_Section.png");
@@ -366,7 +365,7 @@ h3 {
   display: flex;
   flex-direction: row;
   align-items: top;
-  gap: 150px;
+  gap: 100px;
   padding: 3%;
   color: white;
 }
@@ -386,37 +385,35 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-
   color: white;
 }
 #foundation-title {
   align-content: center;
   justify-content: center;
-  font-size: 90px;
+  font-size: 30px;
+  padding-top: 10%;
 }
-#foundation-title {
-  align-content: center;
-  justify-content: center;
+#foundation-subtitle {
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+  margin: 50px 20px;
 }
+
 #foundation-subtitle h3 {
   font-family: Gotham;
-  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%; /* 16px */
   letter-spacing: 0.4px;
+  margin: 20px;
 }
 #foundation-title {
   font-size: 300px;
   margin: 0;
   line-height: 1.2;
   text-align: center;
-  margin-bottom: 30%;
-}
-#foundation-subtitle {
-  font-size: 80px;
-  font-family: "Times New Roman", Times, serif;
-  margin: 0;
+  padding-top: 400px;
+  margin-left: 20px;
 }
 
 .foundation-description {
@@ -424,6 +421,7 @@ h3 {
   max-width: 800px;
   margin-top: 20px;
   padding-bottom: 20%;
+  margin: 20px 20px;
 }
 
 .subject-title-container {
@@ -432,6 +430,7 @@ h3 {
   width: 100%;
   padding: 20px 0;
   color: white;
+  margin-top: 50px;
 }
 
 /*The Crowning*/
@@ -479,89 +478,89 @@ h3 {
   letter-spacing: 2px;
 }
 
-/*Finalists slider*/
+/* Finalist Section */
 
-#slider-container {
-  overflow-x: auto; /* Enables horizontal scrolling */
+#finalist-content {
+  overflow-x: auto;
   position: relative;
-  width: 100%; /* Full width of the parent container */
-  max-width: 1440px; /* Max width for larger screens */
+  width: 100%;
+  max-width: 1440px;
   height: auto;
   margin: 0 auto;
-  scroll-behavior: smooth; /* Smooth scrolling effect */
-  white-space: nowrap; /* Prevent line breaks between images */
+  scroll-behavior: smooth;
+  white-space: nowrap;
 }
 
-.image-slider {
+.finalist-content h2 {
+  font-size: 50px;
+  padding-left: 30px;
+  padding-top: 50px;
+}
+
+.finalist-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: auto;
+  width: max-content;
+  padding: 0 20px;
 }
 
-.main-img {
-  height: auto;
-  display: inline-block;
+.finalist-box {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px;
+  box-sizing: border-box;
+  min-width: 80%;
 }
 
-/* First image should be larger */
-.image-slider img:first-child {
+.finalist-box:first-child {
   width: 65vw;
 }
 
-/* Second image */
-.image-slider img:nth-child(2) {
+.finalist-box:nth-child(2) {
   width: 35vw;
-  object-fit: cover;
+  overflow: hidden;
+}
+
+.finalist-box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
   display: inline-block;
 }
 
-/*Finalist Text*/
-
 .finalist-info {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: left;
-}
-
-.finalist-header h3 {
-  font-size: 80px;
-  color: Black;
-  text-align: left;
-  margin-left: 3%;
-  padding-bottom: 3%;
-  padding-right: 2%;
+  margin-top: 10px;
 }
 
 .finalist-text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  color: #000;
-  text-align: left;
-  padding-right: 2%;
-  padding-left: 2%;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
-.finalist-team {
-  font-size: 1rem;
-  color: red;
+.finalist-members {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.finalist-members button {
-  display: inline-flex;
-  padding: 10px 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 22px;
-  background: black;
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #000;
   color: white;
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.finalist-members button:hover {
+.button:hover {
   background-color: #444;
 }
 
