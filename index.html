@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <title>Industry Night 2025</title>
   </head>
   <body>
@@ -90,23 +91,23 @@
       <div class="grid-con" id="video-showcase">
         <h2 class="hidden">Industry Night Video</h2>
         <div class="col-span-full m-col-span-4">
-          <div class="industry-night-video">
-            <div class="industry-night">
-              <video
-                controls
-                preload="metadata"
-                poster="images/video_placeholder.png"
-              >
-                <source src="video/video.mp4" type="video/mp4" />
-                <source src="video/video.webm" type="video/webm" />
-                <p>
-                  Ooops, something went wrong. You may be using an outdate
-                  browser or have javascript disabled.
-                </p>
-              </video>
-            </div>
-          </div>
+          <section id="player-container" class="industry-night-video">
+            <video
+              class="player"
+              controls
+              preload="metadata"
+              poster="images/video_placeholder.png"
+            >
+              <source src="video/video.mp4" type="video/mp4" />
+              <source src="video/video.webm" type="video/webm" />
+              <p>
+                Ooops, something went wrong. You may be using an outdate browser
+                or have javascript disabled.
+              </p>
+            </video>
+          </section>
         </div>
+        <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
         <!--Industry Night Content -->
         <div class="col-span-full" id="industry-content">
