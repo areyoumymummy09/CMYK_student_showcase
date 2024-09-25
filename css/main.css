@@ -105,6 +105,16 @@ button {
   cursor: pointer;
 }
 
+/* Plyr UI Video Customization */
+:root {
+  --plyr-color-main: #e2231a;
+  --plyr-audio-controls-background: #5e0005;
+  --plyr-control-icon-size: 20px;
+  --plyr-control-radius: 20px;
+  --plyr-font-family: Helvetica, Arial, sans-serif;
+  --plyr-video-control-color-hover: black;
+}
+
 /* Nav bar */
 #header {
   display: flex;
@@ -1719,7 +1729,7 @@ footer p {
     height: 100vh;
   }
 
-  .industry-night {
+  .industry-night video {
     background-image: url(../images/Group/538.png);
   }
 

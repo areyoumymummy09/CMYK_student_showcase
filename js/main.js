@@ -1,5 +1,8 @@
 console.log("Javascript Linked!");
 
+//Plyr video player//
+const player = new Plyr("video");
+
 const videoBox = document.getElementById("IndVideoBox");
 const video = document.getElementById("indVideo");
 const burgerMenu = document.getElementById("menuMobile");
@@ -45,10 +48,6 @@ window.addEventListener("load", updateVideoPoster);
 window.addEventListener("resize", updateVideoPoster);
 window.addEventListener("scroll", closeBurger);
 burgerMenu.addEventListener("click", openBurger);
-
-// This area needs fix, later.
-//video player//
-const player = new Plyr("video");
 
 //portfoliio//
 
