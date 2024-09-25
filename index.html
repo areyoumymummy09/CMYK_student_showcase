@@ -8,50 +8,23 @@
     <title>Industry Night 2025</title>
   </head>
   <body>
-    <!--<div class="off-screen-menu">
-      <button>Book a seat</button>
-      <ul>
-        <li><a href="#">Event</a></li>
-        <li><a href="#">Honor</a></li>
-        <li><a href="#">About IDP</a></li>
-        <li><a href="#">Portfolio</a></li>
-      </ul>
-    </div>
-    
-    <nav>
-      <a href="#">
-        <img
-          src="images/Fanshawe_logo.png"
-          height="80px"
-          class="logo"
-          alt="hero image"
-        />
-      </a>
-      <div class="ham-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
--->
     <header id="header">
-      <div id="sticky-nav-con">
-        <a href="#">
+      <div id="sticky-nav-con" class="">
+        <a id="fanshaweLogo" href="#">
           <img
             src="images/Fanshawe_logo.png"
-            height="30px"
             class="logo"
-            alt="Fanshawe image"
-          />
+            alt="Fanshawe image" />
         </a>
 
         <ul id="navbar">
           <li><a href="#">Event</a></li>
           <li><a href="#">Honor</a></li>
           <li><a href="#">About IDP</a></li>
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Portfolios</a></li>
         </ul>
-        <button type="submit">Book a seat</button>
+        <button id="navBtn" type="submit">Book a seat</button>
+        <button id="menuMobile" type="submit">Menu</button>
       </div>
     </header>
     <main>
@@ -66,122 +39,128 @@
 
         <div class="hero-text-wrapper">
           <div id="hero-text-left">
-            <h2>
-              The Design Showcase <br />
-              with newest digital designers
-            </h2>
+            <p>
+              <b>Join us Industry Night 2025</b><br />
+              April 18<sup>th</sup> Fanshawe, London, CA
+            </p>
           </div>
 
+          <button class="headerBtn" type="submit">Book a seat</button>
+
           <div class="hero-button">
-            <button type="submit">Explore More</button>
+            <button type="submit">Explore Industry Night</button>
           </div>
 
           <div id="hero-text-right">
-            <h2>
+            <p>
               Interactive Media Design &amp;<br />
               User Experience Design Program <br />
               School of Media &amp;Design Arts
-            </h2>
+            </p>
           </div>
         </div>
       </div>
       <!-- 2-Industry Night Video -->
 
-      <div class="grid-con" id="video-showcase">
+      <div class="full-width-grid-con" id="video-showcase">
         <h2 class="hidden">Industry Night Video</h2>
         <div class="col-span-full m-col-span-4">
-          <div class="industry-night-video">
+          <div id="IndVideoBox" class="industry-night-video">
             <div class="industry-night">
               <video
-                controls
+                id="indVideo"
                 preload="metadata"
-                poster="images/video_placeholder.png"
-              >
+                poster="images/video_placeholder.png">
                 <source src="video/video.mp4" type="video/mp4" />
                 <source src="video/video.webm" type="video/webm" />
-                <p>
-                  Ooops, something went wrong. You may be using an outdate
-                  browser or have javascript disabled.
-                </p>
               </video>
             </div>
           </div>
-        </div>
-        <!--Industry Night Content -->
-        <div class="col-span-full" id="industry-content">
-          <h2 class="hidden">Industry Night Details</h2>
-          <div class="industry-night-container">
-            <div class="industry-night-details">
-              <div class="industry-night-image-container">
-                <img
-                  src="images/industry-night-image.png"
-                  alt="industry-night-image"
-                  width="80%"
-                />
-              </div>
-
-              <div class="industry-night-text-container">
-                <div class="industry-night-left col-span-full">
-                  <h3>7 Showcases</h3>
-                  <p>
-                    Korem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc vulputate libero et velit interdum, ac aliquet odio
-                    mattis.
-                  </p>
-
-                  <h3>Networking</h3>
-                  <p>
-                    Korem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc vulputate libero et velit interdum, ac aliquet odio
-                    mattis.
-                  </p>
+          <!--Industry Night Content -->
+          <div class="col-span-full" id="industry-content">
+            <h2 class="hidden">Industry Night Details</h2>
+            <div class="industry-night-container">
+              <div class="industry-night-details">
+                <div class="industry-night-image-container">
+                  <img
+                    src="images/industry-night-image.png"
+                    alt="industry-night-image"
+                    width="80%" />
                 </div>
 
-                <div class="industry-night-right col-span-full">
-                  <h3>72 Portfolios</h3>
-                  <p>
-                    Korem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc vulputate libero et velit interdum, ac aliquet odio
-                    mattis.
-                  </p>
+                <div class="industry-night-text-container">
+                  <div
+                    id="showcase-ins"
+                    class="industry-night-left col-span-full">
+                    <h3>7 Showcases</h3>
+                    <p>
+                      Korem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nunc vulputate libero et velit interdum, ac aliquet odio
+                      mattis.
+                    </p>
 
-                  <h3>Opportunity</h3>
-                  <p>
-                    Korem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc vulputate libero et velit interdum, ac aliquet odio
-                    mattis.
-                  </p>
+                    <div id="network-ins">
+                      <h3>Networking</h3>
+                      <p>
+                        Korem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc vulputate libero et velit interdum, ac aliquet odio
+                        mattis.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    id="portfolio-ins"
+                    class="industry-night-right col-span-full">
+                    <h3>72 Portfolios</h3>
+                    <p>
+                      Korem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nunc vulputate libero et velit interdum, ac aliquet odio
+                      mattis.
+                    </p>
+
+                    <div id="opportunity-ins">
+                      <h3>Opportunity</h3>
+                      <p>
+                        Korem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc vulputate libero et velit interdum, ac aliquet odio
+                        mattis.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="event-detail-container">
-                <div class="event-detail-date">
-                  <h3>Date</h3>
-                  <p>18<sup>th</sup> April 2024</p>
-                </div>
+                <div class="event-detail-container">
+                  <div class="event-detail-date">
+                    <h3>Date</h3>
+                    <p>18<sup>th</sup> April 2024</p>
+                    <button class="buttonEvent">Book a seat</button>
+                  </div>
 
-                <div class="event-detail-schedule">
-                  <h3>Schedule</h3>
-                  <h4 class="time">4 30 PM</h4>
-                  <p>Industry members &amp; Guests arrival</p>
-                  <p>Student Portfolio Viewing</p>
-                  <h4>Level 4 Labs</h4>
-                  <p>Culinary Delights &amp; Networking<br /></p>
-                  <h4>The Chef&apos;s Table</h4>
+                  <div class="event-detail-schedule">
+                    <h3>Schedule</h3>
+                    <h4 class="time">4 30 PM</h4>
+                    <p>Industry members &amp; Guests arrival</p>
+                    <p>Student Portfolio Viewing</p>
+                    <h4>at Level 4 Labs</h4>
+                    <p>Culinary Delights &amp; Networking<br /></p>
+                    <h4>at The Chef&apos;s Table</h4>
 
-                  <h4 class="time">06 00 PM</h4>
-                  <p>Spotlight Presentations<br /></p>
-                  <h4>Foundation Inc. Theatre</h4>
-                </div>
+                    <h4 class="time">06 00 PM</h4>
+                    <p>Spotlight Presentations<br /></p>
+                    <h4>at Foundation Inc. Theatre</h4>
+                  </div>
 
-                <div class="event-detail-venue">
-                  <h3>Venue</h3>
-                  <p>
-                    137 Dundas St,<br />
-                    Fanshawe LDA Building,<br />
-                    London, ON <br />
-                    N6A 1E9
-                  </p>
+                  <div class="event-detail-venue">
+                    <h3>Venue</h3>
+                    <p>
+                      137 Dundas St,<br />
+                      Fanshawe LDA Building,<br />
+                      London, ON <br />
+                      N6A 1E9
+                    </p>
+                    <button class="buttonEvent">The Location</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -190,7 +169,7 @@
       </div>
       <!-- Date, run-down/itinerary, Venue -->
 
-      <div class="col-start-2 col-end-4 m-col-span-4" id="foundation-content">
+      <div class="col-span-full" id="foundation-content">
         <h2 class="hidden">Brothers in arms</h2>
         <div class="title-container">
           <div class="foundation-details">
@@ -205,9 +184,11 @@
             </div>
 
             <div class="foundation-details-container">
-              <h1 id="foundation-title">BROTHERS IN ARMS</h1>
+              <h2 id="foundation-title">
+                <span>BROTHERS</span>&nbsp;<span>IN ARMS</span>
+              </h2>
               <h3 id="foundation-subtitle">
-                Transforming Communities, Enhancing Lives
+                Transforming Communities,<wbr /> Enhancing Lives
               </h3>
 
               <p class="foundation-description">
@@ -222,7 +203,7 @@
       </div>
 
       <!-- The Crowning -->
-      <div class="m-col-span-4" id="crowning">
+      <div class="col-span-full m-col-span-4" id="crowning">
         <h2 class="hidden">The Crowning</h2>
         <div class="crowning-detail-container">
           <div class="crowning-content">
@@ -232,7 +213,7 @@
           <div class="crowning-wording">
             <p>
               This project by Level 4 students involves designing a marketing
-              campaign for the Srishti Foundation’s Brothers in Arms Memorial.
+              campaign for the Srishti Foundation's Brothers in Arms Memorial.
               The memorial honors Indian and Canadian WWI soldiers with a serene
               green space and stone memorial for reflection.
             </p>
@@ -240,27 +221,19 @@
         </div>
       </div>
 
-      <div id="finalist">
+      <div id="finalist" class="col-span-full">
         <h2 class="hidden">Finalists</h2>
         <div class="finalist-header">
-          <h2>Finalists</h2>
+          <h3>Finalists</h3>
         </div>
 
         <div class="finalist-display">
           <div class="finalist-image-container">
-            <div id="slider-container">
-              <div class="image-slider">
-                <img
-                  src="images/finalist-1.png"
-                  alt="finalist Portfolio 1"
-                  class="main-img"
-                />
-                <img
-                  src="images/finalist-bkgd2.png"
-                  alt="finalist Portfolio 2"
-                  class="main-img"
-                />
-              </div>
+            <div id="slider-container" class="image-slider">
+              <img
+                src="images/finalist-1.png"
+                alt="finalist Portfolio 1"
+                class="main-img" />
             </div>
 
             <div class="finalist-info">
@@ -268,21 +241,48 @@
                 <h3>Finalist 1</h3>
               </div>
               <div class="finalist-members">
-                Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine .
-                Keith Lie
-
-                <button type="submit">Check It Out</button>
+                <ul>
+                  <li>Connie KingYin Sham</li>
+                  <li>Mahaittidon Natchanon</li>
+                  <li>YiTing LaiElaine</li>
+                  <li>Keith Lie</li>
+                </ul>
               </div>
+              <button class="toLinkBtn" type="submit">Check It Out</button>
+            </div>
+          </div>
+
+          <div class="finalist-image-container">
+            <div id="slider-container-2" class="image-slider">
+              <img
+                src="images/finalist-bkgd2.png"
+                alt="finalist Portfolio 1"
+                class="main-img" />
+            </div>
+
+            <div class="finalist-info">
+              <div class="finalist-text">
+                <h3>Finalist 1</h3>
+              </div>
+              <div class="finalist-members">
+                <ul>
+                  <li>Connie KingYin Sham</li>
+                  <li>Mahaittidon Natchanon</li>
+                  <li>YiTing LaiElaine</li>
+                  <li>Keith Lie</li>
+                </ul>
+              </div>
+              <button class="toLinkBtn" type="submit">Check It Out</button>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Honorable Achiever -->
-      <div id="honorable-content">
+      <div id="honorable-content" class="col-span-full">
         <h2 class="hidden">Honorable</h2>
         <div class="honorable-content">
-          <h2>Honorable</h2>
+          <h3>Honorable</h3>
 
           <div class="honorable-container">
             <div class="honorable-box">
@@ -291,10 +291,12 @@
               <div class="team-info">
                 <div class="team-text">Team 1</div>
                 <div class="team-members">
-                  Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine
-                  . Keith Lie
+                  Connie KingYin Sham <br />
+                  Mahaittidon Natchanon <br />
+                  YiTing LaiElaine <br />
+                  Keith Lie
                 </div>
-                <button class="button">Check It Out</button>
+                <button class="toLinkBtn">Check It Out</button>
               </div>
             </div>
 
@@ -305,10 +307,12 @@
               <div class="team-info">
                 <div class="team-text">Team 2</div>
                 <div class="team-members">
-                  Connie KingYin Sham . Mahaittidon Natchanon . YiTing LaiElaine
-                  . Keith Lie
+                  Connie KingYin Sham <br />
+                  Mahaittidon Natchanon <br />
+                  YiTing LaiElaine <br />
+                  Keith Lie
                 </div>
-                <button class="button">Check It Out</button>
+                <button class="toLinkBtn">Check It Out</button>
               </div>
             </div>
           </div>
@@ -353,13 +357,13 @@
         </div>
       </div>
 
-      <!-- 5-Testimonial -->
+      <!-- Testimonial -->
       <div class="col-span-full" id="testimonial-container">
-        <h2 class="hidden">Testimonial</h2>
         <div class="testimonial-title">
           <h2>TESTIMONIALS</h2>
           <h3>FEEDBACK</h3>
         </div>
+        <h2 class="hidden">Testimonial</h2>
 
         <div class="testimonials">
           <div class="left-box">
@@ -367,17 +371,16 @@
               <div class="card-content">
                 <div class="circle-top"></div>
                 <p class="testimonial-text">
-                  1-Torem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nunc vulputate libero et velit interdum, ac aliquet odio
-                  mattis. Class aptent taciti sociosqu ad litora torquent per
-                  conubia nostra, per inceptos himenaeos.
+                  Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis.
+                  Class aptent taciti sociosqu ad litora torquent per conubia
+                  nostra, per inceptos himenaeos.
                 </p>
                 <div class="client-info">
                   <img
                     src=".//images/client-photo.png"
                     alt="Client Photo"
-                    class="client-photo"
-                  />
+                    class="client-photo" />
                   <div>
                     <p class="client-name">Client Name</p>
                     <p class="client-title">Title</p>
@@ -390,15 +393,14 @@
               <div class="card-content">
                 <div class="circle-top"></div>
                 <p class="testimonial-text">
-                  2-Worem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nunc vulputate libero et velit interdum.
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum.
                 </p>
                 <div class="client-info">
                   <img
                     src=".//images/client-photo.png"
                     alt="Client Photo"
-                    class="client-photo"
-                  />
+                    class="client-photo" />
                   <div>
                     <p class="client-name">Client Name</p>
                     <p class="client-title">Title</p>
@@ -413,15 +415,14 @@
               <div class="card-content">
                 <div class="circle-top"></div>
                 <p class="testimonial-text">
-                  3-Worem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nunc vulputate libero et velit interdum.
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum.
                 </p>
                 <div class="client-info">
                   <img
                     src=".//images/client-photo.png"
                     alt="Client Photo"
-                    class="client-photo"
-                  />
+                    class="client-photo" />
                   <div>
                     <p class="client-name">Client Name</p>
                     <p class="client-title">Title</p>
@@ -434,15 +435,14 @@
               <div class="card-content">
                 <div class="circle-top"></div>
                 <p class="testimonial-text">
-                  4-Worem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nunc vulputate libero et velit interdum.
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum.
                 </p>
                 <div class="client-info">
                   <img
                     src=".//images/client-photo.png"
                     alt="Client Photo"
-                    class="client-photo"
-                  />
+                    class="client-photo" />
                   <div>
                     <p class="client-name">Client Name</p>
                     <p class="client-title">Title</p>
@@ -457,15 +457,14 @@
               <div class="card-content">
                 <div class="circle-top"></div>
                 <p class="testimonial-text">
-                  5-Worem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nunc vulputate libero et velit interdum.
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum.
                 </p>
                 <div class="client-info">
                   <img
                     src=".//images/client-photo.png"
                     alt="Client Photo"
-                    class="client-photo"
-                  />
+                    class="client-photo" />
                   <div>
                     <p class="client-name">Client Name</p>
                     <p class="client-title">Title</p>
@@ -478,15 +477,14 @@
               <div class="card-content">
                 <div class="circle-top"></div>
                 <p class="testimonial-text">
-                  6-Worem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nunc vulputate libero et velit interdum.
+                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum.
                 </p>
                 <div class="client-info">
                   <img
                     src=".//images/client-photo.png"
                     alt="Client Photo"
-                    class="client-photo"
-                  />
+                    class="client-photo" />
                   <div>
                     <p class="client-name">Client Name</p>
                     <p class="client-title">Title</p>
@@ -496,108 +494,139 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- 6-Developer - CMYK -->
-        <div class="col-span-full" id="CMYK-developer">
-          <h2 class="hidden">DEVS</h2>
-
-          <div class="dev-content">
-            <h2 class="title">DEVS</h2>
-          </div>
-
+      <!-- 6-Developer - CMYK -->
+      <div class="col-span-full" id="CMYK-developer">
+        <h2 class="hidden">DEVS</h2>
+        <div class="dev-content">
+          <h2 class="title">DEVS</h2>
+        </div>
+        <div class="dev-name">
           <div class="three-circles">
-            <div class="white-circle">
-              <div class="letter">C</div>
-            </div>
-
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="name-section">
-              <p class="name">Connie KingYin Sham</p>
-              <p class="website">connie.ca</p>
-            </div>
-            <div class="dev-image">
-              <img src=".//images/dev-image.png" alt="developer image" />
-            </div>
+            <img src="images/Group 519.png" alt="" />
+          </div>
+          <div class="name-section">
+            <p class="name">Connie KingYin Sham</p>
+            <p class="website">connie.ca</p>
           </div>
         </div>
+        <div class="dev-image">
+          <img src="images/dev-image.png" alt="developer image" />
+        </div>
       </div>
+
       <!-- 7-Portfolio 72 students -->
-      <div class="col-span-full" id="72students-portfolio">
+      <div class="grid-con col" id="students-portfolio">
         <h2 class="hidden">All students portfolio</h2>
-        <div class="portfolio-content">
-          <div class="portfolio-content-text">
-            <h2>PORTFOILIOS</h2>
-            <div class="search-bar">
-              <input type="text" placeholder="Search" />
-              <button>Search</button>
-            </div>
+        <div class="portfolio-content-text">
+          <h2>PORTFOILIOS</h2>
+          <div class="search-bar">
+            <label for="searchPortfolio">Search</label>
+            <input type="text" />
           </div>
+        </div>
 
-          <div class="image-gallery">
-            <img src=".//images/image-gallery-1.png" alt="Portfolio Image 1" />
-            <img src=".//images/image-gallery-2.png" alt="Portfolio Image 2" />
-          </div>
+        <div class="image-gallery">
+          <img
+            id="portrait"
+            src=".//images/image-gallery-2.png"
+            alt="Portfolio Image 2" />
+          <img
+            id="hobby"
+            src=".//images/image-gallery-1.png"
+            alt="Portfolio Image 1" />
+        </div>
 
-          <div class="showroom">SHOWROOMS</div>
+        <div class="showroom">SHOWROOMS</div>
 
-          <div class="portfolio-list">
-            <p class="highlight">Corey Rosser</p>
-            <p>Jakob Vaccaro</p>
-            <p>Zain Septimus</p>
-            <p>Makenna Dunn</p>
-
-            <p>Alfonso Donin</p>
-            <p>Nolan Culhane</p>
-            <p>Justin Philips</p>
-            <p>Haylie Black</p>
-
-            <p>Terry Korsgaard</p>
-            <p>Omar Geidt</p>
-            <p>Kadin Levin</p>
-            <p>Zain Rhiel</p>
-
-            <p>Emerson Philips</p>
-            <p>Jakob Lubin</p>
-            <p>Ryan Gouse</p>
-            <p>Rayna Mark</p>
-
-            <p>Alfredo Siphron</p>
-            <p>Angel Rhiel Madsen</p>
-            <p>Cooper Schleifer</p>
-            <p>Jaydon Sanches</p>
-
-            <p>Corey Dokidis</p>
-            <p>Charlie Geidt</p>
-            <p>Jaydon Donin</p>
-            <p>Carter Clemons</p>
-
-            <p>Charlie Dias</p>
-            <p>Jaylon Philips</p>
-            <p>Terry Ekstrom Bothman</p>
-            <p>Cristofer Kane</p>
-
-            <p>Zaire Aminoff</p>
-            <p>Jaylon Franci</p>
-            <p>Davis Levin</p>
-            <p>Ruben Diaz</p>
-
-            <p>Brandon Levin</p>
-            <p>Cooper Torff</p>
-            <p>Leo Rhiel Madsen</p>
-            <p>Tiana Gomez</p>
-          </div>
+        <div class="portfolio-list">
+          <ul>
+            <li><a href="#">Corey Rosser</a></li>
+            <li><a href="#">Jakob Vaccaro</a></li>
+            <li><a href="#">Zain Septimus</a></li>
+            <li><a href="#">Makenna Dunn</a></li>
+            <li><a href="#">Alfonso Donin</a></li>
+            <li><a href="#">Nolan Culhane</a></li>
+            <li><a href="#">Justin Philips</a></li>
+            <li><a href="#">Haylie Black</a></li>
+            <li><a href="#">Terry Korsgaard</a></li>
+            <li><a href="#">Omar Geidt</a></li>
+            <li><a href="#">Kadin Levin</a></li>
+            <li><a href="#">Zain Rhiel</a></li>
+            <li><a href="#">Emerson Philips</a></li>
+            <li><a href="#">Jakob Lubin</a></li>
+            <li><a href="#">Ryan Gouse</a></li>
+            <li><a href="#">Rayna Mark</a></li>
+            <li><a href="#">Alfredo Siphron</a></li>
+            <li><a href="#">Angel Rhiel Madsen</a></li>
+            <li><a href="#">Cooper Schleifer</a></li>
+            <li><a href="#">Jaydon Sanches</a></li>
+            <li><a href="#">Corey Dokidis</a></li>
+            <li><a href="#">Charlie Geidt</a></li>
+            <li><a href="#">Jaydon Donin</a></li>
+            <li><a href="#">Carter Clemons</a></li>
+            <li><a href="#">Charlie Dias</a></li>
+            <li><a href="#">Jaylon Philips</a></li>
+            <li><a href="#">Terry Ekstrom Bothman</a></li>
+            <li><a href="#">Cristofer Kane</a></li>
+            <li><a href="#">Zaire Aminoff</a></li>
+            <li><a href="#">Jaylon Franci</a></li>
+            <li><a href="#">Davis Levin</a></li>
+            <li><a href="#">Ruben Diaz</a></li>
+            <li><a href="#">Brandon Levin</a></li>
+            <li><a href="#">Cooper Torff</a></li>
+            <li><a href="#">Leo Rhiel Madsen</a></li>
+            <li><a href="#">Tiana Gomez</a></li>
+            <li><a href="#">Milo Harrington</a></li>
+            <li><a href="#">Avery Boswell</a></li>
+            <li><a href="#">Phoebe Hartman</a></li>
+            <li><a href="#">Silas McClure</a></li>
+            <li><a href="#">Giselle Stokes</a></li>
+            <li><a href="#">Declan Vickers</a></li>
+            <li><a href="#">Jaxon Tremblay</a></li>
+            <li><a href="#">Alice Carr</a></li>
+            <li><a href="#">Elliot Whitman</a></li>
+            <li><a href="#">Eliza Monroe</a></li>
+            <li><a href="#">Felix Buckley</a></li>
+            <li><a href="#">Sophia Hawke</a></li>
+            <li><a href="#">Grayson Fenwick</a></li>
+            <li><a href="#">Isabella Crispin</a></li>
+            <li><a href="#">Lincoln Stafford</a></li>
+            <li><a href="#">Lydia Ashworth</a></li>
+            <li><a href="#">Oliver Breckenridge</a></li>
+            <li><a href="#">Vivian Eastwood</a></li>
+            <li><a href="#">Jasper Collier</a></li>
+            <li><a href="#">Harper Donnelly</a></li>
+            <li><a href="#">Gabriel Fitzpatrick</a></li>
+            <li><a href="#">Selena Hart</a></li>
+            <li><a href="#">Maxwell O'Connor</a></li>
+            <li><a href="#">Charlotte Payne</a></li>
+            <li><a href="#">Logan Brooks</a></li>
+            <li><a href="#">Amelia West</a></li>
+            <li><a href="#">Jackson Myers</a></li>
+            <li><a href="#">Hannah Steele</a></li>
+            <li><a href="#">Griffin Moore</a></li>
+            <li><a href="#">Zoey Alexander</a></li>
+            <li><a href="#">Wyatt Cook</a></li>
+            <li><a href="#">Mia Harris</a></li>
+            <li><a href="#">Carter Ellis</a></li>
+            <li><a href="#">Lila Hayes</a></li>
+            <li><a href="#">Caleb Fisher</a></li>
+            <li><a href="#">Ruby Morgan</a></li>
+          </ul>
         </div>
       </div>
 
-       <!-- 8-About IDP -->
+      <!-- 8-About IDP -->
 
-       <div class="grid-con" id="about-idp">
+      <div class="grid-con" id="about-idp">
         <h2 class="hidden">About IDP</h2>
-        <div class="about-idp-content col-span-full t-col-start-3 t-col-end-11 l-col-start-4 l-col-end-10">
+        <div
+          class="about-idp-content col-span-full t-col-start-1 t-col-end-13 l-col-start-4 l-col-end-10">
           <div class="about-idp-content-text">
             <h2>ABOUT US</h2>
-            <h1 class="fan-red">FANSHAWE <br>Interactive</h1>
+            <h3 class="fan-red">FANSHAWE <br />Interactive</h3>
             <p class="course-description">
               Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis. Class
@@ -608,106 +637,108 @@
           </div>
         </div>
       </div>
-          
-            <!--Services Section -->
-            <div class="services-container grid-con">
-              <div class="services-box col-span-full l-col-start-1 l-col-end-5">
-                <section class="hidden">We Design</section>
-                <h3>WE DESIGN</h3>
-                <img src=".//images/we-design.png" alt="We design" />
-                <p id="message_idp">
-                  Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum, ac aliquet odio mattis. Class
-                  aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                  inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-                  lobortis.
-                </p>
-              </div>
-            
-              <div class="services-box col-span-full l-col-start-5 l-col-end-9">
-                <section class="hidden">We Code</section>
-                <h3>WE CODE</h3>
-                <img src=".//images/we-code.png" alt="We code" />
-                <p id="message_idp">
-                  Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum, ac aliquet odio mattis. Class
-                  aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                  inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-                  lobortis.
-                </p>
-              </div>
-            
-              <div class="services-box col-span-full l-col-start-9 l-col-end-13">
-                <section class="hidden">We Build</section>
-                <h3>WE BUILD</h3>
-                <img src=".//images/we-build.png" alt="We build" />
-                <p id="message_idp">
-                  Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum, ac aliquet odio mattis. Class
-                  aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                  inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-                  lobortis.
-                </p>
-              </div>
-            </div>
-            
 
-              <!-- Services box- mobile version -->
-              <div class="services-container-m hidden grid-con">
-                  <div class="services-box-m col-span-full t-col-start-3 t-col-end-11">
-                    <section class="hidden">We Design</section>
-                    <img src=".//images/we-design-350.png" alt="We design" />
-                    <h3>WE DESIGN</h3>
-                    <p>Vorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Nunc vulputate libero et velit interdum, ac aliquet odio 
-                      mattis. Class aptent taciti sociosqu ad litora torquent per 
-                      conubia nostra, per inceptos himenaeos.</p>
-                  </div>
-
-                  <div class="services-box-m col-span-full t-col-start-3 t-col-end-11">
-                    <section class="hidden">We Code</section>
-                    <img src=".//images/we-code-350.png" alt="We code" />
-                    <h3>WE CODE</h3>
-                    <p>Vorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Nunc vulputate libero et velit interdum, ac aliquet odio 
-                      mattis. Class aptent taciti sociosqu ad litora torquent per 
-                      conubia nostra, per inceptos himenaeos.</p>
-                  </div>
-
-                  <div class="services-box-m col-span-full t-col-start-3 t-col-end-11">
-                    <section class="hidden">We Build</section>
-                    <img src=".//images/we-build-350.png" alt="We build" />
-                    <h3>WE BUILD</h3>
-                    <p>Vorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Nunc vulputate libero et velit interdum, ac aliquet odio 
-                      mattis. Class aptent taciti sociosqu ad litora torquent per 
-                      conubia nostra, per inceptos himenaeos.</p>
-                  </div>
-              </div>
-
-          
-
-          <div class="grid-con" id="idp-description">
-            <h3 class="col-span-full t-col-start-3 t-col-end-11 l-col-start-4 l-col-end-10">
-              Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis. Class
-              aptent taciti sociosqu ad litora torquent per conubia nostra, per
-              inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-              lobortis. Ut commodo efficitur neque.
-            </h3>
-
-          <div class="col-start-2 col-end-4 t-col-start-5 t-col-end-9 l-col-start-7 l-col-end-10" id="idp-signature">
-            <img src="images/idp-signature.png" alt="idp signature"/>
-            <h3>Marco Deluca</h3>
-            <h4 class="fan-red">PROGRAME COORDINATOR</h4>
-          </div>
-
-          <div class="col-span-full" id="idp-weblink">
-            <a href="https://www.fanshawec.ca/programs/idp3-interactive-media-design/next">
-                <button type="submit">Explore More</button>
-            </a>
+      <!--Services Section -->
+      <div class="services-container grid-con">
+        <div class="services-box col-span-full l-col-start-1 l-col-end-5">
+          <h3>WE DESIGN</h3>
+          <p id="message_idp-1">
+            Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+            lobortis.
+          </p>
+          <img src="images/we-design.png" alt="We design" />
         </div>
-        
+
+        <div class="services-box col-span-full l-col-start-5 l-col-end-9">
+          <h3>WE CODE</h3>
+          <p id="message_idp-2">
+            Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+            lobortis.
+          </p>
+          <img src="images/we-code.png" alt="We code" />
+        </div>
+
+        <div class="services-box col-span-full l-col-start-9 l-col-end-13">
+          <section class="hidden">We Build</section>
+          <h3>WE BUILD</h3>
+          <p id="message_idp-3">
+            Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+            lobortis.
+          </p>
+          <img src="images/we-build.png" alt="We build" />
+        </div>
+      </div>
+
+      <!-- Services box- mobile version -->
+      <div class="services-container-m hidden grid-con">
+        <div class="services-box-m col-span-full t-col-start-2 t-col-end-8">
+          <img src=".//images/we-design-350.png" alt="We design" />
+          <h3>WE DESIGN</h3>
+          <p>
+            Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+          </p>
+        </div>
+
+        <div class="services-box-m col-span-full t-col-start-2 t-col-end-8">
+          <section class="hidden">We Code</section>
+          <img src=".//images/we-code-350.png" alt="We code" />
+          <h3>WE CODE</h3>
+          <p>
+            Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+          </p>
+        </div>
+
+        <div class="services-box-m col-span-full t-col-start-2 t-col-end-8">
+          <section class="hidden">We Build</section>
+          <img src=".//images/we-build-350.png" alt="We build" />
+          <h3>WE BUILD</h3>
+          <p>
+            Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-con" id="idp-description">
+        <p
+          class="col-span-full t-col-start-2 t-col-end-8 l-col-start-4 l-col-end-10">
+          Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          vulputate libero et velit interdum, ac aliquet odio mattis. Class
+          aptent taciti sociosqu ad litora torquent per conubia nostra, per
+          inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+          lobortis. Ut commodo efficitur neque.
+        </p>
+
+        <div
+          class="col-start-2 col-end-4 t-col-start-5 t-col-end-8 l-col-start-7 l-col-end-10"
+          id="idp-signature">
+          <img src="images/idp-signature.png" alt="idp signature" />
+          <h3>Marco Deluca</h3>
+          <h4 class="fan-red">PROGRAME COORDINATOR</h4>
+        </div>
+
+        <div class="col-span-full" id="idp-weblink">
+          <a
+            href="https://www.fanshawec.ca/programs/idp3-interactive-media-design/next">
+            <button type="submit">Explore More</button>
+          </a>
         </div>
       </div>
     </main>
@@ -715,55 +746,53 @@
     <footer class="footer row">
       <div id="footer-logo">
         <a href="https://www.fanshawec.ca/">
-          <img src="./images/fanshawe_icon_footer.png" alt="Fanshawe Logo">
+          <img src="./images/fanshawe_icon_footer.png" alt="Fanshawe Logo" />
         </a>
       </div>
 
       <div class="social-media">
-        <a href="https://www.instagram.com/fanshawecollege/?hl=en"> 
-          <img src="./images/instagram_icon.png" atl="Fanshawe Instagram">
+        <a href="https://www.instagram.com/fanshawecollege/?hl=en">
+          <img src="./images/instagram_icon.png" atl="Fanshawe Instagram" />
         </a>
 
-        <a href="https://www.youtube.com/myfanshawe"> 
-          <img src="./images/youtube_icon.png" atl="Fanshawe youtube">
+        <a href="https://www.youtube.com/myfanshawe">
+          <img src="./images/youtube_icon.png" atl="Fanshawe youtube" />
         </a>
 
-        <a href="https://www.facebook.com/FanshaweCollege/"> 
-          <img src="./images/facebook_icon.png" atl="Fanshawe Facebook">
+        <a href="https://www.facebook.com/FanshaweCollege/">
+          <img src="./images/facebook_icon.png" atl="Fanshawe Facebook" />
         </a>
       </div>
 
-      <div >
+      <div>
         <p>&copy;2024 Fanshawe College</p>
       </div>
-
     </footer>
 
     <footer class="footer-m grid-con">
       <div id="footer-logo" class="col-span-full">
         <a href="https://www.fanshawec.ca/">
-          <img src="./images/fanshawe_icon_footer.png" alt="Fanshawe Logo">
+          <img src="./images/fanshawe_icon_footer.png" alt="Fanshawe Logo" />
         </a>
       </div>
 
       <div class="social-media-m col-span-full">
-        <a href="https://www.instagram.com/fanshawecollege/?hl=en"> 
-          <img src="./images/instagram_icon.png" atl="Fanshawe Instagram">
+        <a href="https://www.instagram.com/fanshawecollege/?hl=en">
+          <img src="./images/instagram_icon.png" atl="Fanshawe Instagram" />
         </a>
 
-        <a href="https://www.youtube.com/myfanshawe"> 
-          <img src="./images/youtube_icon.png" atl="Fanshawe youtube">
+        <a href="https://www.youtube.com/myfanshawe">
+          <img src="./images/youtube_icon.png" atl="Fanshawe youtube" />
         </a>
 
-        <a href="https://www.facebook.com/FanshaweCollege/"> 
-          <img src="./images/facebook_icon.png" atl="Fanshawe Facebook">
+        <a href="https://www.facebook.com/FanshaweCollege/">
+          <img src="./images/facebook_icon.png" atl="Fanshawe Facebook" />
         </a>
       </div>
 
       <div class="col-span-full">
         <p>&copy;2024 Fanshawe College</p>
       </div>
-
     </footer>
 
     <script src="js/main.js"></script>
