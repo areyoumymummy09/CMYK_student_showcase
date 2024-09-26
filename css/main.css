@@ -1267,22 +1267,26 @@ button {
 footer {
   background-color: #e2231a;
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 5rem;
+  display: flex;
+  height: 200px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #footer-logo img {
-  height: 3rem;
+  height: 4rem;
 }
 
 .social-media a,
 .social-media-m a {
   text-decoration: none;
+  margin-left: 20px;
 }
 
 .social-media img,
 .social-media-m img {
-  height: 1.2rem;
+  height: 1.5rem;
   margin: 15px;
 }
 
@@ -1299,16 +1303,8 @@ footer p {
 
 @media (max-width: 768px) {
   .footer {
-    display: none;
-  }
-
-  .footer-m {
     gap: 20px;
     align-items: center;
-  }
-
-  .footer-m p {
-    font-size: 0.5;
   }
 }
 
@@ -2045,5 +2041,19 @@ footer p {
     width: 80%;
     align-self: center;
     text-align: center;
+  }
+
+  /* Mobile - Footer */
+
+  .footer {
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-media-m a {
+    margin-left: 0;
   }
 }
