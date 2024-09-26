@@ -42,10 +42,21 @@ function closeBurger() {
   burgerMenu.textContent = "Menu";
 }
 
+function adjustNavBar() {
+  if (window.innerWidth > 700) {
+    navBar.style.transform = "translateX(0)";
+  } else {
+    navBar.style.transform = "translateX(-100vw)";
+  }
+  burgerMenu.textContent = "Menu";
+}
+
 video.addEventListener("click", playNpause);
 window.addEventListener("load", updateVideoPoster);
 window.addEventListener("resize", updateVideoPoster);
 window.addEventListener("scroll", closeBurger);
+window.addEventListener("resize", adjustNavBar);
+adjustNavBar();
 burgerMenu.addEventListener("click", openBurger);
 
 //portfoliio//
