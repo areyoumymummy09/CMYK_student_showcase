@@ -75,7 +75,7 @@ html {
   grid-column-end: 5;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 432px) {
   .grid-con {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
