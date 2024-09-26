@@ -1127,7 +1127,7 @@ button {
   .services-container-m {
     display: none;
   }
-}
+
 
 .services-box {
   margin: 0 20px;
@@ -1160,7 +1160,7 @@ button {
 
 .services-box img:hover {
   filter: opacity(0);
-}
+}}
 
 .services-box img,
 .services-box-m img {
