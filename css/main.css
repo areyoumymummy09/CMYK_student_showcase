@@ -164,7 +164,14 @@ button {
   font-family: "GothamLight";
   font-size: 1rem;
   color: #1a1a1a;
+  transition: color 0.3s ease;
 }
+
+#navbar li a:hover {
+  color: #e2231a;
+  font-weight: bold;
+}
+
 
 #navBtn {
   width: 125px;
@@ -1248,7 +1255,7 @@ button {
   padding-bottom: 50px;
 }
 
-#idp-weblink button {
+#idp-weblink {
   padding: 10px 15px;
   justify-content: center;
   align-items: center;
@@ -1260,7 +1267,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-#idp-weblink button:hover {
+#idp-weblink:hover {
   background-color: #646469;
   color: white;
 }
@@ -1647,6 +1654,12 @@ footer p {
     display: flex;
     justify-content: end;
     z-index: 11;
+  }
+
+  #menuMobile:hover {
+    font-size: 1.5rem;
+    color: #e2231a;
+    
   }
 
   #navbar {
