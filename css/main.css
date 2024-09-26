@@ -800,7 +800,8 @@ button {
 }
 
 .gallery-content img {
-  size-adjust: 120%;
+  width: 100%;
+  height: auto;
 }
 
 /*Testmonials*/
@@ -1244,7 +1245,7 @@ button {
 
 @media (max-width: 768px) {
   #idp-signature {
-    text-align: centre;
+    text-align: center;
   }
 }
 
@@ -1513,8 +1514,7 @@ footer p {
   /* Tablet - Gallery Section */
   .top-row,
   .down-row {
-    scale: 1.1;
-    transform: rotate(0);
+    transform: scale(1.1) rotate(0);
   }
 
   .down-row {
@@ -2025,7 +2025,7 @@ footer p {
   .image-gallery {
     grid-column-start: 1;
     grid-column-end: 13;
-    justify-content: space;
+    justify-content: space-between;
     margin-top: 10px;
   }
 
