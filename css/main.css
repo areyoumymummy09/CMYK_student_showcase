@@ -1615,7 +1615,7 @@ footer p {
 
 /* Mobile Screen */
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 432px) {
   /* Header Section */
   #header {
   }
