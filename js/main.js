@@ -2,7 +2,6 @@ console.log("Javascript Linked!");
 
 //Plyr video player//
 const player = new Plyr("video");
-
 const videoBox = document.getElementById("IndVideoBox");
 const video = document.getElementById("indVideo");
 const burgerMenu = document.getElementById("menuMobile");
