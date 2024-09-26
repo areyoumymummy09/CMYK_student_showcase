@@ -451,9 +451,11 @@ button {
 }
 
 /*Coorperation objective*/
+
 .title-container {
+  display: block;
   height: 100vh;
-  background-image: url("/images/Srishti_Foundation_Section.png");
+  background-image: url("../images/Srishti_Foundation_Section.png");
   background-size: cover;
   background-position: center;
 }
