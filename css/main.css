@@ -304,6 +304,7 @@ button {
   margin: 0;
   padding: 5rem 0 0 0;
 }
+
 .industry-night-text {
   padding: 20px;
   color: white;
@@ -314,6 +315,11 @@ button {
   margin-left: 10%;
   margin-top: 3%;
   width: 80%;
+}
+
+#opportunity-ins h3,
+#network-ins h3 {
+  text-align: center;
 }
 
 /*Industry night text*/
@@ -475,7 +481,7 @@ button {
 #objective h3 {
   font-family: "GothamBook";
   font-size: 1rem;
-  color: black;
+  color: white;
 }
 
 .foundation-details-container {
