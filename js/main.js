@@ -38,8 +38,10 @@ function openBurger() {
 }
 
 function closeBurger() {
-  navBar.style.transform = "translateX(-100vw)";
-  burgerMenu.textContent = "Menu";
+  if (window.innerWidth <= 432) {
+    navBar.style.transform = "translateX(-100vw)";
+    burgerMenu.textContent = "Menu";
+  }
 }
 
 function adjustNavBar() {
