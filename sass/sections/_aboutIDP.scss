@@ -1,0 +1,232 @@
+@use "../abstracts" as a;
+@use "../components" as b;
+@use "../base/" as c;
+@use "../base/typography" as t;
+
+#about_idp_section {
+  padding-top: 96px;
+}
+
+#about_idp_intro {
+  grid-column-start: 4;
+  text-align: center;
+
+  h2 {
+    margin-top: 48px;
+    text-transform: uppercase;
+    font-family: a.$voltune-font;
+    font-size: 8rem;
+    font-weight: 400;
+    line-height: 1;
+    color: a.$sec-red;
+  }
+
+  p {
+    margin: 24px 0;
+  }
+}
+
+.section_subname {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: a.$black;
+}
+
+#idp_card_box {
+  width: 100%;
+  margin-top: 36px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.idp_card {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  flex: 0 0 30%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 36px;
+    background-color: rebeccapurple;
+  }
+
+  h3 {
+    font: a.$voltune;
+    margin: 36px 0;
+    text-align: center;
+    display: none;
+  }
+
+  p {
+    text-align: center;
+    display: none;
+  }
+}
+
+#idp_text_lightbox {
+  display: grid;
+  place-items: center;
+  color: a.$white;
+  padding: 48px 48px;
+  position: absolute;
+  background-color: red;
+  width: 70vw;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: a.$box-shadow;
+  text-align: center;
+
+  h3 {
+    font: a.$voltune;
+    margin-bottom: 24px;
+  }
+}
+
+#idp_letter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column-start: 3;
+  margin-top: 96px;
+
+  blockquote {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  a {
+    margin: 24px 0 48px 0;
+    text-align: center;
+    width: 200px;
+    padding: 15px;
+  }
+}
+
+#prof_cite {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  margin-left: auto;
+  span {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 16px;
+  }
+  cite {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+  p {
+    font-family: a.$voltune-font;
+    font-size: 1.5rem;
+    color: a.$sec-red;
+  }
+}
+
+// !Tablet Screen
+@media screen and (max-width: 768px) {
+  #about_idp_intro {
+    grid-column-start: 2;
+  }
+
+  #idp_card_box {
+    flex-direction: column;
+    grid-column-start: 2;
+    display: block;
+  }
+
+  .idp_card {
+    flex-direction: column;
+    flex: none;
+    height: 500px;
+    margin-bottom: 50px;
+
+    h3 {
+      display: block;
+    }
+
+    p {
+      display: block;
+    }
+  }
+
+  #idp_letter {
+    grid-column-start: 2;
+
+    blockquote {
+      font-size: 1.5rem;
+    }
+
+    a {
+      margin: 96px 0 48px 0;
+      text-align: center;
+      width: 200px;
+      padding: 15px;
+    }
+  }
+
+  .section_subname {
+    writing-mode: unset;
+    position: unset;
+  }
+
+  #idp_text_lightbox {
+    display: none;
+  }
+
+  #prof_cite {
+    margin-top: 48px;
+    margin-left: 0;
+    align-items: center;
+    span {
+      width: 200px;
+      height: 30px;
+      margin-bottom: 24px;
+    }
+    cite {
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+// !Mobile Scree
+@media screen and (max-width: 414px) {
+  #about_idp_intro {
+    grid-column-start: 1;
+  }
+
+  .section_subname {
+    display: block;
+  }
+
+  #idp_card_box {
+    grid-column-start: 1;
+  }
+
+  .idp_card {
+    height: 420px;
+    margin-bottom: 50px;
+
+    h3 {
+      margin: 24px 0;
+    }
+  }
+
+  #idp_letter {
+    grid-column-start: 1;
+
+    blockquote {
+      font-size: 1.35;
+    }
+  }
+}

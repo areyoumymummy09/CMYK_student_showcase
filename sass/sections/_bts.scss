@@ -1,0 +1,64 @@
+@use "../abstracts" as a;
+@use "../components" as b;
+@use "../base/" as c;
+@use "../base/typography" as t;
+
+#bts_section {
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+#bts_gallery-a,
+#bts_gallery-b {
+  width: 150%;
+  transform: translateX(-100px);
+}
+
+#bts_gallery-a {
+  margin-top: 48px;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  gap: 16px;
+  margin: 0 auto;
+
+  li {
+    width: 350px;
+    height: 250px;
+    background-color: pink;
+    flex: 0 0 auto;
+    border-radius: 24px;
+  }
+}
+
+.gallery li:nth-child(odd) {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    height: 40vh;
+    li {
+      width: 300px;
+      height: 250px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #bts_section {
+    height: 40vh;
+    margin-bottom: 48px;
+  }
+
+  #bts_gallery-b {
+    display: none;
+  }
+}
