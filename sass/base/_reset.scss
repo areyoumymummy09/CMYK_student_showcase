@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1.5;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+li {
+  all: unset;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  display: inline-block;
+  text-align: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea,
+select {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

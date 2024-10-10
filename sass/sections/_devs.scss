@@ -1,0 +1,146 @@
+@use "../abstracts" as a;
+@use "../components" as b;
+@use "../base/" as c;
+@use "../base/typography" as t;
+
+#developer_section {
+  height: auto;
+  background-color: a.$black;
+}
+
+#developer_title {
+  grid-column-start: 2;
+
+  .section_name {
+    font-size: 6rem;
+    color: a.$white;
+  }
+}
+
+#dev_container {
+  display: flex;
+  grid-column-start: 2;
+}
+
+#dev_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  align-self: flex-start;
+  p,
+  a,
+  span {
+    color: a.$white;
+  }
+
+  p {
+    font-size: 2.25rem;
+  }
+
+  a {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  span {
+    font-size: 24px;
+    font-weight: 600;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(100%);
+  }
+}
+
+#cmyk_wheel {
+  width: 120px;
+  position: relative;
+  margin-right: 24px;
+}
+
+#dev_img {
+  width: 400px;
+  height: 300px;
+  background-color: grey;
+  grid-row: span 2;
+  align-self: center;
+  border-radius: 150px;
+  margin: 24px;
+}
+
+// !Tablet Screen
+@media screen and (max-width: 768px) {
+  #developer_title {
+    grid-column-start: 1;
+    padding-left: 24px;
+
+    .section_name {
+      font-size: 4rem;
+    }
+  }
+
+  #dev_img {
+    width: 300px;
+    height: 210px;
+    justify-self: end;
+    grid-row: span 2;
+  }
+
+  #dev_container {
+    padding: 24px;
+    grid-column: span 3;
+  }
+
+  #dev_box {
+    top: -36px;
+    left: 24px;
+    p {
+      font-size: 1.45rem;
+    }
+    a {
+      font-size: 1rem;
+    }
+    span {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #developer_title {
+    height: auto;
+    padding: 8px 16px;
+    .section_name {
+      font-size: 3rem;
+    }
+  }
+
+  #dev_img {
+    margin: 16px;
+    width: 160px;
+    height: 120px;
+    justify-self: end;
+    grid-row: span 1;
+  }
+
+  #dev_container {
+    grid-column: span 4;
+  }
+
+  #dev_box {
+    p {
+      font-size: 1.45rem;
+    }
+    a {
+      font-size: 1rem;
+    }
+    span {
+      font-size: 13px;
+    }
+  }
+
+  #cmyk_wheel {
+    width: 60px;
+  }
+}
