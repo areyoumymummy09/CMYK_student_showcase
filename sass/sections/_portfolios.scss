@@ -38,8 +38,10 @@
   input {
     width: 100%;
     height: 2rem;
+    padding: 0 8px;
     margin-left: 8px;
-    background-color: rgba(#333, 0.05);
+    background-color: #ccc;
+    box-shadow: inset 1px 3px 4px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -49,36 +51,50 @@
   justify-content: center;
 
   #student_portrait {
+    visibility: hidden;
     width: 200px;
     height: 100px;
     background-color: pink;
-  }
 
-  #student_abstract_image {
-    width: 400px;
-    height: 100px;
-    background-color: beige;
+    img {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+#student_abstract_image {
+  visibility: hidden;
+  width: 400px;
+  height: 100px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 #student_list {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   margin: 96px 0;
-
   grid-column-start: 3;
   width: 150%;
   height: 500px;
   column-gap: 16px;
-  row-gap: 32px;
+  row-gap: 24px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
 
-  li {
-    width: 200px;
-    text-wrap: nowrap;
-    font-size: 2rem;
-    transition: a.$normal-trans;
-  }
+#student_list li {
+  width: 420px;
+  white-space: nowrap;
+  font-size: 2rem;
+  transition: all 0.3s ease;
 }
 
 #student_list li:hover {
@@ -105,26 +121,23 @@
     #student_portrait {
       width: 200px;
       height: 100px;
-      background-color: pink;
     }
 
     #student_abstract_image {
       width: 400px;
       height: 100px;
-      background-color: beige;
     }
   }
 
   #student_list {
-    display: flex;
-    flex-direction: column;
+    grid-column-start: 3;
+    height: 500px;
     flex-wrap: nowrap;
-    grid-column-start: 4;
     row-gap: 16px;
+    margin-top: 24px;
 
     li {
-      width: 200px;
-      text-wrap: nowrap;
+      width: 500px;
       font-size: 2rem;
       transition: a.$normal-trans;
     }

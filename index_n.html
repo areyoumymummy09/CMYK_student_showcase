@@ -374,24 +374,7 @@
           <span class="section_subname">Feedback</span>
         </div>
 
-        <div id="testimonial_box">
-          <!-- to JS -->
-          <div class="testimonial_card">
-            <img class="company_logo" src="#" alt="" />
-            <blockquote class="testimonial-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at
-              minima dolor expedita repellendus id fugiat est sunt tenetur
-              voluptates!
-            </blockquote>
-            <div class="client_details">
-              <img class="client_image" src="#" alt="" />
-              <div class="cite">
-                <cite class="client_name">Jack Ma</cite>
-                <span class="company_name">CEO, Spritelines</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="testimonial_box"></div>
       </div>
     </section>
 
@@ -413,7 +396,7 @@
               draggable="false" /><span id="alphabet">C</span>
           </div>
           <div id="dev_name_and_portfolio">
-            <p id="dev_name">Connie KingYin Sham</p>
+            <p id="dev_name">Connie Sham</p>
             <a href="#">connie.ca</a>
           </div>
         </div>
@@ -431,13 +414,15 @@
         <input id="search_portfolio" name="search" type="search" />
       </div>
       <div id="student_preview" class="col-span-6 t-col-span-4">
-        <div id="student_portrait"></div>
-        <div id="student_abstract_image"></div>
+        <div id="student_portrait">
+          <img id="portrait_img" src="#" alt="Student Portrait" />
+        </div>
+        <div id="student_abstract_image">
+          <img id="abstract_image" src="#" alt="Student Portrait" />
+        </div>
       </div>
 
-      <ul id="student_list" class="col-span-10 t-col-span-3 m-col-span-2">
-        <li class="student"><a href="#"></a></li>
-      </ul>
+      <ul id="student_list" class="col-span-10 t-col-span-3 m-col-span-2"></ul>
     </section>
 
     <section id="about_idp_section">
@@ -457,18 +442,9 @@
 
         <div id="idp_card_box" class="col-span-full t-col-span-4">
           <!-- !Need JS and cut it off -->
-          <div id="idp_text_lightbox">
-            <h3>We Design</h3>
-            <p>
-              Our program emphasizes graphic, motion, and video design,
-              empowering you to craft visually captivating multimedia content
-              that resonates with audiences. You'll gain proficiency in
-              industry-standard tools to create engaging designs that
-              communicate powerful messages.
-            </p>
-          </div>
+          <div id="idp_text_lightbox"></div>
           <div id="idp_design" class="idp_card">
-            <img src="#" alt="" />
+            <img src="../images/about_idp_1.gif" alt="" />
             <h3>We Design</h3>
             <p
               class="idp_text"
@@ -482,7 +458,7 @@
             </p>
           </div>
           <div id="idp_code" class="idp_card">
-            <img src="#" alt="" />
+            <img src="../images/about_idp_2.gif" alt="" />
             <h3>We Code</h3>
             <p
               class="idp_text"
@@ -495,7 +471,7 @@
             </p>
           </div>
           <div id="idp_build" class="idp_card">
-            <img src="#" alt="" />
+            <img src="../images/about_idp_3.gif" alt="" />
             <h3>We Build</h3>
             <p
               class="idp_text"
