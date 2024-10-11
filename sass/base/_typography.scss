@@ -1,0 +1,52 @@
+@use "../abstracts/fonts" as f;
+@use "../abstracts/variables" as v;
+
+* {
+  font-family: "Montserrat";
+}
+
+p {
+  font: v.$normal-body-text;
+}
+
+h1 {
+}
+
+.section_name {
+  font-family: v.$voltune-font;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.section_subname {
+  display: block;
+}
+
+// Tablet Screen
+@media screen and (max-width: 768px) {
+  .section_subname {
+    font-size: 0.8rem;
+    position: absolute;
+    left: 0;
+    padding-left: 16px;
+    writing-mode: vertical-lr;
+  }
+
+  .section_name {
+    font-size: 3rem;
+  }
+}
+
+// Mobile Screen
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 14px;
+  }
+  .section_subname {
+    display: none;
+  }
+
+  .section_name {
+    font-size: 1.5rem;
+  }
+}
