@@ -46,12 +46,14 @@
   flex-direction: row;
   height: 400px;
   flex: 0 0 30%;
-
+  border-radius: 24px;
+  background: #e0e0e0;
+  box-shadow: -14px 14px 38px #d9d9d9, 14px -14px 38px #e7e7e7;
   img {
     width: 100%;
     height: 100%;
-    border-radius: 36px;
-    background-color: rebeccapurple;
+    border-radius: 24px;
+    object-fit: cover;
   }
 
   h3 {
@@ -68,24 +70,37 @@
 }
 
 #idp_text_lightbox {
+  visibility: hidden;
   display: grid;
+  width: 70vw;
   place-items: center;
   color: a.$white;
+  margin: 40px auto;
   padding: 48px 48px;
   position: absolute;
-  background-color: red;
-  width: 70vw;
   height: auto;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: a.$box-shadow;
+  transform: translate(-50%, -65%);
   text-align: center;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  background-color: rgba(247, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: a.$box-shadow;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  z-index: 9999;
 
   h3 {
     font: a.$voltune;
     margin-bottom: 24px;
   }
+}
+
+#idp_text_lightbox.visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 #idp_letter {
@@ -139,14 +154,20 @@
   #idp_card_box {
     flex-direction: column;
     grid-column-start: 2;
-    display: block;
   }
 
   .idp_card {
     flex-direction: column;
     flex: none;
-    height: 500px;
+    height: auto;
     margin-bottom: 50px;
+    box-shadow: unset;
+    background-color: transparent;
+
+    img {
+      height: 250px;
+      box-shadow: -10px 10px 30px #d9d9d9, -10px 10px 30px #e7e7e7;
+    }
 
     h3 {
       display: block;
