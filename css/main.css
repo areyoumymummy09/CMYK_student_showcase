@@ -205,6 +205,7 @@ button {
   text-align: center;
   max-height: 100vh;
   padding: 5rem 0;
+  padding-bottom: 15%;
 }
 
 .hero-text-wrapper {
@@ -294,6 +295,42 @@ button {
   padding: 0;
   margin: 0;
 }
+.industry-night-video-text h2 {
+  color: #fff;
+  text-shadow: 1px 1px 15px #fff;
+  -webkit-text-stroke-width: 0.5;
+  -webkit-text-stroke-color: #fff;
+  font-family: VOLTUNE;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding-top: 5%;
+  letter-spacing: 0.4px;
+}
+.industry-night-video-text {
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(43, 43, 43, 0.98), black);
+  height: 100vh;
+  z-index: 2;
+}
+
+.industry-night-video-text p {
+  opacity: 1;
+  color: #fff;
+  font-size: large;
+  line-height: 10px;
+}
+.industry-night-video-text p:first-of-type {
+  padding-top: 100px;
+}
+
 .industry-night-details {
   background-image: url("/images/Group-523.png");
   background-color: #020202;
@@ -468,6 +505,7 @@ button {
   background-image: url("../images/Srishti_Foundation_Section.png");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 .subject-title-container {
   display: flex;
@@ -500,7 +538,18 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: felx-start;
+}
+
+.subject-title-container h2,
+.subject-title-container h3 {
+  position: relative;
+  opacity: 0; /* Initially hidden */
+}
+
+#cooperation h2,
+#objective h3 {
+  transform: translateY(50px); /* Starting point from bottom */
 }
 
 .foundation-details-container h2 {
@@ -595,13 +644,12 @@ button {
 /*Finalists slider*/
 
 #slider-container {
-  overflow-x: auto; /* Enables horizontal scrolling */
+  /* overflow-x: auto; Enables horizontal scrolling */
   position: relative;
   width: 100%; /* Full width of the parent container */
   max-width: 1440px; /* Max width for larger screens */
   height: auto;
   margin: 0 auto;
-  scroll-behavior: smooth; /* Smooth scrolling effect */
   white-space: nowrap; /* Prevent line breaks between images */
 }
 
@@ -610,6 +658,7 @@ button {
   flex-direction: row;
   justify-content: flex-start;
   width: auto;
+  overflow: hidden;
 }
 
 .main-img {
@@ -629,13 +678,13 @@ button {
 /*Finalist Text*/
 
 .finalist-display {
-  width: 100%;
+  width: 300%;
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .finalist-image-container {
-  width: 90%;
+  width: 33.33%;
   flex-shrink: 0;
 }
 
@@ -1382,6 +1431,7 @@ footer p {
   /* Tablet - Hero Section */
   .main-hero-text {
     height: 70vh;
+    padding-bottom: 20px;
   }
 
   .hero-title h1 {
