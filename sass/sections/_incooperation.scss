@@ -1,0 +1,131 @@
+@use "../abstracts" as a;
+@use "../components" as b;
+@use "../base/" as c;
+@use "../base/typography" as t;
+
+#cooperation_container {
+  position: relative;
+
+  #cooperation_container_img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+#cooperation_title {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding: 48px 24px;
+
+  h2 {
+    color: a.$white;
+  }
+
+  .section_subname {
+    color: a.$white;
+    text-transform: uppercase;
+    padding-right: 96px;
+  }
+}
+
+#cooperation_text {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: a.$white;
+  bottom: 0;
+  padding: 48px;
+  text-align: center;
+
+  h3 {
+    font: a.$voltune-h3;
+    font-size: 14rem;
+    line-height: 0.8;
+  }
+}
+
+#cooperation_text p:first-of-type {
+  font-size: 2.5rem;
+}
+
+#cooperation_text p:last-child {
+  width: 40%;
+  padding: 24px 48px 24px 0;
+  margin-left: auto;
+  text-align: left;
+}
+
+// !Tablet Screen
+@media screen and (max-width: 768px) {
+  #cooperation_title {
+    justify-content: center;
+
+    .section_subname {
+      position: absolute;
+      left: 0;
+      writing-mode: vertical-lr;
+      color: a.$white;
+      text-transform: uppercase;
+      padding-right: 96px;
+    }
+  }
+
+  #cooperation_text {
+    h3 {
+      font-size: 11rem;
+    }
+  }
+  #cooperation_text p:first-of-type {
+    font-size: 1.8rem;
+    text-wrap: nowrap;
+  }
+
+  #cooperation_text p:last-child {
+    width: 100%;
+    padding: 24px 48px 24px 0;
+    margin-left: auto;
+    text-align: center;
+  }
+}
+
+// !Mobile Screen
+@media screen and (max-width: 414px) {
+  #cooperation_title {
+    h2 {
+      font-size: 2rem;
+    }
+    .section_subname {
+      display: none;
+    }
+  }
+
+  #cooperation_text {
+    width: 100%;
+    height: 90%;
+    padding: 12px;
+    justify-content: space-around;
+    h3 {
+      font-size: 8rem;
+    }
+  }
+
+  #cooperation_text p:first-of-type {
+    margin-top: auto;
+    font-size: 1.5rem;
+    text-wrap: wrap;
+  }
+
+  #cooperation_text p:last-child {
+    padding: 28px;
+    font-size: 1rem;
+  }
+}

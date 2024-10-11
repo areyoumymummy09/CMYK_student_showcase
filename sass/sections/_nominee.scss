@@ -142,12 +142,21 @@
   border-radius: 24px;
 }
 
-// Tablet Screen
+// !Tablet Screen
 @media screen and (max-width: 768px) {
   #nominee_title {
+    justify-content: center;
     h2 {
       font-size: 5.5rem;
       margin-left: auto;
+    }
+    .section_subname {
+      position: absolute;
+      left: 0;
+      writing-mode: vertical-lr;
+      color: a.$black;
+      text-transform: uppercase;
+      padding-right: 96px;
     }
   }
 
@@ -195,6 +204,9 @@
     h2 {
       font-size: 4rem;
       margin: 0;
+    }
+    .section_subname {
+      display: none;
     }
   }
   #nominee_container {
