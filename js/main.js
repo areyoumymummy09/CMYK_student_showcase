@@ -1,21 +1,33 @@
 console.log("Javascript Linked!");
+// Initialize Lenis
+const lenis = new Lenis();
+
+// Listen for the scroll event and log the event data
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 //Scroll for sequence
-
+gsap.registerPlugin(ScrollTrigger);
 let tl = gsap.timeline({
   scrollTrigger: {
-    trigger: "#industry_night_container",
-    start: "top 50%",
-    end: "bottom 90%",
+    trigger: "#hero_desc_box",
+    start: "top 60%",
+    end: "bottom center",
     scrub: true,
-    onEnter: () => console.log("Entered scroll trigger area"), // Log when entering the area
-    onLeave: () => console.log("Left scroll trigger area"),
   },
 });
-console.log("GSAP Timeline created");
 
-tl.to("#industry_night_promo_video", {
-  y: 100,
+tl.to("#industry_night_container", {
+  y: -250,
 });
 
 gsap.fromTo(
@@ -25,10 +37,10 @@ gsap.fromTo(
     opacity: 1,
     ease: "power1.inOut",
     scrollTrigger: {
-      trigger: "#industry_night_promo_video_desc h2", // Trigger when h2 elements come into view
-      start: "top 90%", // Start the animation earlier
-      end: "bottom 30%", // Control how long the h2 animation lasts
-      scrub: true, // Smooth scroll
+      trigger: "#industry_night_promo_video_desc h2",
+      start: "top 90%",
+      end: "bottom 30%",
+      scrub: true,
     },
   }
 );
@@ -39,10 +51,10 @@ gsap.fromTo(
     opacity: 1,
     ease: "power1.inOut",
     scrollTrigger: {
-      trigger: "#industry_night_promo_video_desc p", // Trigger when p elements come into view
-      start: "top 90%", // Start the animation when p is 90% down from the top of the viewport (starts earlier)
-      end: "top 65%", // Control how long the p animation lasts
-      scrub: true, // Smooth scroll
+      trigger: "#industry_night_promo_video_desc p",
+      start: "top 90%",
+      end: "top 65%",
+      scrub: true,
     },
   }
 );
