@@ -149,7 +149,7 @@
     {
       portrait: "../images/student_1.webp",
       portfolio: "http://portolio.com/diego-rodriguez-ramos",
-      illustrate: "../images/i_student_1.jpg",
+      illustrate: "images/i_student_1.jpg",
       firstName: "Diego",
       lastName: "Rodriguez-Ramos",
     },
