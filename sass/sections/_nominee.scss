@@ -51,17 +51,29 @@
 #finalist_container {
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: row;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   gap: 0;
 }
 
+// #finalist_container {
+//   display: flex;
+//   flex-direction: row;
+//   width: 300%; /* adjust based on the number of teams */
+//   overflow: hidden;
+// }
+
 .finalist {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   flex: 0 0 90%;
-  width: 100%;
+  min-width: 100%;
 }
+
+// min-width: 100%; /* Ensures each finalist takes full width */
+// flex-shrink: 0;
 
 .finalist_image_review {
   height: 85%;
@@ -114,14 +126,18 @@
   display: flex;
   flex-wrap: nowrap;
   height: 100vh;
-  gap: 24px;
   overflow-x: hidden;
 }
 
+.honorable:last-child {
+  padding-right: 0; /* Remove gap from the last slide */
+}
+
 .honorable {
-  flex: 0 0 80%;
   display: flex;
   flex-direction: column;
+  min-width: 100%;
+  padding-right: 20px;
 
   .team_member {
     padding: 24px 0;
