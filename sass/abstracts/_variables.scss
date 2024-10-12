@@ -32,6 +32,7 @@ $normal-trans: all 0.2s ease-in;
   color: #fff;
   border-radius: 36px;
   background-color: $sec-red;
+  cursor: pointer;
 }
 
 .btn_style_2 {
@@ -39,11 +40,13 @@ $normal-trans: all 0.2s ease-in;
   color: $black;
   background-color: transparent;
   transition: $normal-trans;
+ 
 }
 
 .btn_style_2:hover {
   background-color: $black;
   color: $white;
+  cursor: pointer;
 }
 
 .btn_style_3 {
@@ -59,6 +62,7 @@ $normal-trans: all 0.2s ease-in;
   background-color: $white;
   box-shadow: $light-shadow;
   color: $black;
+  cursor: pointer;
 }
 
 .to_project_btn {
@@ -75,3 +79,4 @@ $normal-trans: all 0.2s ease-in;
   font-family: $voltune-font;
   font-weight: 400;
 }
+

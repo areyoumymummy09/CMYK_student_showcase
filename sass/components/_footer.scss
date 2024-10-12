@@ -27,6 +27,7 @@ footer {
 #footer_logo {
   display: grid;
   place-items: center;
+  cursor: pointer;
 
   img {
     width: 250px;
@@ -38,6 +39,7 @@ footer {
   font-size: 1.5rem;
   gap: 36px;
   color: a.$white;
+  cursor: pointer;
 }
 
 // !Tablet Screen

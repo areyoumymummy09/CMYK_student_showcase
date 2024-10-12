@@ -41,6 +41,7 @@
 
     a {
       transition: v.$normal-trans;
+      cursor: pointer;
     }
 
     a:hover {
@@ -52,6 +53,7 @@
     align-self: center;
     width: 180px;
     flex-shrink: 0;
+    cursor: pointer;
   }
 
   #booking {
@@ -128,6 +130,7 @@
     #burger_ic {
       display: block;
       transition: v.$normal-trans;
+      cursor: pointer;
     }
 
     #burger_ic:hover {

@@ -88,6 +88,7 @@
   row-gap: 24px;
   flex-wrap: wrap;
   overflow-y: scroll;
+  cursor: pointer;
 }
 
 #student_list li {
@@ -155,7 +156,5 @@
     grid-column-start: 2;
     margin: 48px 0;
 
-    li {
-    }
   }
 }
