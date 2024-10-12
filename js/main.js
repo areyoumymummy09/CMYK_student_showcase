@@ -26,10 +26,17 @@ let tl = gsap.timeline({
   },
 });
 
-tl.to("#industry_night_container", {
-  y: -250,
+tl.to("#industry_night_section", {
+  y: -100,
 });
-
+gsap.to("#next_section", {
+  scrollTrigger: {
+    trigger: "#industry_night_promo_video_desc",
+    start: "top bottom", // Ensure the following section starts scrolling when its top reaches the bottom of the viewport
+    end: "center top", // Ends when the top of the next section reaches the top of the viewport
+    scrub: true,
+  },
+});
 gsap.fromTo(
   "#industry_night_promo_video_desc h2",
   { opacity: 0 },
@@ -113,51 +120,37 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none", duration: 2 });
 
 // Scroll animation for each finalist team
-const timeline_2 = gsap.timeline({
+
+const finalists = document.querySelectorAll(".finalist");
+
+gsap.to(finalists, {
+  xPercent: -100 * (finalists.length - 1), // Move horizontally by 100% for each finalist
+  ease: "none",
   scrollTrigger: {
     trigger: "#finalist_container",
-    start: "top top",
-    scrub: true,
-    pin: true,
-    anticipatePin: 1,
-    markers: true,
+    pin: true, // Pin the finalist container while scrolling
+    scrub: 1, // Smooth scrolling
+    snap: 1 / (finalists.length - 1), // Snap to each finalist
+    end: () => "+=" + document.querySelector("#finalist_container").offsetWidth, // Unpin after the last finalist
   },
 });
-
-// Scroll each finalist horizontally as user scrolls
-timeline_2.to("#finalist_team_1", { xPercent: -100, ease: "none" });
-timeline_2.to("#finalist_team_2", { xPercent: -100, ease: "none" }, "<");
-timeline_2.to("#finalist_team_3", { xPercent: -100, ease: "none" }, "<");
-
 // Move the original background image inside each container
-timeline_2.to(
-  ".bg_showcase .showcase_img",
-  {
-    xPercent: -100,
-    ease: "none",
-  },
-  0
-);
 
 // Scroll animation for each honorable team
-const timeline_3 = gsap.timeline({
+
+const honorable = document.querySelectorAll(".honorable");
+
+gsap.to(honorable, {
+  xPercent: -100 * (honorable.length - 1), // Move horizontally by 100% for each finalist
+  ease: "none",
   scrollTrigger: {
     trigger: "#honorable_section",
-    start: "top top",
-    end: "+=1000",
-    scrub: true,
-    pin: true,
-    anticipatePin: 1,
-    markers: true,
+    pin: true, // Pin the finalist container while scrolling
+    scrub: 1, // Smooth scrolling
+    snap: 1 / (honorable.length - 1), // Snap to each finalist
+    end: () => "+=" + document.querySelector("#honorable_section").offsetWidth, // Unpin after the last finalist
   },
 });
-
-// Scroll each honorable team horizontally
-timeline_3.to("#honorable_team_1", { xPercent: -100, ease: "none" });
-timeline_3.to("#honorable_team_2", { xPercent: -100, ease: "none" }, "<");
-timeline_3.to("#honorable_team_3", { xPercent: -100, ease: "none" }, "<");
-timeline_3.to("#honorable_team_4", { xPercent: -100, ease: "none" }, "<");
-timeline_3.to("#honorable_team_6", { xPercent: -100, ease: "none" }, "<");
 
 //gallery
 gsap.registerPlugin(ScrollTrigger);
