@@ -29,6 +29,7 @@ let tl = gsap.timeline({
 tl.to("#industry_night_section", {
   y: -100,
 });
+
 gsap.to("#next_section", {
   scrollTrigger: {
     trigger: "#industry_night_promo_video_desc",
