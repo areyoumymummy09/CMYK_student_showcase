@@ -712,80 +712,80 @@
       company: "Wobble Enterprises",
       testimonial:
         "Working with the institute has been an absolute blast! The creativity and energy they bring to every project are unmatched. They really helped us step up our game, and the results speak for themselves. Wobble Enterprises will definitely partner with them again in the future.",
-      clientPortrait: "../images/client_1.webp",
-      companyLogo: "../images/company_1.png",
+      clientPortrait: "images/client_1.webp",
+      companyLogo: "images/company_1.png",
     },
     {
       name: "Sally Gigglesworth",
       company: "Laughology Ltd.",
       testimonial:
         "The team at the institute is amazing! Their professionalism combined with their innovative approach made the whole experience enjoyable. Our collaboration brought fresh ideas and laughter to the table, and we couldn’t be happier with the outcome.",
-      clientPortrait: "../images/client_2.webp",
-      companyLogo: "../images/company_2.png",
+      clientPortrait: "images/client_2.webp",
+      companyLogo: "images/company_2.png",
     },
     {
       name: "Chad Thundercat",
       company: "ZapZap Inc.",
       testimonial:
         "The institute brought the thunder to our project! Their unique ideas and ability to adapt to our fast-paced environment was truly impressive. We couldn’t have done it without them. ZapZap Inc. highly recommends their expertise!",
-      clientPortrait: "../images/client_3.webp",
-      companyLogo: "../images/company_3.png",
+      clientPortrait: "images/client_3.webp",
+      companyLogo: "images/company_3.png",
     },
     {
       name: "Milly Quackers",
       company: "DuckDuckDesigns",
       testimonial:
         "Partnering with the institute was one of the best decisions we’ve made. Their team is full of quack-tastic talent! They helped us take our designs to the next level, and the results were simply fantastic. We’ll be coming back for sure!",
-      clientPortrait: "../images/client_4.webp",
-      companyLogo: "../images/company_4.png",
+      clientPortrait: "images/client_4.webp",
+      companyLogo: "images/company_4.png",
     },
     {
       name: "Frankie Fizzlebop",
       company: "Bop and Beyond",
       testimonial:
         "What a bop working with the institute! They brought a burst of creativity and energy to our brand. The team was not only professional but also fun to work with. Their fresh approach helped us connect with our audience like never before.",
-      clientPortrait: "../images/client_5.webp",
-      companyLogo: "../images/company_5.png",
+      clientPortrait: "images/client_5.webp",
+      companyLogo: "images/company_5.png",
     },
     {
       name: "Luna Moonbeam",
       company: "Galactic Ventures",
       testimonial:
         "The institute took us on a creative journey that was out of this world! Their innovative solutions and visionary thinking helped us achieve something truly stellar. We’re beyond excited with the results and look forward to future collaborations.",
-      clientPortrait: "../images/client_6.webp",
-      companyLogo: "../images/company_6.png",
+      clientPortrait: "images/client_6.webp",
+      companyLogo: "images/company_6.png",
     },
     {
       name: "Timmy Toots",
       company: "WhistleWorks",
       testimonial:
         "WhistleWorks couldn’t be happier with the collaboration! The institute’s team was always on point and full of great ideas. Their creative process blew us away, and the final product was a breath of fresh air. Highly recommend their services!",
-      clientPortrait: "../images/client_7.webp",
-      companyLogo: "../images/company_7.png",
+      clientPortrait: "images/client_7.webp",
+      companyLogo: "images/company_7.png",
     },
     {
       name: "Penny Pizzazz",
       company: "SparkleCorp",
       testimonial:
         "The institute brought sparkle and shine to our project! Their team was incredibly creative and professional, and they delivered beyond our expectations. It was a pleasure to work with such a dynamic group of people. We’re excited for future projects!",
-      clientPortrait: "../images/client_8.webp",
-      companyLogo: "../images/company_8.png",
+      clientPortrait: "images/client_8.webp",
+      companyLogo: "images/company_8.png",
     },
     {
       name: "Fifi Fluffington",
       company: "CloudNine Creations",
       testimonial:
         "CloudNine Creations had a cloud-tastic experience working with the institute! Their creative approach was exactly what we needed to bring our ideas to life. The team was a delight to work with, and we couldn’t be happier with the results.",
-      clientPortrait: "../images/client_9.webp",
-      companyLogo: "../images/company_9.png",
+      clientPortrait: "images/client_9.webp",
+      companyLogo: "images/company_9.png",
     },
     {
       name: "Tommy Tickles",
       company: "JollyGood Industries",
       testimonial:
         "JollyGood Industries had an absolutely jolly time working with the institute! Their creativity and professionalism are second to none. They took our ideas and turned them into something extraordinary. We can’t wait to work together again!",
-      clientPortrait: "../images/client_10.webp",
-      companyLogo: "../images/company_10.png",
+      clientPortrait: "images/client_10.webp",
+      companyLogo: "images/company_10.png",
     },
   ];
 
@@ -838,28 +838,28 @@
 
   const devsData = [
     {
-      imgSrc: "../images/dev_1.jpg",
+      imgSrc: "images/dev_1.jpg",
       name: "Connie Sham",
       portfolioText: "connie.ca",
       portfolioLink: "https://connie.ca",
       spanText: "C",
     },
     {
-      imgSrc: "../images/dev_2.jpg",
+      imgSrc: "images/dev_2.jpg",
       name: "Nate Mahaittidon",
       portfolioText: "natem.com",
       portfolioLink: "https://natem.com",
       spanText: "M",
     },
     {
-      imgSrc: "../images/dev_3.jpg",
+      imgSrc: "images/dev_3.jpg",
       name: "Yi Ting Lai",
       portfolioText: "elaine.com",
       portfolioLink: "https://elaine.com",
       spanText: "Y",
     },
     {
-      imgSrc: "../images/dev_4.jpg",
+      imgSrc: "images/dev_4.jpg",
       name: "Keith Lie",
       portfolioText: "keithr.com",
       portfolioLink: "https://keithl.com",
