@@ -7,6 +7,23 @@
   const navBar = document.querySelector("#navbar > nav > ul");
   const studentList = document.querySelector("#student_list");
 
+  // * Resizing tracking for Tablet Screen size
+  const bookingBtn = document.querySelector("#booking");
+  const cta = document.querySelectorAll(".cta");
+  window.addEventListener("resize", () => {
+    const width = window.innerWidth;
+    if (width <= 768) {
+      // Header CTA, Industry night CTA
+      bookingBtn.innerHTML = "Ticket";
+      cta[2].innerHTML = "Ticket";
+      document.querySelector("#event_location_btn").innerHTML = "Location";
+    } else if (width > 768) {
+      bookingBtn.innerHTML = "Get a Ticket";
+      cta[2].innerHTML = "Get a Ticket";
+      document.querySelector("#event_location_btn").innerHTML = "The Location";
+    }
+  });
+
   // * Nominee Section Variables
   const toLinkBtn = document.querySelectorAll(".to_project_btn");
 

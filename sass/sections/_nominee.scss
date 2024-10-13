@@ -21,15 +21,16 @@
 
   h2 {
   }
-
   .section_subname {
     font-weight: 600;
     text-transform: uppercase;
     padding-right: 96px;
   }
 }
+
+// !Issue
 .nominee_award {
-  width: 100%;
+  width: 100;
   display: flex;
   justify-content: baseline;
   align-items: baseline;
