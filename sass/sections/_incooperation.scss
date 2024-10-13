@@ -7,11 +7,22 @@
   position: relative;
 
   #cooperation_container_img {
+    
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+
   }
 }
+
+// .title-container {
+//   display: block;
+//   height: 100vh;
+//   background-image: url("../images/Srishti_Foundation_Section.png");
+//   background-size: cover;
+//   background-position: center;
+//   background-attachment: fixed;
+// }
 
 #cooperation_title {
   width: 100%;
@@ -25,6 +36,7 @@
 
   h2 {
     color: a.$white;
+    
   }
 
   .section_subname {
