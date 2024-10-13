@@ -3,6 +3,13 @@
 @use "../base/" as c;
 @use "../base/typography" as t;
 
+
+#industry_night_section {
+  position: relative; /* Maintain document flow */
+  z-index: 1;         /* Ensure proper stacking */
+  transition: height 0.3s ease;
+}
+
 #industry_night_promo_video {
   position: relative;
   background-color: skyblue;
