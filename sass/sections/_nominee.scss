@@ -4,6 +4,7 @@
 @use "../base/typography" as t;
 
 #nominee_section {
+  border: 1px solid greenyellow;
   h3 {
     font-size: 5rem;
     text-align: left;
@@ -32,6 +33,7 @@
   width: 100%;
   display: flex;
   justify-content: baseline;
+  font-weight: 600;
   align-items: baseline;
   i {
     font-size: 5rem;
@@ -213,13 +215,13 @@
   }
 }
 
-// Mobile Screen
-@media screen and (max-width: 414px) {
+// !Mobile Screen
+@media screen and (max-width: 580px) {
   #nominee_title {
     justify-content: center;
     h2 {
-      font-size: 4rem;
-      margin: 0;
+      font-size: 6rem;
+      margin: 0 0 96px 0;
     }
     .section_subname {
       display: none;

@@ -52,6 +52,12 @@
     if (window.innerWidth <= 580) {
       navBar.style.transform = "translateX(-100vw)";
       burgerMenu.textContent = "Menu";
+      document.querySelector(
+        "#cooperation_text p:first-of-type"
+      ).innerHTML = `Transforming Communities, <br> Enhancing Lives`;
+      document.querySelector(
+        "#cooperation_text h3"
+      ).innerHTML = `Brother<br> in arms`;
     }
   }
 
@@ -66,14 +72,14 @@
     }
   }
 
-  function changeButton() {
-    if (window.innerWidth <= 414) {
-      toLinkBtn.forEach((e) => {
-        e.innerHTML = '<i class="fa-light fa-arrow-right"></i>';
-        e.style.padding = "0";
-        e.style.width = "50px";
-        e.style.height = "50px";
-      });
+  function changeETC() {
+    if (window.innerWidth <= 580) {
+      document.querySelector(
+        "#cooperation_text p:first-of-type"
+      ).innerHTML = `Transforming Communities, <br> Enhancing Lives`;
+      document.querySelector(
+        "#cooperation_text h3"
+      ).innerHTML = `Brother<br> in arms`;
     }
   }
 
@@ -150,7 +156,7 @@
   window.addEventListener("resize", adjustNavBar);
   window.addEventListener("resize", stopTextChange);
   window.addEventListener("resize", startTextChange);
-  window.addEventListener("resize", changeButton);
+  window.addEventListener("resize", changeETC);
 
   adjustNavBar();
   startTextChange();
