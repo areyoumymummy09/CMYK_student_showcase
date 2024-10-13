@@ -18,20 +18,16 @@ requestAnimationFrame(raf);
 //Scroll for sequence
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 gsap.to("#industry_night_section", {
   scrollTrigger: {
-    trigger: "#hero_desc_box",   
-    start: "top 60%",            
-    end: "bottom top",          
-    scrub: true,                
-    pin: true,                   
-    pinSpacing: false,   // Prevent extra space beneath the pinned element
-                
+    trigger: "#hero_desc_box",
+    start: "top 60%",
+    end: "bottom top",
+    scrub: true,
+    pin: true,
+    pinSpacing: false, // Prevent extra space beneath the pinned element
   },
 });
-
 
 gsap.to("#next_section", {
   scrollTrigger: {
@@ -95,14 +91,13 @@ gsap.registerPlugin(ScrollTrigger);
 // Create a timeline to synchronize the animations
 const timeline_1 = gsap.timeline({
   scrollTrigger: {
-    trigger: "#cooperation_title h2", 
-    start: "top center",              
-    end: "bottom 35%",                
-    scrub: true,                       
-    pin: true,               
+    trigger: "#cooperation_title h2",
+    start: "top center",
+    end: "bottom 35%",
+    scrub: true,
+    pin: true,
   },
 });
-
 
 //  Animate the h2 and p simultaneously
 timeline_1

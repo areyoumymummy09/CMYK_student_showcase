@@ -221,7 +221,7 @@
 }
 
 // !Mobile Scree
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 580px) {
   #about_idp_intro {
     grid-column-start: 1;
   }
@@ -235,11 +235,13 @@
   }
 
   .idp_card {
-    height: 420px;
-    margin-bottom: 50px;
+    height: auto;
 
     h3 {
-      margin: 24px 0;
+      margin: 36px 0 16px 0;
+    }
+    p {
+      padding: 0 24px;
     }
   }
 
