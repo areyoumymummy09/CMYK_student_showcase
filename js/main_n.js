@@ -2,6 +2,17 @@
   console.log("Javascript Linked!");
 
   // Variables
+  function screenChecking() {
+    const screenSize = window.innerWidth;
+    const scrollPosition = window.scrollY.toFixed(1);
+
+    document.querySelector(
+      "#screen-size"
+    ).innerHTML = `${screenSize}, <br> ${scrollPosition}`;
+  }
+  screenChecking();
+  window.addEventListener("resize", screenChecking);
+  window.addEventListener("scroll", screenChecking);
 
   const burgerMenu = document.querySelector("#burger_ic");
   const navBar = document.querySelector("#navbar > nav > ul");
@@ -38,7 +49,7 @@
   }
 
   function closeBurger() {
-    if (window.innerWidth <= 414) {
+    if (window.innerWidth <= 580) {
       navBar.style.transform = "translateX(-100vw)";
       burgerMenu.textContent = "Menu";
     }
@@ -51,6 +62,7 @@
     } else {
       navBar.style.transform = "translateX(-100vw)";
       navBar.style.zIndex = "9";
+      burgerMenu.textContent = "Menu";
     }
   }
 

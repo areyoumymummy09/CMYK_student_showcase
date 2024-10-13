@@ -6,9 +6,19 @@ Tablet portrait screen: less than 768px
 
 *Portrait screen:
 Tablet screen: less than 768px
-Mobile screen less than 414px
+Mobile screen less than px
 
 */
+
+#screen-size {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  color: greenyellow;
+  padding: 10px;
+  z-index: 9999;
+}
 
 .hidden {
   display: none;
@@ -16,6 +26,11 @@ Mobile screen less than 414px
 
 .show {
   display: block;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* !Desktop screen: 1280px ~ 1440px */
@@ -97,8 +112,8 @@ Mobile screen less than 414px
 @media only screen and (max-width: 768px) and (orientation: landscape) {
 }
 
-/* !Mobile screen <= 414px */
-@media screen and (max-width: 414px) {
+/* !Mobile screen <= 580px */
+@media screen and (max-width: 580px) {
   .grid-con {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-column-gap: 12px;
