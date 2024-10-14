@@ -1,10 +1,11 @@
 console.log("Javascript Linked!");
-// Initialize Lenis
+
+(() => {// Initialize Lenis
 const lenis = new Lenis();
 
 // Listen for the scroll event and log the event data
 lenis.on("scroll", (e) => {
-  console.log(e);
+  //console.log(e);
 });
 
 // Use requestAnimationFrame to continuously update the scroll
@@ -113,42 +114,68 @@ timeline_1
     "<" // "<" means start this animation at the same time as the previous one
   );
 
-//scroll sequence for finalist
+
+
+  // Disable finalist and honorable animations on screens <= 580px
+
+  // Clear any existing ScrollTriggers to avoid duplicating animations
+  
+
+  // Check if the screen width is larger than 580px
+  console.log("width: " + window.innerWidth);
+  const finalists = document.querySelectorAll(".finalist");
+  const honorable = document.querySelectorAll(".honorable");
+  
+  // Only trigger the scroll animations if the window width is greater than 580px
+  if (window.innerWidth > 800) {
+    // Scroll sequence for finalist
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.defaults({ ease: "none", duration: 2 });
+  
+    // Scroll animation for each finalist team
+    gsap.to(finalists, {
+      xPercent: -100 * (finalists.length - 1), // Move horizontally by 100% for each finalist
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#finalist_container",
+        pin: true, // Pin the finalist container while scrolling
+        scrub: 1, // Smooth scrolling
+        snap: 1 / (finalists.length - 1), // Snap to each finalist
+        end: () => "+=" + document.querySelector("#finalist_container").offsetWidth, // Unpin after the last finalist
+      },
+    });
+  
+    // Scroll animation for each honorable team
+    gsap.to(honorable, {
+      xPercent: -100 * (honorable.length - 1), // Move horizontally by 100% for each honorable
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#honorable_section",
+        pin: true, // Pin the honorable container while scrolling
+        scrub: 1, // Smooth scrolling
+        snap: 1 / (honorable.length - 1), // Snap to each honorable
+        end: () => "+=" + document.querySelector("#honorable_section").offsetWidth, // Unpin after the last honorable
+      },
+    });
+  }
+  
+
+
 gsap.registerPlugin(ScrollTrigger);
-gsap.defaults({ ease: "none", duration: 2 });
 
-// Scroll animation for each finalist team
-
-const finalists = document.querySelectorAll(".finalist");
-
-gsap.to(finalists, {
-  xPercent: -100 * (finalists.length - 1), // Move horizontally by 100% for each finalist
-  ease: "none",
+// Scroll the student list horizontally
+gsap.to("#student_list", {
   scrollTrigger: {
-    trigger: "#finalist_container",
-    pin: true, // Pin the finalist container while scrolling
-    scrub: 1, // Smooth scrolling
-    snap: 1 / (finalists.length - 1), // Snap to each finalist
-    end: () => "+=" + document.querySelector("#finalist_container").offsetWidth, // Unpin after the last finalist
+    trigger: "#search_portfolio",
+    start: "top top", // Start scrolling when the section hits the top
+    end: "+=0", // Continue scrolling for a specific distance
+    scrub: true, // Smooth scroll
+    pin: false, // Do not pin the list itself, just scroll it
+    markers: true // For debugging, remove if not needed
   },
+  x: -1000 // Adjust this value based on how far you want the list to scroll
 });
-// Move the original background image inside each container
 
-// Scroll animation for each honorable team
-
-const honorable = document.querySelectorAll(".honorable");
-
-gsap.to(honorable, {
-  xPercent: -100 * (honorable.length - 1), // Move horizontally by 100% for each finalist
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#honorable_section",
-    pin: true, // Pin the finalist container while scrolling
-    scrub: 1, // Smooth scrolling
-    snap: 1 / (honorable.length - 1), // Snap to each finalist
-    end: () => "+=" + document.querySelector("#honorable_section").offsetWidth, // Unpin after the last finalist
-  },
-});
 
 //gallery
 gsap.registerPlugin(ScrollTrigger);
@@ -317,3 +344,5 @@ gsap.fromTo(
     },
   }
 );
+
+})();
