@@ -40,7 +40,6 @@ $normal-trans: all 0.2s ease-in;
   color: $black;
   background-color: transparent;
   transition: $normal-trans;
- 
 }
 
 .btn_style_2:hover {
@@ -67,16 +66,20 @@ $normal-trans: all 0.2s ease-in;
 
 .to_project_btn {
   border: 1px solid $black;
-  background-color: $black;
-  border-radius: 100px;
-  color: $white;
+  background-color: transparent;
+  color: $black;
   padding: 8px 16px;
   text-wrap: nowrap;
   text-align: center;
+  transition: $normal-trans;
+}
+
+.to_project_btn:hover {
+  background-color: $black;
+  color: $white;
 }
 
 .vol {
   font-family: $voltune-font;
   font-weight: 400;
 }
-

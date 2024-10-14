@@ -94,7 +94,7 @@
 #student_list li {
   width: 420px;
   white-space: nowrap;
-  font-size: 2rem;
+  font-size: 1.5rem;
   transition: all 0.3s ease;
 }
 
@@ -146,7 +146,7 @@
 }
 
 // !Mobile Screen
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 580px) {
   #search_portfolio_box {
     padding: 24px;
     grid-column: span 4;
@@ -154,7 +154,7 @@
 
   #student_list {
     grid-column-start: 2;
+    font-size: 1rem;
     margin: 48px 0;
-
   }
 }

@@ -55,8 +55,15 @@
   flex-wrap: nowrap;
   flex-direction: row;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  // *!
   gap: 0;
+}
+
+#finalist_container::-webkit-scrollbar {
+  display: none;
 }
 
 .finalist {
@@ -98,37 +105,40 @@
 .team_member {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   padding: 24px;
 
   .member {
     display: flex;
+    flex: 0 0 60%;
     gap: 24px;
     margin-left: 24px;
   }
 
   .to_project_btn {
-    margin-left: auto;
-    width: 100px;
+    width: auto;
+    flex: 0 1 20%;
   }
 }
 
 #honorable_section {
   display: flex;
   flex-wrap: nowrap;
-  height: 100vh;
+  height: auto;
   overflow-x: hidden;
 }
 
 .honorable:last-child {
-  padding-right: 0; /* Remove gap from the last slide */
+  padding-right: 0;
 }
 
 .honorable {
+  width: 100vh;
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
   min-width: 100%;
-  padding-right: 20px;
 
   .team_member {
     padding: 24px 0;
@@ -137,14 +147,6 @@
   .to_project_btn {
     width: 150px;
   }
-}
-
-.honorable:first-of-type {
-  padding-left: 24px;
-}
-
-.honorable:last-of-type {
-  padding-right: 24px;
 }
 
 .honorable_image_review {
@@ -158,6 +160,10 @@
     width: 70%;
     border-radius: 24px;
   }
+}
+
+.pagination_dots {
+  display: none;
 }
 
 // !Tablet Screen
@@ -197,9 +203,19 @@
     align-items: start;
     row-gap: 10px;
 
+    h4 {
+      flex: 1 1 15%;
+    }
+
     .member {
       flex-direction: column;
       gap: 8px;
+      flex: 1 1 50%;
+    }
+
+    .to_project_btn {
+      width: auto;
+      flex: 1 1 20%;
     }
   }
 
@@ -250,17 +266,32 @@
     }
   }
 
+  #finalist_container {
+    position: relative;
+  }
+
+  .carousal_controller {
+    display: block;
+    z-index: 100;
+  }
+
   .team_member {
     flex-wrap: wrap;
     justify-content: space-between;
 
     .member {
-      flex: 0 0 60%;
+      flex: 0 0 auto;
+    }
+
+    .to_project_btn {
+      width: auto;
+      flex: 1 1 100%;
     }
   }
 
   .honorable {
     flex: 0 0 calc(100% - 24px);
+    transition: a.$normal-trans;
     .team_member {
       gap: 14px;
     }
@@ -274,4 +305,33 @@
 .to_project_btn {
   width: 60%;
   font-size: 1.2rem;
+}
+
+// Carousal Button
+
+.finalist {
+  flex: 0 0 100%;
+}
+
+.pagination_dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.dot:hover {
+  background-color: #555;
 }
