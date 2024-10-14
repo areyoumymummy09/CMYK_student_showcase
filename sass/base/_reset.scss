@@ -10,7 +10,6 @@ body {
   width: 100%;
   line-height: 1.5;
   scroll-behavior: smooth;
-
 }
 
 a,
@@ -30,6 +29,10 @@ li {
   display: inline-block;
   text-align: inherit;
   text-decoration: none;
+}
+
+a {
+  cursor: pointer;
 }
 
 input,

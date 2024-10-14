@@ -6,20 +6,23 @@
 #bts_section {
   overflow: hidden;
   width: 100%;
-  height: 600px;
   display: flex;
   flex-direction: column;
-  border: 1px solid pink;
 }
 
 #bts_gallery-a,
 #bts_gallery-b {
-  width: 150%;
+  width: 100;
   transform: translateX(-100px);
 }
 
 #bts_gallery-a {
   margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+#bts_gallery-b {
+  margin-bottom: 48px;
 }
 
 .gallery {
@@ -32,7 +35,7 @@
 
   li {
     width: 350px;
-    height: 400px;
+    height: 300px;
     flex: 0 0 auto;
   }
 

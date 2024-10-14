@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/plyr.css" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <script
       src="https://kit.fontawesome.com/5ea80a4b63.js"
       crossorigin="anonymous"></script>
@@ -18,7 +20,7 @@
       <h2 class="hidden">Fanshawe IDP — Header Section</h2>
       <div id="navbar" class="col-span-full">
         <div id="logo" class="">
-          <img src="images/Fanshawe-Logo.svg" alt="Fanshawe's Logo">
+          <img src="images/Fanshawe-Logo.svg" alt="Fanshawe's Logo" />
         </div>
         <nav>
           <ul id="page_nav">
@@ -40,7 +42,7 @@
               <a href="https://www.youtube.com/myfanshawe"
                 ><i class="fa-brands fa-youtube"></i
               ></a>
-              <br>
+              <br />
               <span>&copy;2025 Fanshawe College</span>
             </li>
           </ul>
@@ -59,30 +61,31 @@
         </p>
         <model-viewer
           id="north_star"
-          src="../images/Fanshawe_3D_Northstar.gltf"
-          ar
+          src=""
           camera-controls
           tone-mapping="neutral"
-          poster="poster.png"
+          poster="images/poster-2.webp"
           shadow-intensity="0"
+          poster=""
           autoplay
           exposure="1.43"
           shadow-softness="0"
-          camera-target="-0.07m -0.003299m -0.08m">
+          camera-target="-0.07m -0.003299m -0.08m"
+          disable-zoom>
         </model-viewer>
       </div>
       <div id="hero_desc_box" class="col-span-full">
-        <p>
-          <b>Join us Industry Night 2025</b><br>
+        <p class="">
+          <b>Join us Industry Night 2025</b><br />
           April 18<sup>th</sup> Fanshawe, London, CA
         </p>
 
         <button class="cta btn_style_2">Get a ticket</button>
 
         <p>
-          Interactive Media Design &amp; <br>
+          Interactive Media Design &amp; <br />
           User Experience Design Program
-          <br>
+          <br />
           School of Media &amp; Design Arts
         </p>
       </div>
@@ -91,13 +94,16 @@
     <section id="industry_night_section" class="grid-con full-width">
       <h2 class="hidden">Fanshawe IDP — Industry Night Section</h2>
       <article id="industry_night_container" class="col-span-full">
+        <div id="video_container">
+          <video
+            controls
+            id="industryVideo"
+            src="video/Industry Night - video_1.mp4"></video>
+        </div>
+
         <div id="industry_night_promo_video">
-          <video src="#"></video>
           <div id="industry_night_promo_video_desc">
-            <h2><span>The</span><br>Industry Night</h2>
-            <button id="play_video">
-              <i class="fa-light fa-circle-play"></i>
-            </button>
+            <h2><span>The</span><br />Industry Night</h2>
             <p>
               Industry Night 2025 brings together the most exciting emerging
               designers from the IDP program in London, Ontario. Discover
@@ -111,7 +117,7 @@
             id="industry_night_desc-img"
             class="col-span-full"
             src="images/industry-night-image.png"
-            alt="Industry Night">
+            alt="Industry Night" />
           <div id="industry_night_hl" class="">
             <div>
               <h3>7 Showcases</h3>
@@ -160,19 +166,19 @@
               <p>Student Portfolio Viewing</p>
               <span>Level 4 Labs</span>
 
-              <p>Culinary Delights &amp; Networking<br></p>
+              <p>Culinary Delights &amp; Networking<br /></p>
               <span>at The Chef&apos;s Table</span>
 
               <h4>6 00 PM</h4>
-              <p>Spotlight Presentations<br></p>
+              <p>Spotlight Presentations<br /></p>
               <span>at Foundation Inc. Theatre</span>
             </div>
             <div>
               <h3>Venue</h3>
               <p>
-                137 Dundas St,<br>
-                Fanshawe LDA Building,<br>
-                London, ON <br>
+                137 Dundas St,<br />
+                Fanshawe LDA Building,<br />
+                London, ON <br />
                 N6A 1E9
               </p>
 
@@ -194,7 +200,7 @@
           id="cooperation_container_img"
           class="col-span-full"
           src="images/Srishti_Foundation_Section.png"
-          alt="Srishti Foundation">
+          alt="Srishti Foundation" />
         <div id="cooperation_title" class="col-span-full">
           <h2 class="section_name">In cooperation with</h2>
           <p class="section_subname">Objective</p>
@@ -242,12 +248,12 @@
               class="bg_showcase"
               draggable="false"
               src="images/123.png"
-              alt="Showcase Background">
+              alt="Showcase Background" />
             <img
               class="showcase_img"
               draggable="false"
               src="images/team-nominee_1.png"
-              alt="Showcase">
+              alt="Showcase" />
           </div>
 
           <div class="team_member">
@@ -270,12 +276,12 @@
               class="bg_showcase"
               draggable="false"
               src="images/finalist-bkgd2.png"
-              alt="Showcase Background">
+              alt="Showcase Background" />
             <img
               class="showcase_img"
               draggable="false"
               src="images/team-nominee_2.png"
-              alt="Showcase">
+              alt="Showcase" />
           </div>
 
           <div class="team_member">
@@ -336,8 +342,9 @@
           <div class="honorable_image_review">
             <img
               class="showcase_img_honor"
+              draggable="false"
               src="images/team-nominee_1.png"
-              alt="Honorable">
+              alt="Honorable" />
           </div>
           <div class="team_member">
             <h4>Team # 1</h4>
@@ -357,8 +364,9 @@
           <div class="honorable_image_review">
             <img
               class="showcase_img_honor"
+              draggable="false"
               src="images/team-nominee_2.png"
-              alt="Honorable">
+              alt="Honorable" />
           </div>
           <div class="team_member">
             <h4>Team # 2</h4>
@@ -378,8 +386,9 @@
           <div class="honorable_image_review">
             <img
               class="showcase_img_honor"
+              draggable="false"
               src="images/team-nominee_3.png"
-              alt="Honorable">
+              alt="Honorable" />
           </div>
           <div class="team_member">
             <h4>Team # 3</h4>
@@ -400,8 +409,9 @@
             <img
               class="showcase_img_honor"
               draggable="false"
+              draggable="false"
               src="images/team-nominee_1.png"
-              alt="Honorable">
+              alt="Honorable" />
           </div>
           <div class="team_member">
             <h4>Team # 4</h4>
@@ -421,8 +431,9 @@
           <div class="honorable_image_review">
             <img
               class="showcase_img_honor"
+              draggable="false"
               src="images/team-nominee_5.png"
-              alt="Honorable">
+              alt="Honorable" />
           </div>
           <div class="team_member">
             <h4>Team # 5</h4>
@@ -450,28 +461,28 @@
     <section id="bts_section" class="grid-con full-width">
       <h2 class="hidden">Fanshawe IDP — Behind the scene Section</h2>
       <ul id="bts_gallery-a" class="gallery">
-        <li><img src="images/gallery_1.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_2.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_3.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_5.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_6.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_4.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_7.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_8.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_2.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_6.png" alt="Behind the Scene"></li>
+        <li><img src="images/gallery_1.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_2.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_3.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_5.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_6.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_4.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_7.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_8.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_2.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_6.png" alt="Behind the Scene" /></li>
       </ul>
       <ul id="bts_gallery-b" class="gallery">
-        <li><img src="images/gallery_8.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_4.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_2.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_1.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_8.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_5.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_3.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_6.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_7.png" alt="Behind the Scene"></li>
-        <li><img src="images/gallery_4.png" alt="Behind the Scene"></li>
+        <li><img src="images/gallery_8.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_4.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_2.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_1.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_8.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_5.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_3.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_6.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_7.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_4.png" alt="Behind the Scene" /></li>
       </ul>
     </section>
 
@@ -487,7 +498,6 @@
       </div>
     </section>
 
-    <!-- !Has an issue about JS -->
     <section id="developer_section" class="grid-con full-width">
       <h2 class="hidden">Fanshawe IDP — Testimonials Section</h2>
       <div id="developer_title" class="col-span-6 t-col-span-3 m-col-span-2">
@@ -611,7 +621,12 @@
             <cite>Marco Deluca</cite>
             <p>Program Coordinator</p>
           </div>
-          <a href="" class="cta">Join IDP</a>
+          <a
+            href="https://www.fanshawec.ca/programs/idp3-interactive-media-design/next#"
+            class="cta"
+            target="_blank"
+            >Join IDP</a
+          >
         </div>
       </article>
     </section>
@@ -644,14 +659,14 @@
     </footer>
 
     <!-- JS start here -->
-    <!--<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script> -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/main_n.js"></script>
     <script
       type="module"
-      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-    <!-- <script src="js/main.js"></script> -->
   </body>
 </html>
