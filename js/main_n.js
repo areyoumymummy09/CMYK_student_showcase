@@ -21,6 +21,152 @@
   // * Nominee Section Variables
   const toLinkBtn = document.querySelectorAll(".to_project_btn");
 
+  // !Carousal Session
+  // !Finalist
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".finalist");
+  const dots = document.querySelectorAll(".dot");
+  const totalSlides = slides.length;
+  let startX = 0;
+  let isDragging = false;
+
+  function showSlide(index) {
+    const slideWidth = slides[0].clientWidth;
+    const offset = -slideWidth * index;
+    slides.forEach((slide) => {
+      slide.style.transform = `translateX(${offset}px)`;
+    });
+
+    dots.forEach((dot) => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentSlide = index;
+      showSlide(currentSlide);
+    });
+  });
+
+  const carousel = document.getElementById("finalist_container");
+
+  carousel.addEventListener("mousedown", (e) => {
+    startX = e.pageX;
+    isDragging = true;
+  });
+  carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].pageX;
+    isDragging = true;
+  });
+
+  carousel.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    let moveX = e.pageX - startX;
+    if (moveX > 50) {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+      isDragging = false;
+    } else if (moveX < -50) {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+      isDragging = false;
+    }
+  });
+  carousel.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    let moveX = e.touches[0].pageX - startX;
+    if (moveX > 50) {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+      isDragging = false;
+    } else if (moveX < -50) {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+      isDragging = false;
+    }
+  });
+
+  carousel.addEventListener("mouseup", () => (isDragging = false));
+  carousel.addEventListener("touchend", () => (isDragging = false));
+  showSlide(currentSlide);
+
+  // !Honorable
+
+  let currentSlideH = 0;
+  const slidesH = document.querySelectorAll(".honorable");
+  const dotsH = document.querySelectorAll("#pagination_honorable .dot");
+  const totalSlidesH = slidesH.length;
+  let startXH = 0;
+  let isDraggingH = false;
+
+  function showSlideH(index) {
+    const slideWidthH = slidesH[0].clientWidth;
+    const containerWidth =
+      document.getElementById("honorable_section").clientWidth;
+
+    // คำนวณ offset ให้สไลด์อยู่ตรงกลาง
+    const offsetH = -slideWidthH * index + (containerWidth - slideWidthH) / 2;
+
+    slidesH.forEach((slide) => {
+      slide.style.transform = `translateX(${offsetH}px)`;
+    });
+
+    dotsH.forEach((dot) => dot.classList.remove("active"));
+    dotsH[index].classList.add("active");
+  }
+
+  dotsH.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentSlideH = index;
+      showSlideH(currentSlideH);
+    });
+  });
+
+  const carouselH = document.getElementById("honorable_section");
+
+  carouselH.addEventListener("mousedown", (e) => {
+    startXH = e.pageX;
+    isDraggingH = true;
+  });
+  carouselH.addEventListener("touchstart", (e) => {
+    startXH = e.touches[0].pageX;
+    isDraggingH = true;
+  });
+
+  carouselH.addEventListener("mousemove", (e) => {
+    if (!isDraggingH) return;
+    let moveXH = e.pageX - startXH;
+    if (moveXH > 50) {
+      currentSlideH = (currentSlideH - 1 + totalSlidesH) % totalSlidesH;
+      showSlideH(currentSlideH);
+      isDraggingH = false;
+    } else if (moveXH < -50) {
+      currentSlideH = (currentSlideH + 1) % totalSlidesH;
+      showSlideH(currentSlideH);
+      isDraggingH = false;
+    }
+  });
+  carouselH.addEventListener("touchmove", (e) => {
+    if (!isDraggingH) return;
+    let moveXH = e.touches[0].pageX - startXH;
+    if (moveXH > 50) {
+      currentSlideH = (currentSlideH - 1 + totalSlidesH) % totalSlidesH;
+      showSlideH(currentSlideH);
+      isDraggingH = false;
+    } else if (moveXH < -50) {
+      currentSlideH = (currentSlideH + 1) % totalSlidesH;
+      showSlideH(currentSlideH);
+      isDraggingH = false;
+    }
+  });
+
+  carouselH.addEventListener("mouseup", () => (isDraggingH = false));
+  carouselH.addEventListener("touchend", () => (isDraggingH = false));
+
+  showSlideH(currentSlideH);
+
+  // !End Carousal
+
   // * Portfolio Section Variables
   const student = document.querySelector(".student");
   const searchInput = document.querySelector("#search_portfolio");
@@ -62,7 +208,7 @@
   }
 
   function adjustNavBar() {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth > 768) {
       navBar.style.transform = "translateX(0)";
       navBar.style.zIndex = "0";
     } else {
