@@ -1,0 +1,2071 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "VOLTUNE";
+  src: url("../font/Voltune/VOLTUNE.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamLight";
+  src: url(../font/Gotham/GothamLight.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamBook";
+  src: url(../font/Gotham/GothamBook.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamBold";
+  src: url(../font/Gotham/GothamBold.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* General Rules */
+img,
+embed,
+object,
+video,
+picture {
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  color: #777;
+}
+
+h1 {
+  font-family: "VOLTUNE", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "GothamLight", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: large;
+}
+
+h3 {
+  font-family: "VOLTUNE", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 2px;
+}
+
+h4 {
+  font-family: "GothamLight", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 25px;
+}
+
+p {
+  font-family: "GothamLight", sans-serif;
+  font-size: 0.9rem;
+}
+
+button {
+  font-family: "GothamLight", sans-serif;
+  font-size: 0.9rem;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+/* Plyr UI Video Customization */
+:root {
+  --plyr-color-main: #e2231a;
+  --plyr-audio-controls-background: #5e0005;
+  --plyr-control-icon-size: 20px;
+  --plyr-control-radius: 20px;
+  --plyr-font-family: Helvetica, Arial, sans-serif;
+  --plyr-video-control-color-hover: black;
+}
+
+/* Nav bar */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  padding: 24px 24px;
+  z-index: 1000;
+  background-color: transparent;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#sticky-nav-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between elements */
+  width: 100%;
+  padding: 25px 20px;
+  box-sizing: border-box;
+}
+
+#sticky-nav-con img {
+  width: 100%;
+  object-fit: cover;
+  overflow: visible;
+  margin-left: auto;
+  margin-right: 0;
+  height: 30px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 5px;
+  position: relative;
+  text-align: center;
+}
+
+#navbar li a {
+  text-decoration: none;
+  text-align: center;
+  margin-inline: 10px;
+  font-family: "GothamLight";
+  font-size: 1rem;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+#navbar li a:hover {
+  color: #e2231a;
+  font-weight: bold;
+}
+
+#navBtn {
+  width: 125px;
+  padding: 10px 15px;
+  border-radius: 22px;
+  border: none;
+  color: white;
+  background: var(--Fan-Red, #e2231a);
+  white-space: nowrap;
+}
+
+.headerBtn {
+  width: 125px;
+  padding: 10px 15px;
+  border-radius: 22px;
+  border: none;
+  color: white;
+  background: var(--Fan-Red, #e2231a);
+}
+
+/*Main Hero*/
+.main-hero-text {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-height: 100vh;
+  padding: 5rem 0;
+}
+
+.hero-text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5rem;
+  width: 80%;
+}
+
+#hero-text-left,
+#hero-text-right {
+  text-align: left;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the image */
+  z-index: 0; /* Image behind the text */
+  width: 100%;
+}
+
+.image-overlay img {
+  width: auto; /* Full width image */
+  max-width: 600px; /* Adjust to desired size */
+  height: auto;
+  opacity: 0.7;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 1; /* Places the title above the image */
+}
+
+.hero-title h1 {
+  font-size: 20rem;
+  color: #000;
+  font-weight: 300;
+  line-height: 0.8;
+}
+
+.hero-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-button button {
+  display: flex;
+  width: auto;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 22px;
+  border: 0.5px solid #65656b;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#menuMobile {
+  display: none;
+}
+
+.headerBtn {
+  display: none;
+}
+
+/*Industry night*/
+
+.industry-night video {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+#indVideo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.industry-night-container {
+  padding: 0;
+  margin: 0;
+}
+.industry-night-details {
+  background-image: url("/images/Group-523.png");
+  background-color: #020202;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.industry-night-image-container {
+  margin: 0;
+  padding: 5rem 0 0 0;
+}
+
+.industry-night-text {
+  padding: 20px;
+  color: white;
+}
+
+.industry-night-details img {
+  display: block;
+  margin-left: 10%;
+  margin-top: 3%;
+  width: 80%;
+}
+
+#opportunity-ins h3,
+#network-ins h3 {
+  text-align: center;
+}
+
+/*Industry night text*/
+
+.industry-night-text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 10rem;
+}
+
+.industry-night-left,
+.industry-night-right {
+  width: 25%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.industry-night-left h3,
+.industry-night-right h3 {
+  font-size: 5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  margin-top: 5rem;
+}
+
+.industry-night-left p,
+.industry-night-right p {
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-top: 1.5rem;
+  margin-left: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.industry-night-left {
+  position: relative;
+}
+
+.industry-night-right {
+  position: relative;
+}
+
+.event-detail-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10rem;
+  padding: 0 2rem;
+}
+
+.event-detail-date,
+.event-detail-schedule,
+.event-detail-venue {
+  width: 20%;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.buttonEvent {
+  margin-top: auto;
+  margin-bottom: 3rem;
+}
+
+.event-detail-date h3,
+.event-detail-schedule h3,
+.event-detail-venue h3 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  margin-top: 150px;
+}
+
+.event-detail-date p,
+.event-detail-venue p {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.5;
+  max-width: 300px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-stretch: expanded;
+}
+
+.buttonEvent {
+  width: 150px;
+  border-radius: 22px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.event-detail-schedule p {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.5;
+  max-width: 300px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-stretch: expanded;
+}
+
+.event-detail-date h4,
+.event-detail-schedule h4,
+.event-detail-venue h4 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #636466;
+  margin: 1rem 0;
+}
+.event-detail-venue p {
+  justify-content: center;
+  text-align: center;
+}
+
+/*Coorperation objective*/
+
+.title-container {
+  display: block;
+  height: 100vh;
+  background-image: url("../images/Srishti_Foundation_Section.png");
+  background-size: cover;
+  background-position: center;
+}
+.subject-title-container {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.foundation-details {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+}
+
+#cooperation h2 {
+  font-family: "VOLTUNE";
+  color: #ffffff;
+  font-size: 4rem;
+}
+
+#objective h3 {
+  font-family: "GothamBook";
+  font-size: 1rem;
+  color: white;
+}
+
+.foundation-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.foundation-details-container h2 {
+  text-align: center;
+  font-family: "VOLTUNE";
+  font-size: 14rem;
+  height: 13rem;
+  color: #ffffff;
+}
+
+.foundation-details-container h3 {
+  font-family: "GothamBook";
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-top: 1.25rem;
+}
+
+#foundation-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#foundation-subtitle h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 16px */
+  letter-spacing: 0.4px;
+}
+
+.foundation-description {
+  font-size: 1rem;
+  color: #ffffff;
+  width: 30vw;
+  margin-left: 30vw;
+  margin-top: 2rem;
+}
+
+.subject-title-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  color: white;
+}
+
+/*The Crowning*/
+.crowning-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+}
+
+.crowning-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+}
+
+.crowning-content h2 {
+  font-family: "VOLTUNE";
+  color: black;
+  font-size: 4rem;
+}
+
+.crowning-content h3 {
+  font-family: "GothamBook";
+  font-size: 1rem;
+  color: black;
+}
+.crowning-wording p {
+  font-size: 1rem;
+  color: #000000;
+  width: 30vw;
+  margin-left: 30vw;
+}
+
+.crowning-content-container h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+/*Finalists slider*/
+
+#slider-container {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  position: relative;
+  width: 100%; /* Full width of the parent container */
+  max-width: 1440px; /* Max width for larger screens */
+  height: auto;
+  margin: 0 auto;
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  white-space: nowrap; /* Prevent line breaks between images */
+}
+
+.image-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: auto;
+}
+
+.main-img {
+  height: auto;
+  display: inline-block;
+}
+
+/* First image should be larger */
+
+/* Second image */
+.image-slider img:nth-child(2) {
+  width: 35vw;
+  object-fit: cover;
+  display: inline-block;
+}
+
+/*Finalist Text*/
+
+.finalist-display {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+}
+
+.finalist-image-container {
+  width: 90%;
+  flex-shrink: 0;
+}
+
+.image-slider {
+  width: 100%;
+}
+
+.finalist-info {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "GothamBook";
+  padding: 0 3rem;
+  margin-top: 1rem;
+}
+
+.finalist-members ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.finalist-members ul li {
+  margin-left: 1rem;
+}
+
+.finalist-header h3 {
+  font-size: 1.75rem;
+  font-family: "GothamBold";
+  color: black;
+  text-align: left;
+  padding: 3rem 4rem 1rem 4rem;
+}
+
+.finalist-text h3 {
+  font-family: "GothamBold";
+  font-size: 1rem;
+  color: #000;
+  text-align: left;
+}
+
+.finalist-team {
+  font-size: 1rem;
+}
+
+.toLinkBtn {
+  padding: 0.8rem 2rem;
+  border-radius: 22px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.finalist-members button:hover {
+  background-color: #444;
+}
+
+/*Honorable*/
+#honorable-content {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  position: relative;
+  width: 100%; /* Full width of the parent container */
+  max-width: 1440px; /* Max width for larger screens */
+  height: auto;
+  margin: 0 auto;
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  white-space: nowrap; /* Prevent line breaks between images */
+}
+
+.honorable-content h3 {
+  font-size: 1.75rem;
+  font-family: "GothamBold";
+  color: black;
+  text-align: left;
+  padding: 3rem 4rem 1rem 4rem;
+}
+
+.honorable-container {
+  display: flex;
+  padding-left: 3rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: max-content;
+}
+
+.honorable-box {
+  flex: 0 0 50%; /* Both boxes take up 50% of the container */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  min-width: 80%; /* Ensure both boxes take at least half of the container width */
+}
+
+.honorable-box:first-child {
+  width: 65vw;
+}
+
+.honorable-box:nth-child(2) {
+  width: 35vw;
+  overflow: hidden;
+}
+
+.honorable-box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* Team information */
+.team-info {
+  font-family: "GothamBook";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.team-text {
+  font-family: "GothamBold";
+  font-size: 1rem;
+  color: #000;
+  text-align: left;
+}
+
+.team-members {
+  font-size: 1em;
+  color: #333;
+}
+
+.button:hover {
+  background-color: #444;
+}
+
+/*Gallery*/
+
+#gallery {
+  padding: 5rem 0;
+}
+.top-row {
+  display: flex;
+  flex-direction: row;
+  transform: rotate(1deg);
+}
+.down-row {
+  display: flex;
+  flex-direction: row;
+  transform: rotate(-1deg);
+}
+
+.gallery-content {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  margin: 1rem;
+}
+
+.gallery-content img {
+  width: 100%;
+  height: auto;
+}
+
+/*Testmonials*/
+
+.testimonial-title {
+  width: 100%;
+}
+
+#testimonial-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #b3272d;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 0 3rem;
+}
+
+.testimonials {
+  display: grid;
+  width: 70%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-box,
+.right-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 200px;
+}
+
+.middle-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.testimonial-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.testimonial-title h2 {
+  font-family: "VOLTUNE";
+  font-size: 7rem;
+  color: white;
+}
+
+.testimonial-title h3 {
+  font-family: "GothamBook";
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/*Testimonial card styling*/
+
+.card {
+  width: 368px;
+  height: 520px;
+  border-radius: 18px;
+  background: #fff;
+  padding: 1.25rem;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.circle-top {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #a9a9a9;
+  margin-left: auto;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  line-height: 1.5;
+}
+.client-info {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.client-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.client-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.client-title {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Developer Section */
+
+#CMYK-developer {
+  background-color: black;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 0 2rem;
+}
+
+.title {
+  font-family: "VOLTUNE";
+  font-size: 6rem;
+  color: #ffffff;
+}
+
+.dev-content {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  padding: 2rem 2rem;
+}
+
+.dev-name {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 2;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.three-circles {
+  width: 10rem;
+}
+
+.name-section {
+  margin-left: 2rem;
+}
+
+.name-section .name {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.name-section .website {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+.dev-image {
+  display: grid;
+  place-items: center;
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row: 1 / span 2;
+  padding: 0 2rem;
+}
+
+/* Portfolio Section */
+
+#students-portfolio {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 24px;
+  padding: 4rem 2rem;
+  background-color: #efefef;
+}
+
+.portfolio-content-text {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.portfolio-content-text h2 {
+  font-family: "VOLTUNE";
+  font-size: 5rem;
+  color: black;
+}
+
+.search-bar {
+  margin-top: 1rem;
+}
+
+.search-bar label {
+  font-family: "Gotham";
+}
+
+.search-bar input {
+  background-color: #efefef;
+  border: none;
+  border-bottom: 1px solid #999;
+}
+
+.image-gallery {
+  width: auto;
+  height: 120px;
+  display: flex;
+  grid-column-start: 4;
+  grid-column-end: 10;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.image-gallery img {
+  width: 50%;
+  object-fit: cover;
+}
+
+#portrait {
+  width: 30%;
+}
+
+.showroom {
+  grid-column-start: 11;
+  grid-column-end: 13;
+  font-family: "GothamBook";
+  padding-top: 2rem;
+}
+
+.portfolio-list {
+  grid-column-start: 3;
+  grid-column-end: 13;
+  margin-top: 100px;
+  overflow-x: auto;
+}
+
+.portfolio-list ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 3.5rem;
+  height: 400px;
+  list-style-type: none;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.portfolio-list ul li {
+  width: 170px;
+  margin-top: 0.25rem;
+  text-overflow: ellipsis;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.portfolio-list ul li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: 100;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.portfolio-list ul li a:hover {
+  font-weight: 900;
+}
+
+@media (max-width: 1200px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
+
+/* About IDP */
+#about-idp h2 {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "GothamBook";
+  color: #1a1a1a;
+  margin: 100px 0;
+  font-weight: 900;
+}
+
+#about-idp h3 {
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 500;
+  padding-bottom: 30px;
+  line-height: 0.85;
+}
+
+.course-description {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.services-container {
+  align-items: center;
+}
+
+@media (max-width: 1199px) {
+  .services-container {
+    display: none;
+  }
+}
+
+@media (min-width: 1199px) {
+  .services-container-m {
+    display: none;
+  }
+
+  .services-box {
+    margin: 0 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .services-box h3 {
+    display: inline;
+    position: absolute;
+    color: black;
+    font-size: 2.5rem;
+    z-index: 9;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .services-box p {
+    position: absolute;
+    color: black;
+    bottom: 10%;
+    padding: 10px;
+  }
+
+  .services-box img {
+    filter: opacity(1);
+    transition: all 0.5s ease;
+  }
+
+  .services-box img:hover {
+    filter: opacity(0);
+  }
+}
+
+.services-box img,
+.services-box-m img {
+  border-radius: 10px;
+}
+
+.services-box-m img {
+  width: 100%;
+}
+
+.services-box-m {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.services-box-m h3 {
+  color: black;
+  font-size: 4rem;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.services-box-m p {
+  color: black;
+  font-size: 1.25rem;
+  padding-bottom: 40px;
+  width: 35rem;
+}
+
+.services-box-m p :last-child {
+  padding-bottom: 60px;
+}
+
+#idp-description {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+#idp-description p {
+  font-size: 2rem;
+  font-family: "GothamBook";
+  color: black;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  line-height: 1;
+}
+
+#idp-signature {
+  padding-bottom: 50px;
+}
+
+#idp-signature img {
+  width: 170px;
+  margin-bottom: 1rem;
+}
+
+#idp-signature h3 {
+  font-size: 1.2rem;
+  font-family: "GothamBook";
+  font-weight: bold;
+  color: black;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#idp-signature h4 {
+  font-size: 1.5rem;
+  font-family: "VOLTUNE";
+}
+
+@media (max-width: 768px) {
+  #idp-signature {
+    text-align: center;
+  }
+}
+
+.abt-idp-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: black;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  font-family: "GothamLight", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.abt-idp-button:hover {
+  background-color: #646469;
+  color: white;
+}
+
+/*footer*/
+footer {
+  background-color: #e2231a;
+  text-align: center;
+  padding: 5rem;
+  display: flex;
+  height: 200px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer-logo img {
+  height: 4rem;
+}
+
+.social-media a,
+.social-media-m a {
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.social-media img,
+.social-media-m img {
+  height: 1.5rem;
+  margin: 15px;
+}
+
+footer p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-m {
+    display: none;
+  }
+}
+
+/* 1024 - 1200px screen */
+
+@media screen and (max-width: 1199px) {
+  html {
+    font-size: 70%;
+  }
+
+  /* Hero Section */
+  .hero-title h1 {
+    font-size: 17rem;
+  }
+
+  .image-overlay img {
+    max-width: 450px;
+  }
+
+  /* Testimonial Section */
+
+  .right-box {
+    display: none;
+  }
+
+  .card {
+    height: 350px;
+  }
+
+  .testimonial-text {
+    font-size: 1.2rem;
+    padding: 2rem;
+  }
+
+  /* 1024px - About IDP Section */
+
+  .about-idp-content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-description {
+    width: 40%;
+  }
+
+  .services-box-m h3 {
+    font-size: 4rem;
+    align-self: self-start;
+    margin-top: 20px;
+  }
+  .services-box-m p {
+    width: 100%;
+    align-self: self-start;
+    text-align: left;
+  }
+}
+
+/* Tablet Screen */
+@media screen and (max-width: 768px) {
+  /* Tablet - Hero Section */
+  .main-hero-text {
+    height: 70vh;
+  }
+
+  .hero-title h1 {
+    padding-top: 3rem;
+    font-size: 20rem;
+  }
+
+  .hero-text-wrapper {
+    margin-top: 100px;
+  }
+
+  /* Tablet - Industry Night */
+  .industry-night-video,
+  #indVideo {
+    height: 60vh;
+  }
+
+  .industry-night-left h3,
+  .industry-night-right h3 {
+    font-size: 4.5rem;
+  }
+
+  #network-ins,
+  #opportunity-ins {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  #portfolio-ins {
+    margin-top: 10rem;
+  }
+
+  .event-detail-container {
+    padding: 0 5rem;
+  }
+
+  .event-detail-date h3,
+  .event-detail-schedule h3,
+  .event-detail-venue h3 {
+    margin-top: 100px;
+  }
+
+  /* Tablet - Cooperation Section */
+
+  .subject-title-container {
+    width: auto;
+    justify-content: center;
+  }
+
+  #cooperation {
+    order: 2;
+  }
+
+  #objective {
+    order: 1;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 0;
+  }
+
+  #objective h3 {
+    color: white;
+  }
+
+  .title-container {
+    height: 90vh;
+  }
+  .foundation-details {
+    height: 90vh;
+  }
+
+  .foundation-details-container h2 {
+    font-size: 17rem;
+    line-height: 0.8;
+    margin-bottom: 25%;
+  }
+
+  .foundation-details-container h3 {
+    font-size: 2.25rem;
+  }
+
+  .foundation-description {
+    margin-left: 0;
+    width: 70%;
+    text-align: center;
+  }
+
+  /* Tablet - The Crowning Section */
+
+  .crowning-content {
+    padding-top: 80px;
+    justify-content: end;
+  }
+
+  .crowning-content h2 {
+    order: 2;
+    font-size: 7rem;
+  }
+
+  .crowning-content h3 {
+    order: 1;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 0;
+  }
+
+  .crowning-wording p {
+    margin-left: 45vw;
+  }
+
+  .finalist-image-container {
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  .honorable-box {
+    flex: 0 0 95%;
+  }
+
+  .honorable-container {
+    padding-left: 1.5rem;
+    gap: 1rem;
+  }
+
+  /* Tablet - Gallery Section */
+  .top-row,
+  .down-row {
+    transform: scale(1.1) rotate(0);
+  }
+
+  .down-row {
+    transform: translateX(50px);
+  }
+
+  /* Tablet - Testimonial Section */
+
+  .testimonial-title h2 {
+    font-size: 5rem;
+  }
+
+  .testimonial-title h3 {
+    transform: rotate(90deg);
+    position: absolute;
+    right: 0;
+  }
+
+  .left-box {
+    display: grid;
+    place-items: center;
+    margin: 10rem 0 15rem 0;
+  }
+
+  .left-box .card:nth-child(2) {
+    display: none;
+  }
+
+  .middle-box,
+  .right-box {
+    display: none;
+  }
+
+  /* Tablet - DEVs Section */
+
+  .name-section .name {
+    font-size: 2.2rem;
+  }
+
+  .dev-image {
+    padding: 0;
+  }
+
+  /* Tablet - Portfolios */
+
+  .portfolio-content-text {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .search-bar {
+    margin-top: 130px;
+  }
+
+  .image-gallery {
+    grid-column-start: 5;
+    grid-column-end: 12;
+
+    height: 80px;
+  }
+
+  .showroom {
+    transform: rotate(90deg);
+    position: absolute;
+    right: 0;
+  }
+
+  #students-portfolio {
+    padding-top: 100px;
+    height: 100vh;
+  }
+
+  .portfolio-list ul {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 1rem;
+    column-gap: 3.5rem;
+    height: 600px;
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 2rem;
+    overflow-x: hidden;
+  }
+
+  .portfolio-list {
+    grid-column-start: 6;
+    grid-column-end: 10;
+    margin-top: 0;
+    transform: translateY(-60px);
+    overflow-x: visible;
+  }
+
+  /* Tablet - About IDP */
+  .course-description {
+    width: 70%;
+    font-size: 1rem;
+  }
+
+  #about-idp h2 {
+    margin: 75px 0 40px 0;
+  }
+}
+
+/* Mobile Screen */
+
+@media screen and (max-width: 432px) {
+  /* Header Section */
+  #header {
+  }
+  #sticky-nav-con {
+    flex-wrap: wrap;
+  }
+  #sticky-nav-con img {
+    height: 40px;
+  }
+
+  #sticky-nav-con {
+    margin-top: 10px;
+  }
+
+  #fanshaweLogo {
+    order: 1;
+    width: 100%;
+    flex: 0 0 50%;
+    z-index: 11;
+  }
+
+  #menuMobile {
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    order: 2;
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: end;
+    z-index: 11;
+  }
+
+  #menuMobile:hover {
+    font-size: 1.5rem;
+    color: #e2231a;
+  }
+
+  #navbar {
+    /* display: none; */
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+    order: 3;
+    top: 15vh;
+    left: 0;
+    flex: 0 0 100%;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    background-color: white;
+    gap: 10px;
+    z-index: 9;
+    padding: 2rem 1rem;
+    transform: translateX(-100vw);
+    transition: all 0.2s ease-in-out;
+  }
+
+  #navbar li a {
+    margin-inline: 0;
+    font-size: 2rem;
+  }
+
+  #navBtn,
+  #hero-text-right {
+    display: none;
+  }
+
+  .hero-text-wrapper {
+    flex-direction: column;
+  }
+
+  #sticky-nav-con {
+    padding: 0;
+  }
+
+  /* Mobile - Hero Section */
+
+  .main-hero-text {
+    height: 90vh;
+  }
+
+  .hero-title h1 {
+    margin-top: 40px;
+    font-size: 11rem;
+  }
+
+  .image-overlay img {
+    max-width: 300px;
+    transform: translateY(-100px);
+  }
+
+  .hero-text-wrapper {
+    height: 200px;
+    padding: 0;
+  }
+
+  .hero-text-wrapper div:nth-child(1) {
+    margin-bottom: auto;
+  }
+
+  #hero-text-left {
+    text-align: center;
+  }
+
+  #hero-text-left p {
+    font-size: 1.5rem;
+  }
+
+  .headerBtn {
+    width: 175px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  /* Mobile - Industry Night */
+
+  .industry-night-video,
+  #indVideo {
+    height: 100vh;
+  }
+
+  .industry-night video {
+    background-image: url(../images/Group/538.png);
+  }
+
+  .industry-night-image-container {
+    padding: 1rem 0 0 0;
+  }
+
+  .industry-night-details img {
+    padding: 0 1rem;
+    margin: 0;
+    width: 100%;
+  }
+
+  .industry-night-left,
+  .industry-night-right {
+    width: 100%;
+  }
+
+  #portfolio-ins {
+    margin-top: 0;
+  }
+
+  .industry-night-text-container {
+    display: block;
+  }
+
+  #network-ins,
+  #opportunity-ins {
+    margin-top: 0;
+  }
+
+  .industry-night-left p,
+  .industry-night-right p {
+    width: 70%;
+  }
+
+  .event-detail-container {
+    flex-wrap: wrap;
+  }
+
+  .event-detail-container div:nth-child(2) {
+    order: 1;
+    flex: 0 0 100%;
+  }
+
+  .event-detail-container div:nth-child(2) h3 {
+    margin-top: 50px;
+  }
+
+  .event-detail-container div:nth-child(1) h3 {
+    margin-top: 50px;
+  }
+
+  .event-detail-container div:nth-child(3) h3 {
+    margin-top: 50px;
+  }
+
+  .event-detail-container div:nth-child(1) {
+    order: 2;
+    flex: 0 0 40%;
+  }
+
+  .event-detail-container div:nth-child(3) {
+    order: 3;
+    flex: 0 0 40%;
+  }
+
+  .event-detail-venue p {
+    width: 200px;
+  }
+
+  .buttonEvent {
+    transform: translateY(30px);
+  }
+
+  /* Mobile - Cooperation */
+
+  #objective {
+    display: none;
+  }
+
+  #cooperation h2 {
+    font-size: 2.5rem;
+  }
+
+  .title-container {
+    height: 100vh;
+  }
+
+  .foundation-details {
+    justify-content: start;
+    padding: 3rem 0;
+  }
+
+  .foundation-details-container h2 {
+    font-size: 10rem;
+  }
+
+  .foundation-details-container h3 {
+    width: 300px;
+    margin-top: auto;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    text-align: center;
+    margin-top: 35vh;
+  }
+  .foundation-description {
+    width: 90%;
+    font-size: 1.25rem;
+  }
+
+  /* Mobile - The Crowning */
+
+  .crowning-detail-container {
+    margin-bottom: 50px;
+  }
+
+  .crowning-content {
+    justify-content: start;
+    padding: 3rem 0 1rem 1rem;
+  }
+  .crowning-content h3 {
+    display: none;
+  }
+
+  .crowning-wording {
+    align-self: start;
+  }
+  .crowning-wording p {
+    padding: 0 1rem;
+    width: 70%;
+    margin-left: 0;
+  }
+
+  .finalist-header h3,
+  .honorable-content h3 {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+  }
+
+  .finalist-display {
+    margin-bottom: 30px;
+  }
+
+  .finalist-info {
+    align-items: start;
+    padding: 1rem 1rem;
+    font-family: sans-serif;
+    font-weight: 100;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .finalist-members ul {
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 0;
+    gap: 0.25rem;
+    font-size: 1.25rem;
+    flex: 0 0 50%;
+  }
+
+  .finalist-members ul li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .toLinkBtn {
+    flex: 0 0 30%;
+    align-self: end;
+  }
+
+  .honorable-container {
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .team-info {
+    align-items: start;
+    padding: 1rem 1rem;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .team-members {
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1.25rem;
+    text-align: left;
+    line-height: 1.25;
+  }
+
+  /* Mobile - Gallery */
+  #gallery {
+    padding: 5rem 0;
+  }
+
+  .top-row {
+    overflow-x: auto;
+  }
+
+  .down-row {
+    display: none;
+  }
+
+  .gallery-content {
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+  }
+
+  .gallery-content li {
+    min-width: 300px;
+  }
+
+  /* Mobile - Testimonial */
+
+  .testimonial-title h3 {
+    display: none;
+  }
+
+  .testimonial-title h2 {
+    font-size: 6rem;
+  }
+
+  /* Mobile - Devs Section */
+
+  .dev-image {
+    align-self: flex-start;
+    grid-column-start: 8;
+    grid-column-end: 13;
+    padding: 1.5rem 0 0 1.5rem;
+    grid-row: 1;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .dev-name {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    margin-bottom: 0;
+  }
+
+  .name-section .name {
+    font-size: 1.5rem;
+  }
+
+  .three-circles img {
+    width: 90px;
+  }
+
+  /* Mobile - Portfolio */
+
+  .showroom {
+    display: none;
+  }
+
+  #students-portfolio {
+    padding-top: 100px;
+  }
+
+  .portfolio-content-text {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+
+  .search-bar {
+    margin-top: 30px;
+  }
+  .search-bar input {
+    width: 70%;
+    margin-left: 20px;
+  }
+  .image-gallery {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  #portrait {
+    width: 40%;
+  }
+
+  #hobby {
+    width: 60%;
+  }
+
+  .portfolio-list {
+    transform: translateY(0);
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+
+  .portfolio-list ul {
+    height: 450px;
+  }
+
+  /* Mobile - About IDP */
+
+  .services-box-m h3 {
+    align-self: center;
+  }
+  .services-box-m p {
+    width: 80%;
+    align-self: center;
+    text-align: center;
+  }
+
+  /* Mobile - Footer */
+
+  .footer {
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-media-m a {
+    margin-left: 0;
+  }
+}
