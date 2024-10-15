@@ -13,7 +13,6 @@
 
   // Use requestAnimationFrame to continuously update the scroll
   function raf(time) {
-    lenis.raf(time);
     requestAnimationFrame(raf);
   }
 
@@ -32,15 +31,6 @@
       pinSpacing: false, // Prevent extra space beneath the pinned element
     },
   });
-
-  // gsap.to("#next_section", {
-  //   scrollTrigger: {
-  //     trigger: "#industry_night_promo_video_desc",
-  //     start: "top bottom", // Ensure the following section starts scrolling when its top reaches the bottom of the viewport
-  //     end: "center top", // Ends when the top of the next section reaches the top of the viewport
-  //     scrub: true,
-  //   },
-  // });
 
   gsap.fromTo(
     "#industry_night_promo_video_desc h2",
@@ -91,10 +81,6 @@
   );
 
   //scroll for foundation-content
-  
-  // Check the window width and apply scroll animation conditionally
-console.log("width: " + window.innerWidth);
-if (window.innerWidth > 580) {
   gsap.registerPlugin(ScrollTrigger);
 
   // Create a timeline to synchronize the animations
@@ -108,7 +94,7 @@ if (window.innerWidth > 580) {
     },
   });
 
-  // Animate the h2 and p simultaneously
+  //  Animate the h2 and p simultaneously
   timeline_1
     .fromTo(
       "#cooperation_title h2",
@@ -120,9 +106,8 @@ if (window.innerWidth > 580) {
       { opacity: 0, x: 0, y: 0 },
       { opacity: 1, x: 0, y: 0, ease: "power1.inOut" },
       "<" // "<" means start this animation at the same time as the previous one
-    );}
+    );
 
-  
   // Disable finalist and honorable animations on screens <= 580px
 
   // Clear any existing ScrollTriggers to avoid duplicating animations
@@ -136,16 +121,15 @@ if (window.innerWidth > 580) {
   if (window.innerWidth > 800) {
     // Scroll sequence for finalist
     gsap.registerPlugin(ScrollTrigger);
-    gsap.defaults({ ease: "power1.inOut", duration: 2 });
 
     // Scroll animation for each finalist team
     gsap.to(finalists, {
       xPercent: -100 * (finalists.length - 1), // Move horizontally by 100% for each finalist
-      ease: "power1.inOut",
+      ease: "none",
       scrollTrigger: {
         trigger: "#finalist_container",
         pin: true, // Pin the finalist container while scrolling
-        scrub: 0.3, // Smooth scrolling
+        scrub: 1, // Smooth scrolling
         snap: 1 / (finalists.length - 1), // Snap to each finalist
         end: () =>
           "+=" + document.querySelector("#finalist_container").offsetWidth, // Unpin after the last finalist
@@ -251,18 +235,4 @@ if (window.innerWidth > 580) {
     }
   }
 
-  //enlarge video
-  gsap.fromTo(
-    ".player",
-    { width: "80%" },
-    {
-      width: "100%",
-      scrollTrigger: {
-        trigger: ".player",
-        start: "top 80%",
-        end: "bottom 40%",
-        scrub: true,
-      },
-    }
-  );
 })();
