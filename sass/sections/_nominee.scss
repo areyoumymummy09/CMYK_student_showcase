@@ -123,7 +123,12 @@
 #honorable_section {
   display: flex;
   flex-wrap: nowrap;
-  height: auto;
+  flex-direction: row;
+  height: 100vh;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 0;
 }
 
 .honorable:last-child {
@@ -135,6 +140,7 @@
   padding: 0 24px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
   min-width: 100%;
 
   .team_member {
@@ -327,7 +333,7 @@
 
 .finalist {
   flex: 0 0 100%;
-  transition: a.$normal-trans;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
 }
 
 .pagination_dots {
