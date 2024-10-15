@@ -13,7 +13,7 @@
 
   // Use requestAnimationFrame to continuously update the scroll
   function raf(time) {
-    lenis.raf(time);
+    // lenis.raf(time);
     requestAnimationFrame(raf);
   }
 
@@ -252,17 +252,17 @@ if (window.innerWidth > 580) {
   }
 
   //enlarge video
-  gsap.fromTo(
-    ".player",
-    { width: "80%" },
-    {
-      width: "100%",
-      scrollTrigger: {
-        trigger: ".player",
-        start: "top 80%",
-        end: "bottom 40%",
-        scrub: true,
-      },
-    }
-  );
+  // gsap.fromTo(
+  //   ".player",
+  //   { width: "80%" },
+  //   {
+  //     width: "100%",
+  //     scrollTrigger: {
+  //       trigger: ".player",
+  //       start: "top 80%",
+  //       end: "bottom 40%",
+  //       scrub: true,
+  //     },
+  //   }
+  // );
 })();
