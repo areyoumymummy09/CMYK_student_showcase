@@ -920,7 +920,7 @@
               portraitImg.src = each.portrait;
               illustrateImg.src = each.illustrate;
 
-              const sound = new Audio("video/pop.wav");
+              const sound = new Audio("audio/pop.wav");
               sound.play();
 
               isClicked = true;

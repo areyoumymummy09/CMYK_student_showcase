@@ -3,780 +3,701 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/plyr.css" />
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-    <link href="css/grid.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    <title>Industry Night 2025</title>
+    <script
+      src="https://kit.fontawesome.com/5ea80a4b63.js"
+      crossorigin="anonymous"></script>
+    <title>Fanshawe IDP, Welcome to the Industry Night</title>
   </head>
   <body>
-    <header id="header">
-      <div id="sticky-nav-con">
-        <a id="fanshaweLogo" href="#index.html">
-          <img
-            src="images/Fanshawe_logo.png"
-            class="logo"
-            alt="Fanshawe image" />
-        </a>
-
-        <ul id="navbar">
-          <li><a href="#video-showcase">Event</a></li>
-          <li><a href="#crowning">Honor</a></li>
-          <li><a href="#about-idp">About IDP</a></li>
-          <li><a href="#students-portfolio">Portfolios</a></li>
-        </ul>
-        <button id="navBtn" type="button">Get a Ticket</button>
-        <button id="menuMobile" type="button">Menu</button>
+    <h1 class="hidden">
+      Fanshawe IDP Industry Night, the design students showcases
+    </h1>
+    <header id="main_header" class="grid-con">
+      <h2 class="hidden">Fanshawe IDP — Header Section</h2>
+      <div id="navbar" class="col-span-full">
+        <div id="logo" class="">
+          <img src="images/Fanshawe-Logo.svg" alt="Fanshawe's Logo" />
+        </div>
+        <nav>
+          <ul id="page_nav">
+            <li><a href="#industry_night_section">Event</a></li>
+            <li><a href="#nominee_section">Honors</a></li>
+            <li><a href="#about_idp_section">About IDP</a></li>
+            <li><a href="#portfolio_section">Portfolios</a></li>
+            <li>
+              <a href="#"
+                ><i class="fa-sharp fa-solid fa-ticket fa-rotate-by"></i> Get a
+                ticket</a
+              >
+            </li>
+            <li id="social_nav">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/FanshaweCollege/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://www.youtube.com/myfanshawe"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <br />
+              <span>&copy;2025 Fanshawe College</span>
+            </li>
+          </ul>
+        </nav>
+        <button id="booking" class="cta">Get a ticket</button>
+        <button id="burger_ic" class="burger_ic">Menu</button>
       </div>
     </header>
-    <main>
-      <!--- Main Hero -->
-      <div class="main-hero-text">
-        <div class="image-overlay">
-          <img src="images/hero_image.png" class="logo" alt="Fanshawe logo" />
-        </div>
-        <div class="hero-title">
-          <h1>Fanshawe <br />Interactive</h1>
+
+    <div id="ticket_box" class="grid-con hidden">
+      <div id="ticket_form" class="col-span-full">
+        <h2>Ticket Form</h2>
+        <h3>Industry Night</h3>
+        <p>Welcome! Tell us a little about you</p>
+        <form action="">
+          <label for="name">Name</label>
+          <input type="text" placeholder="Your name" required />
+          <label for="name">Guest(s)</label>
+          <input type="number" value="1" placeholder="1" />
+          <label for="email" required>Email</label>
+          <input type="text" placeholder="Your@mail" />
+          <label for="phonenum" required>Phone</label>
+          <input type="tel" />
+          <select name="userType" id="type">
+            <option value="company" selected>
+              Eh! Your company looking for new applicant?
+            </option>
+            <option value="seeking-talent">
+              Oh! You are seeking on the talents?
+            </option>
+            <option value="student">
+              Alright! You are student! just observing, Welcome!
+            </option>
+          </select>
+
+          <button type="submit" class="">Submit</button>
+        </form>
+        <i id="close_ticket_box" class="fa-thin fa-xmark"></i>
+      </div>
+    </div>
+
+    <section id="hero_section" class="grid-con full-width">
+      <h2 class="hidden">Fanshawe IDP - Hero Section</h2>
+      <div id="hero_vid" class="col-span-full">
+        <p id="hero-background">
+          Fanshawe <br />
+          Interactive
+        </p>
+        <model-viewer
+          id="north_star"
+          src=""
+          camera-controls
+          tone-mapping="neutral"
+          poster="images/poster-2.webp"
+          shadow-intensity="0"
+          poster=""
+          autoplay
+          exposure="1.43"
+          shadow-softness="0"
+          camera-target="-0.07m -0.003299m -0.08m"
+          disable-zoom>
+        </model-viewer>
+      </div>
+      <div id="hero_desc_box" class="col-span-full">
+        <p class="">
+          <b>Join us Industry Night 2025</b><br />
+          April 18<sup>th</sup> Fanshawe, London, CA
+        </p>
+
+        <button class="cta btn_style_2">Get a ticket</button>
+
+        <p>
+          Interactive Media Design &amp; <br />
+          User Experience Design Program
+          <br />
+          School of Media &amp; Design Arts
+        </p>
+      </div>
+    </section>
+
+    <section id="industry_night_section" class="grid-con full-width">
+      <h2 class="hidden">Fanshawe IDP — Industry Night Section</h2>
+      <article id="industry_night_container" class="col-span-full">
+        <div id="video_container">
+          <video
+            controls
+            id="industryVideo"
+            src="video/Industry Night - video_1.mp4"></video>
         </div>
 
-        <div class="hero-text-wrapper">
-          <div id="hero-text-left">
+        <div id="industry_night_promo_video">
+          <div id="industry_night_promo_video_desc">
+            <h2><span>The</span><br />Industry Night</h2>
             <p>
-              <b>Join us Industry Night 2025</b> <br />
-              April 18<sup>th</sup> Fanshawe, London, CA
+              Industry Night 2025 brings together the most exciting emerging
+              designers from the IDP program in London, Ontario. Discover
+              innovative projects shaping the future of design. Don't miss your
+              chance to meet tomorrow's creative leaders!
             </p>
           </div>
-
-          <button class="headerBtn" type="submit">Get a Ticket</button>
-
-          <div class="hero-button">
-            <button type="submit">Explore Industry Night</button>
-          </div>
-
-          <div id="hero-text-right">
-            <p>
-              Interactive Media Design &amp;<br />
-              User Experience Design Program <br />
-              School of Media &amp;Design Arts
-            </p>
-          </div>
         </div>
-      </div>
-      <!-- 2-Industry Night Video -->
-      <div class="full-width-grid-con" id="video-showcase">
-        <h2 class="hidden">Industry Night Video</h2>
-        <div class="col-span-full m-col-span-4">
-          <div id="IndVideoBox" class="industry-night-video">
-            <div class="industry-night">
-              <video
-                class="player"
-                id="indVideo"
-                preload="metadata"
-                poster="images/video_placeholder.png">
-                <source
-                  src="./video/desk-industry-night-vid.mp4"
-                  type="video/mp4" />
-                <source
-                  src="./video/desk-industry-night-vid.webm"
-                  type="video/webm" />
-              </video>
+        <div id="industry_night_desc" class="col-span-full">
+          <img
+            id="industry_night_desc-img"
+            class="col-span-full"
+            src="images/industry-night-image.png"
+            alt="Industry Night" />
+          <div id="industry_night_hl" class="">
+            <div>
+              <h3>7 Showcases</h3>
+              <p>
+                Feature our students' innovative projects and accomplishments,
+                highlighting their creativity and skills across various
+                disciplines.
+              </p>
             </div>
-          </div>
-          <!--Industry Night Content -->
-          <div class="col-span-full" id="industry-content">
-            <h2 class="hidden">Industry Night Details</h2>
-            <div class="industry-night-container">
-              <div class="industry-night-details">
-                <div class="industry-night-image-container">
-                  <img
-                    src="images/industry-night-image.png"
-                    alt="industry-night-image" />
-                </div>
-
-                <div class="industry-night-text-container">
-                  <div
-                    id="showcase-ins"
-                    class="industry-night-left col-span-full">
-                    <h3>7 Showcases</h3>
-                    <p>
-                      Feature our students' innovative projects and
-                      accomplishments, highlighting their creativity and skills
-                      across various disciplines.
-                    </p>
-
-                    <div id="network-ins">
-                      <h3>Networking</h3>
-                      <p>
-                        Fosters valuable connections among students, industry
-                        professionals, and peers, opening doors to collaboration
-                        and future opportunities.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    id="portfolio-ins"
-                    class="industry-night-right col-span-full">
-                    <h3>72 Portfolios</h3>
-                    <p>
-                      Our students possess an incredible array of talent and
-                      creativity, representing a diverse range of skills and
-                      innovative projects that are sure to pique your interest.
-                    </p>
-
-                    <div id="opportunity-ins">
-                      <h3>Opportunity</h3>
-                      <p>
-                        It presents valuable opportunities for companies to
-                        discover fresh talent, foster partnerships, and gain
-                        insights into innovative projects from our students.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="event-detail-container">
-                  <div class="event-detail-date">
-                    <h3>Date</h3>
-                    <p>18<sup>th</sup> April 2024</p>
-                    <button class="buttonEvent">Get a Ticket</button>
-                  </div>
-
-                  <div class="event-detail-schedule">
-                    <h3>Schedule</h3>
-                    <h4 class="time">4 30 PM</h4>
-                    <p>Industry members &amp; Guests arrival</p>
-                    <p>Student Portfolio Viewing</p>
-                    <h4>at Level 4 Labs</h4>
-                    <p>Culinary Delights &amp; Networking<br /></p>
-                    <h4>at The Chef&apos;s Table</h4>
-
-                    <h4 class="time">06 00 PM</h4>
-                    <p>Spotlight Presentations<br /></p>
-                    <h4>at Foundation Inc. Theatre</h4>
-                  </div>
-
-                  <div class="event-detail-venue">
-                    <h3>Venue</h3>
-                    <p>
-                      137 Dundas St,<br />
-                      Fanshawe LDA Building,<br />
-                      London, ON <br />
-                      N6A 1E9
-                    </p>
-                    <button class="buttonEvent">The Location</button>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <h3>72 Portfolios</h3>
+              <p>
+                Our students possess an incredible array of talent and
+                creativity, representing a diverse range of skills and
+                innovative projects that are sure to pique your interest.
+              </p>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- Date, run-down/itinerary, Venue -->
-
-      <div class="col-span-full" id="foundation-content">
-        <h2 class="hidden">Brothers in arms</h2>
-        <div class="title-container">
-          <div class="foundation-details">
-            <div class="subject-title-container">
-              <div id="cooperation">
-                <h2>IN COOPERATION WITH</h2>
-              </div>
-
-              <div id="objective">
-                <h3>OBJECTIVE</h3>
-              </div>
+            <div>
+              <h3>Networking</h3>
+              <p>
+                Fosters valuable connections among students, industry
+                professionals, and peers, opening doors to collaboration and
+                future opportunities.
+              </p>
             </div>
-
-            <div class="foundation-details-container">
-              <h2 id="foundation-title">
-                <span>BROTHERS</span>&nbsp;<span>IN ARMS</span>
-              </h2>
-              <h3 id="foundation-subtitle">
-                Transforming Communities, Enhancing Lives
-              </h3>
-
-              <p class="foundation-description">
-                Srishti Foundation, an Indian NGO supporting children and
-                families through education, healthcare, and empowerment. The
-                foundation collaborates with communities to rebrand and design
-                their communication.
+            <div>
+              <h3>Opportunity</h3>
+              <p>
+                It presents valuable opportunities for companies to discover
+                fresh talent, foster partnerships, and gain insights into
+                innovative projects from our students.
               </p>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- The Crowning -->
-      <div class="col-span-full m-col-span-4" id="crowning">
-        <h2 class="hidden">The Crowning</h2>
-        <div class="crowning-detail-container">
-          <div class="crowning-content">
-            <h2>The Crowning</h2>
-            <h3>ACHIVEMENTS</h3>
-          </div>
-          <div class="crowning-wording">
-            <p>
-              This project by Level 4 students involves designing a marketing
-              campaign for the Srishti Foundation's Brothers in Arms Memorial.
-              The memorial honors Indian and Canadian WWI soldiers with a serene
-              green space and stone memorial for reflection.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div id="finalist" class="col-span-full">
-        <h2 class="hidden">Finalists</h2>
-        <div class="finalist-header">
-          <h3>Finalists</h3>
-        </div>
-
-        <div class="finalist-display">
-          <div class="finalist-image-container">
-            <div id="slider-container" class="image-slider">
-              <img
-                src="images/finalist-1.png"
-                alt="finalist Portfolio 1"
-                class="main-img" />
+          <div id="industry_night_event_details" class="">
+            <div>
+              <h3>Date</h3>
+              <p>18<sup>th</sup> April 2024</p>
+              <button class="cta btn_style_3">Get a ticket</button>
             </div>
+            <div>
+              <h3>Schedule</h3>
+              <h4>4 30 PM</h4>
+              <p>Industry members &amp; Guests arrival</p>
+              <p>Student Portfolio Viewing</p>
+              <span>Level 4 Labs</span>
 
-            <div class="finalist-info">
-              <div class="finalist-text">
-                <h3>Finalist 1</h3>
-              </div>
-              <div class="finalist-members">
-                <ul>
-                  <li>Connie KingYin Sham</li>
-                  <li>Mahaittidon Natchanon</li>
-                  <li>YiTing LaiElaine</li>
-                  <li>Keith Lie</li>
-                </ul>
-              </div>
-              <button class="toLinkBtn" type="submit">Check It Out</button>
+              <p>Culinary Delights &amp; Networking<br /></p>
+              <span>at The Chef&apos;s Table</span>
+
+              <h4>6 00 PM</h4>
+              <p>Spotlight Presentations<br /></p>
+              <span>at Foundation Inc. Theatre</span>
             </div>
-          </div>
+            <div>
+              <h3>Venue</h3>
+              <p>
+                137 Dundas St,<br />
+                Fanshawe LDA Building,<br />
+                London, ON <br />
+                N6A 1E9
+              </p>
 
-          <div class="finalist-image-container">
-            <div id="slider-container-2" class="image-slider">
-              <img
-                src="images/finalist-bkgd2.png"
-                alt="finalist Portfolio 1"
-                class="main-img" />
-            </div>
-
-            <div class="finalist-info">
-              <div class="finalist-text">
-                <h3>Finalist 1</h3>
-              </div>
-              <div class="finalist-members">
-                <ul>
-                  <li>Connie KingYin Sham</li>
-                  <li>Mahaittidon Natchanon</li>
-                  <li>YiTing LaiElaine</li>
-                  <li>Keith Lie</li>
-                </ul>
-              </div>
-              <button class="toLinkBtn" type="submit">Check It Out</button>
+              <button id="event_location_btn" class="btn_style_3">
+                The Location
+              </button>
             </div>
           </div>
         </div>
-      </div>
+      </article>
+    </section>
 
-      <!-- Honorable Achiever -->
-      <div id="honorable-content" class="col-span-full">
-        <h2 class="hidden">Honorable</h2>
-        <div class="honorable-content">
-          <h3>Honorable</h3>
-
-          <div class="honorable-container">
-            <div class="honorable-box">
-              <img src="images/honorable-img_1.png" alt="honorable 1" />
-
-              <div class="team-info">
-                <div class="team-text">Team 1</div>
-                <div class="team-members">
-                  Connie KingYin Sham <br />
-                  Mahaittidon Natchanon <br />
-                  YiTing LaiElaine <br />
-                  Keith Lie
-                </div>
-                <button class="toLinkBtn">Check It Out</button>
-              </div>
-            </div>
-
-            <!-- Team 2 -->
-            <div class="honorable-box">
-              <img src="images/honorable_img_2.png" alt="honorable 2" />
-
-              <div class="team-info">
-                <div class="team-text">Team 2</div>
-                <div class="team-members">
-                  Connie KingYin Sham <br />
-                  Mahaittidon Natchanon <br />
-                  YiTing LaiElaine <br />
-                  Keith Lie
-                </div>
-                <button class="toLinkBtn">Check It Out</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--Gallery -->
-      <div class="col-span-full" id="gallery">
-        <h2 class="hidden">Gallery</h2>
-        <div class="top-row">
-          <ul class="gallery-content">
-            <li>
-              <img src="images/gallery_1.png" alt="Gallery Image 1" />
-            </li>
-            <li>
-              <img src="images/gallery_2.png" alt="Gallery Image 2" />
-            </li>
-            <li>
-              <img src="images/gallery_3.png" alt="Gallery Image 3" />
-            </li>
-            <li>
-              <img src="images/gallery_4.png" alt="Gallery Image 4" />
-            </li>
-          </ul>
+    <section id="cooperation_section" class="grid-con full-width">
+      <h2 class="hidden">
+        Fanshawe IDP — In cooperation with Srishti Foundation Section
+      </h2>
+      <article id="cooperation_container" class="col-span-full">
+        <img
+          id="cooperation_container_img"
+          class="col-span-full"
+          src="images/Srishti_Foundation_Section.png"
+          alt="Srishti Foundation" />
+        <div id="cooperation_title" class="col-span-full">
+          <h2 class="section_name">In cooperation with</h2>
+          <p class="section_subname">Objective</p>
         </div>
 
-        <div class="down-row">
-          <ul class="gallery-content">
-            <li>
-              <img src="images/gallery_5.png" alt="gallery_image 5" />
-            </li>
-            <li>
-              <img src="images/gallery_6.png" alt="gallery_image 6" />
-            </li>
-            <li>
-              <img src="images/gallery_7.png" alt="gallery_image 7" />
-            </li>
-            <li>
-              <img src="images/gallery_8.png" alt="gallery_image 8" />
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Testimonial -->
-      <div class="col-span-full" id="testimonial-container">
-        <div class="testimonial-title">
-          <h2>TESTIMONIALS</h2>
-          <h3>FEEDBACK</h3>
-        </div>
-        <h2 class="hidden">Testimonial</h2>
-
-        <div class="testimonials">
-          <div class="left-box">
-            <div class="card">
-              <div class="card-content">
-                <div class="circle-top"></div>
-                <p class="testimonial-text">
-                  Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum, ac aliquet odio mattis.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos.
-                </p>
-                <div class="client-info">
-                  <img
-                    src=".//images/client-photo.png"
-                    alt="Client Photo"
-                    class="client-photo" />
-                  <div>
-                    <p class="client-name">Client Name</p>
-                    <p class="client-title">Title</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-content">
-                <div class="circle-top"></div>
-                <p class="testimonial-text">
-                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum.
-                </p>
-                <div class="client-info">
-                  <img
-                    src=".//images/client-photo.png"
-                    alt="Client Photo"
-                    class="client-photo" />
-                  <div>
-                    <p class="client-name">Client Name</p>
-                    <p class="client-title">Title</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="middle-box">
-            <div class="card">
-              <div class="card-content">
-                <div class="circle-top"></div>
-                <p class="testimonial-text">
-                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum.
-                </p>
-                <div class="client-info">
-                  <img
-                    src=".//images/client-photo.png"
-                    alt="Client Photo"
-                    class="client-photo" />
-                  <div>
-                    <p class="client-name">Client Name</p>
-                    <p class="client-title">Title</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-content">
-                <div class="circle-top"></div>
-                <p class="testimonial-text">
-                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum.
-                </p>
-                <div class="client-info">
-                  <img
-                    src=".//images/client-photo.png"
-                    alt="Client Photo"
-                    class="client-photo" />
-                  <div>
-                    <p class="client-name">Client Name</p>
-                    <p class="client-title">Title</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="right-box">
-            <div class="card">
-              <div class="card-content">
-                <div class="circle-top"></div>
-                <p class="testimonial-text">
-                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum.
-                </p>
-                <div class="client-info">
-                  <img
-                    src=".//images/client-photo.png"
-                    alt="Client Photo"
-                    class="client-photo" />
-                  <div>
-                    <p class="client-name">Client Name</p>
-                    <p class="client-title">Title</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-content">
-                <div class="circle-top"></div>
-                <p class="testimonial-text">
-                  Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum.
-                </p>
-                <div class="client-info">
-                  <img
-                    src=".//images/client-photo.png"
-                    alt="Client Photo"
-                    class="client-photo" />
-                  <div>
-                    <p class="client-name">Client Name</p>
-                    <p class="client-title">Title</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 6-Developer - CMYK -->
-      <div class="col-span-full" id="CMYK-developer">
-        <h2 class="hidden">DEVS</h2>
-        <div class="dev-content">
-          <h2 class="title">DEVS</h2>
-        </div>
-        <div class="dev-name">
-          <div class="three-circles">
-            <img src="images/Group-519.png" alt="CMYK developer" />
-          </div>
-          <div class="name-section">
-            <p class="name">Connie KingYin Sham</p>
-            <p class="website">connie.ca</p>
-          </div>
-        </div>
-        <div class="dev-image">
-          <img src="images/dev-image.png" alt="developer image" />
-        </div>
-      </div>
-
-      <!-- 7-Portfolio 72 students -->
-      <div class="grid-con col" id="students-portfolio">
-        <h2 class="hidden">All students portfolio</h2>
-        <div class="portfolio-content-text">
-          <h2>PORTFOILIOS</h2>
-          <div class="search-bar">
-            <label for="searchPortfolio">Search</label>
-            <input type="text" id="searchPortfolio" />
-          </div>
-        </div>
-
-        <div class="image-gallery">
-          <img
-            id="portrait"
-            src=".//images/image-gallery-2.png"
-            alt="Portfolio Image 2" />
-          <img
-            id="hobby"
-            src=".//images/image-gallery-1.png"
-            alt="Portfolio Image 1" />
-        </div>
-
-        <div class="showroom">SHOWROOMS</div>
-
-        <div class="portfolio-list">
-          <ul>
-            <li><a href="#">Corey Rosser</a></li>
-            <li><a href="#">Jakob Vaccaro</a></li>
-            <li><a href="#">Zain Septimus</a></li>
-            <li><a href="#">Makenna Dunn</a></li>
-            <li><a href="#">Alfonso Donin</a></li>
-            <li><a href="#">Nolan Culhane</a></li>
-            <li><a href="#">Justin Philips</a></li>
-            <li><a href="#">Haylie Black</a></li>
-            <li><a href="#">Terry Korsgaard</a></li>
-            <li><a href="#">Omar Geidt</a></li>
-            <li><a href="#">Kadin Levin</a></li>
-            <li><a href="#">Zain Rhiel</a></li>
-            <li><a href="#">Emerson Philips</a></li>
-            <li><a href="#">Jakob Lubin</a></li>
-            <li><a href="#">Ryan Gouse</a></li>
-            <li><a href="#">Rayna Mark</a></li>
-            <li><a href="#">Alfredo Siphron</a></li>
-            <li><a href="#">Angel Rhiel Madsen</a></li>
-            <li><a href="#">Cooper Schleifer</a></li>
-            <li><a href="#">Jaydon Sanches</a></li>
-            <li><a href="#">Corey Dokidis</a></li>
-            <li><a href="#">Charlie Geidt</a></li>
-            <li><a href="#">Jaydon Donin</a></li>
-            <li><a href="#">Carter Clemons</a></li>
-            <li><a href="#">Charlie Dias</a></li>
-            <li><a href="#">Jaylon Philips</a></li>
-            <li><a href="#">Terry Ekstrom Bothman</a></li>
-            <li><a href="#">Cristofer Kane</a></li>
-            <li><a href="#">Zaire Aminoff</a></li>
-            <li><a href="#">Jaylon Franci</a></li>
-            <li><a href="#">Davis Levin</a></li>
-            <li><a href="#">Ruben Diaz</a></li>
-            <li><a href="#">Brandon Levin</a></li>
-            <li><a href="#">Cooper Torff</a></li>
-            <li><a href="#">Leo Rhiel Madsen</a></li>
-            <li><a href="#">Tiana Gomez</a></li>
-            <li><a href="#">Milo Harrington</a></li>
-            <li><a href="#">Avery Boswell</a></li>
-            <li><a href="#">Phoebe Hartman</a></li>
-            <li><a href="#">Silas McClure</a></li>
-            <li><a href="#">Giselle Stokes</a></li>
-            <li><a href="#">Declan Vickers</a></li>
-            <li><a href="#">Jaxon Tremblay</a></li>
-            <li><a href="#">Alice Carr</a></li>
-            <li><a href="#">Elliot Whitman</a></li>
-            <li><a href="#">Eliza Monroe</a></li>
-            <li><a href="#">Felix Buckley</a></li>
-            <li><a href="#">Sophia Hawke</a></li>
-            <li><a href="#">Grayson Fenwick</a></li>
-            <li><a href="#">Isabella Crispin</a></li>
-            <li><a href="#">Lincoln Stafford</a></li>
-            <li><a href="#">Lydia Ashworth</a></li>
-            <li><a href="#">Oliver Breckenridge</a></li>
-            <li><a href="#">Vivian Eastwood</a></li>
-            <li><a href="#">Jasper Collier</a></li>
-            <li><a href="#">Harper Donnelly</a></li>
-            <li><a href="#">Gabriel Fitzpatrick</a></li>
-            <li><a href="#">Selena Hart</a></li>
-            <li><a href="#">Maxwell O'Connor</a></li>
-            <li><a href="#">Charlotte Payne</a></li>
-            <li><a href="#">Logan Brooks</a></li>
-            <li><a href="#">Amelia West</a></li>
-            <li><a href="#">Jackson Myers</a></li>
-            <li><a href="#">Hannah Steele</a></li>
-            <li><a href="#">Griffin Moore</a></li>
-            <li><a href="#">Zoey Alexander</a></li>
-            <li><a href="#">Wyatt Cook</a></li>
-            <li><a href="#">Mia Harris</a></li>
-            <li><a href="#">Carter Ellis</a></li>
-            <li><a href="#">Lila Hayes</a></li>
-            <li><a href="#">Caleb Fisher</a></li>
-            <li><a href="#">Ruby Morgan</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 8-About IDP -->
-
-      <div class="grid-con" id="about-idp">
-        <h2 class="hidden">About IDP</h2>
-        <div
-          class="about-idp-content col-span-full t-col-start-1 t-col-end-13 l-col-start-4 l-col-end-10">
-          <div class="about-idp-content-text">
-            <h2>ABOUT US</h2>
-            <h3 class="fan-red">FANSHAWE <br />Interactive</h3>
-            <p class="course-description">
-              Discover Our Program and Its Industry-Ready Preparation! Unlock
-              Your Future in Digital Creativity with Us!<br /><br />
-              Dive into digital design, development, and innovation with
-              Fanshawe College's two-year Interactive Media Design program.
-              Explore how our curriculum equips you with the skills needed to
-              excel in the industry.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Services Section -->
-      <div class="services-container grid-con">
-        <div
-          class="services-box col-span-full t-col-start-1 t-col-end-13 l-col-start-1 l-col-end-5">
-          <h3>WE DESIGN</h3>
-          <p id="message_idp-1">
-            Our program emphasizes graphic, motion, and video design, empowering
-            you to craft visually captivating multimedia content that resonates
-            with audiences. You'll gain proficiency in industry-standard tools
-            to create engaging designs that communicate powerful messages.
-          </p>
-          <img src="images/we-design.png" alt="We design" />
-        </div>
-
-        <div
-          class="services-box col-span-full t-col-start-1 t-col-end-13 l-col-start-5 l-col-end-9">
-          <h3>WE CODE</h3>
-          <p id="message_idp-2">
-            In our coding component, you'll master the development of dynamic
-            web pages using CSS, JavaScript, and PHP. This hands-on training
-            will enable you to transform your design concepts into interactive
-            online experiences that enhance user engagement.
-          </p>
-          <img src="images/we-code.png" alt="We code" />
-        </div>
-
-        <div
-          class="services-box col-span-full t-col-start-1 t-col-end-13 l-col-start-9 l-col-end-13">
-          <h3>WE BUILD</h3>
-          <p id="message_idp-3">
-            You will construct innovative web projects that adhere to industry
-            standards by integrating your design and coding skills. This
-            comprehensive approach prepares you to create dynamic websites that
-            provide seamless user experiences and showcase your creative vision.
-          </p>
-          <img src="images/we-build.png" alt="We build" />
-        </div>
-      </div>
-
-      <!-- Services box- mobile version -->
-      <div class="services-container-m hidden grid-con">
-        <div class="services-box-m col-span-full t-col-start-2 t-col-end-8">
-          <img src=".//images/we-design-350.png" alt="We design" />
-          <h3>WE DESIGN</h3>
+        <div id="cooperation_text" class="col-span-full">
+          <h3>Brothers In Arms</h3>
+          <p>Transforming Communities, Enhancing Lives</p>
           <p>
-            Our program emphasizes graphic, motion, and video design, empowering
-            you to craft visually captivating multimedia content that resonates
-            with audiences. You'll gain proficiency in industry-standard tools
-            to create engaging designs that communicate powerful messages.
+            <a href="https://srishti-foundation.org/">Srishti Foundation</a>, an
+            Indian NGO supporting children and families through education,
+            healthcare, and empowerment. The foundation collaborates with
+            communities to rebrand and design their communication.
           </p>
         </div>
+      </article>
+    </section>
 
-        <div class="services-box-m col-span-full t-col-start-2 t-col-end-8">
-          <div class="hidden">We Code</div>
-          <img src=".//images/we-code-350.png" alt="We code" />
-          <h3>WE CODE</h3>
-          <p>
-            In our coding component, you'll master the development of dynamic
-            web pages using CSS, JavaScript, and PHP. This hands-on training
-            will enable you to transform your design concepts into interactive
-            online experiences that enhance user engagement.
-          </p>
+    <section id="nominee_section" class="grid-con full-width">
+      <h2 class="hidden">Fanshawe IDP — Students' nominees</h2>
+      <div id="nominee_container" class="col-span-full">
+        <div id="nominee_title" class="col-span-full">
+          <h2 class="section_name">The Crowning</h2>
+          <span class="section_subname">Achivements</span>
         </div>
 
-        <div class="services-box-m col-span-full t-col-start-2 t-col-end-8">
-          <div class="hidden">We Build</div>
-          <img src=".//images/we-build-350.png" alt="We build" />
-          <h3>WE BUILD</h3>
-          <p>
-            You will construct innovative web projects that adhere to industry
-            standards by integrating your design and coding skills. This
-            comprehensive approach prepares you to create dynamic websites that
-            provide seamless user experiences and showcase your creative vision.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid-con" id="idp-description">
-        <p
-          class="col-span-full t-col-start-2 t-col-end-8 l-col-start-4 l-col-end-10">
-          I invite you to discover how our Interactive Media Design program at
-          Fanshawe College equips students with the essential skills for success
-          in the digital industry. With a focus on web design, coding, and
-          animation, our comprehensive curriculum and state-of-the-art
-          facilities ensure you are well-prepared to seize exciting career
-          opportunities and stay ahead in a rapidly evolving landscape.
+        <p>
+          This project by Level 4 students involves designing a marketing
+          campaign for the Srishti Foundation's Brothers in Arms Memorial. The
+          memorial honors Indian and Canadian WWI soldiers with a serene green
+          space and stone memorial for reflection.
         </p>
+      </div>
 
-        <div
-          class="col-start-2 col-end-4 t-col-start-5 t-col-end-8 l-col-start-7 l-col-end-10"
-          id="idp-signature">
-          <img src="images/idp-signature.png" alt="idp signature" />
-          <h3>Marco Deluca</h3>
-          <h4 class="fan-red">PROGRAME COORDINATOR</h4>
+      <!-- Finalists Section -->
+      <div class="col-span-full nominee_award">
+        <h3 class="">Finalist</h3>
+        <i class="fa-sharp fa-light fa-wreath-laurel"></i>
+      </div>
+
+      <div id="finalist_container" class="col-span-full carousal">
+        <div id="finalist_team_1" class="finalist">
+          <div class="finalist_image_review">
+            <img
+              class="bg_showcase"
+              draggable="false"
+              src="images/123.png"
+              alt="Showcase Background" />
+            <img
+              class="showcase_img"
+              draggable="false"
+              src="images/screen-landscape.png"
+              alt="Showcase" />
+          </div>
+
+          <div class="team_member">
+            <h4>Finalist # 1</h4>
+            <ul class="member">
+              <li>Connie KingYin Sham</li>
+              <li>Mahaittidon Natchanon</li>
+              <li>YiTing LaiElaine</li>
+              <li>Keith Lie</li>
+            </ul>
+            <button class="to_project_btn">
+              <i class="fa-sharp fa-light fa-arrow-right-to-bracket"></i>
+            </button>
+          </div>
         </div>
 
-        <div class="col-span-full" id="idp-weblink">
+        <div id="finalist_team_2" class="finalist">
+          <div class="finalist_image_review">
+            <img
+              class="bg_showcase"
+              draggable="false"
+              src="images/finalist-bkgd2.png"
+              alt="Showcase Background" />
+            <img
+              class="showcase_img"
+              draggable="false"
+              src="images/screen-landscape.png"
+              alt="Showcase" />
+          </div>
+
+          <div class="team_member">
+            <h4>Finalist # 2</h4>
+            <ul class="member">
+              <li>Nicolas Johnson</li>
+              <li>Sophie Bennett</li>
+              <li>Marcus Lee</li>
+              <li>Alexandra Hughes</li>
+            </ul>
+            <button class="to_project_btn">
+              <i class="fa-sharp fa-light fa-arrow-right-to-bracket"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="finalist_team_3" class="finalist">
+          <div class="finalist_image_review">
+            <img
+              class="bg_showcase"
+              draggable="false"
+              src="images/123.png"
+              alt="Showcase Background" />
+            <img
+              class="showcase_img"
+              draggable="false"
+              src="images/screen-landscape.png"
+              alt="Showcase" />
+          </div>
+
+          <div class="team_member">
+            <h4>Finalist # 3</h4>
+            <ul class="member">
+              <li>Benjamin Carter</li>
+              <li>Charlotte Miller</li>
+              <li>Daniel Smith</li>
+              <li>Olivia Martinez</li>
+            </ul>
+            <button class="to_project_btn">
+              <i class="fa-sharp fa-light fa-arrow-right-to-bracket"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="pagination_finalist" class="pagination_dots col-span-full">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <!-- Honorable Section -->
+      <div class="col-span-full nominee_award">
+        <h3>Honorable</h3>
+      </div>
+      <div id="honorable_section" class="col-span-full">
+        <div id="honorable_team_1" class="honorable">
+          <div class="honorable_image_review">
+            <img
+              class="showcase_img_honor"
+              draggable="false"
+              src="images/screen-landscape.png"
+              alt="Honorable" />
+          </div>
+          <div class="team_member">
+            <h4>Team # 1</h4>
+            <ul class="member">
+              <li>Sophia White</li>
+              <li>Ethan Walker</li>
+              <li>Emily Johnson</li>
+              <li>Matthew Thompson</li>
+            </ul>
+            <button class="to_project_btn">
+              <i class="fa-sharp fa-light fa-arrow-right-to-bracket"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="honorable_team_2" class="honorable">
+          <div class="honorable_image_review">
+            <img
+              class="showcase_img_honor"
+              draggable="false"
+              src="images/screen-landscape.png"
+              alt="Honorable" />
+          </div>
+          <div class="team_member">
+            <h4>Team # 2</h4>
+            <ul class="member">
+              <li>James Martin</li>
+              <li>Liam Wilson</li>
+              <li>Emma Garcia</li>
+              <li>Chloe Brown</li>
+            </ul>
+            <button class="to_project_btn">
+              <i class="fa-sharp fa-light fa-arrow-right-to-bracket"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="honorable_team_3" class="honorable">
+          <div class="honorable_image_review">
+            <img
+              class="showcase_img_honor"
+              draggable="false"
+              src="images/screen-landscape.png"
+              alt="Honorable" />
+          </div>
+          <div class="team_member">
+            <h4>Team # 3</h4>
+            <ul class="member">
+              <li>Ella Scott</li>
+              <li>Isabella Moore</li>
+              <li>Samuel Lee</li>
+              <li>Henry Hall</li>
+            </ul>
+            <button class="to_project_btn">
+              <i class="fa-sharp fa-light fa-arrow-right-to-bracket"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="honorable_team_4" class="honorable">
+          <div class="honorable_image_review">
+            <img
+              class="showcase_img_honor"
+              draggable="false"
+              draggable="false"
+              src="images/screen-landscape.png"
+              alt="Honorable" />
+          </div>
+          <div class="team_member">
+            <h4>Team # 4</h4>
+            <ul class="member">
+              <li>Mason Clark</li>
+              <li>Michael Lewis</li>
+              <li>Harper Davis</li>
+              <li>Ava Robinson</li>
+            </ul>
+            <button class="to_project_btn">
+              <i class="fa-sharp fa-light fa-arrow-right-to-bracket"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="honorable_team_5" class="honorable">
+          <div class="honorable_image_review">
+            <img
+              class="showcase_img_honor"
+              draggable="false"
+              src="images/screen-landscape.png"
+              alt="Honorable" />
+          </div>
+          <div class="team_member">
+            <h4>Team # 5</h4>
+            <ul class="member">
+              <li>Amelia Hernandez</li>
+              <li>Jack Turner</li>
+              <li>Grace Adams</li>
+              <li>Lucas Young</li>
+            </ul>
+            <button class="to_project_btn">
+              <i class="fa-sharp fa-light fa-arrow-right-to-bracket"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="pagination_honorable" class="pagination_dots col-span-full">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <section id="bts_section" class="grid-con full-width">
+      <h2 class="hidden">Fanshawe IDP — Behind the scene Section</h2>
+      <ul id="bts_gallery-a" class="gallery">
+        <li><img src="images/gallery_1.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_2.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_3.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_5.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_6.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_4.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_7.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_8.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_2.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_6.png" alt="Behind the Scene" /></li>
+      </ul>
+      <ul id="bts_gallery-b" class="gallery">
+        <li><img src="images/gallery_8.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_4.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_2.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_1.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_8.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_5.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_3.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_6.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_7.png" alt="Behind the Scene" /></li>
+        <li><img src="images/gallery_4.png" alt="Behind the Scene" /></li>
+      </ul>
+    </section>
+
+    <section id="tesimonial_section" class="grid-con full-width">
+      <h2 class="hidden">Fanshawe IDP — Testimonials Section</h2>
+      <div id="testimonial-container" class="col-span-full">
+        <div id="testimonial_title">
+          <h2 class="section_name">Testimonials</h2>
+          <span class="section_subname">Feedback</span>
+        </div>
+
+        <div id="testimonial_box"></div>
+      </div>
+    </section>
+
+    <section id="developer_section" class="grid-con full-width">
+      <h2 class="hidden">Fanshawe IDP — Testimonials Section</h2>
+      <div id="developer_title" class="col-span-6 t-col-span-3 m-col-span-2">
+        <h2 class="section_name">Devs</h2>
+      </div>
+      <div id="dev_img" class="col-span-4 t-col-span-3 m-col-span-2"></div>
+
+      <div id="dev_container" class="col-span-6 t-col-span-3">
+        <!-- to JS -->
+        <div id="dev_box">
+          <div id="cmyk_wheel">
+            <img
+              src="images/three-circles.svg"
+              alt="CMYK Team"
+              draggable="false" /><span id="alphabet">C</span>
+          </div>
+          <div id="dev_name_and_portfolio">
+            <p id="dev_name">Connie Sham</p>
+            <a href="#">connie.ca</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio_section" class="grid-con full-width">
+      <h2 class="hidden">Fanshawe IDP — Portfolios Section</h2>
+      <div id="portfolio_title" class="col-span-full">
+        <h2 class="section_name">Portfolios</h2>
+        <span class="section_subname">Showroom</span>
+      </div>
+      <div id="search_portfolio_box" class="col-span-3">
+        <label for="search_portfolio">Search</label>
+        <input id="search_portfolio" name="search" type="search" />
+      </div>
+      <div id="student_preview" class="col-span-6 t-col-span-4">
+        <div id="student_portrait">
+          <img id="portrait_img" src="#" alt="Student Portrait" />
+        </div>
+        <div id="student_abstract_image">
+          <img id="abstract_image" src="#" alt="Student Portrait" />
+        </div>
+      </div>
+
+      <ul id="student_list" class="col-span-10 t-col-span-3 m-col-span-2"></ul>
+    </section>
+
+    <section id="about_idp_section">
+      <h2 class="hidden">Fanshawe IDP — About IDP Section</h2>
+      <article class="grid-con">
+        <div id="about_idp_intro" class="col-span-6 t-col-span-4">
+          <span class="section_subname">About us</span>
+          <h2>FANSHAWE <br />Interactive</h2>
+          <p>
+            Discover Our Program and Its Industry-Ready Preparation Unlock Your
+            Future in Digital Creativity with Us! Dive into digital design,
+            development, and innovation with Fanshawe College's two-year
+            Interactive Media Design program. Explore how our curriculum equips
+            you with the skills needed to excel in the industry.
+          </p>
+        </div>
+
+        <div id="idp_card_box" class="col-span-full t-col-span-4">
+          <!-- !Need JS and cut it off -->
+          <div id="idp_text_lightbox"></div>
+          <div id="idp_design" class="idp_card">
+            <img src="images/about_idp_1.gif" alt="We Design" />
+            <h3>We Design</h3>
+            <p
+              class="idp_text"
+              data-hl="We Design"
+              data-text="Our program emphasizes graphic, motion, and video design, empowering you to craft visually captivating multimedia content that resonates with audiences. You'll gain proficiency in industry-standard tools to create engaging designs that communicate powerful messages.">
+              Our program emphasizes graphic, motion, and video design,
+              empowering you to craft visually captivating multimedia content
+              that resonates with audiences. You'll gain proficiency in
+              industry-standard tools to create engaging designs that
+              communicate powerful messages.
+            </p>
+          </div>
+          <div id="idp_code" class="idp_card">
+            <img src="images/about_idp_2.gif" alt="We Code" />
+            <h3>We Code</h3>
+            <p
+              class="idp_text"
+              data-hl="We Code"
+              data-text="In our coding component, you'll master the development of dynamic web pages using CSS, JavaScript, and PHP. This hands-on training will enable you to transform your design concepts into interactive online experiences that enhance user engagement.">
+              In our coding component, you'll master the development of dynamic
+              web pages using CSS, JavaScript, and PHP. This hands-on training
+              will enable you to transform your design concepts into interactive
+              online experiences that enhance user engagement.
+            </p>
+          </div>
+          <div id="idp_build" class="idp_card">
+            <img src="images/about_idp_3.gif" alt="We Build" />
+            <h3>We Build</h3>
+            <p
+              class="idp_text"
+              data-hl="We Build"
+              data-text="You will construct innovative web projects that adhere to industry standards by integrating your design and coding skills. This comprehensive approach prepares you to create dynamic websites that provide seamless user experiences and showcase your creative vision.">
+              You will construct innovative web projects that adhere to industry
+              standards by integrating your design and coding skills. This
+              comprehensive approach prepares you to create dynamic websites
+              that provide seamless user experiences and showcase your creative
+              vision.
+            </p>
+          </div>
+        </div>
+
+        <div id="idp_letter" class="col-span-8 t-col-span-4">
+          <blockquote>
+            I invite you to discover how our Interactive Media Design program at
+            Fanshawe College equips students with the essential skills for
+            success in the digital industry. With a focus on web design, coding,
+            and animation, our comprehensive curriculum and state-of-the-art
+            facilities ensure you are well-prepared to seize exciting career
+            opportunities and stay ahead in a rapidly evolving landscape.
+          </blockquote>
+          <div id="prof_cite">
+            <span
+              ><img src="images/marco-fake-au.png" alt="Marco Deluce"
+            /></span>
+            <cite>Marco Deluca</cite>
+            <p>Program Coordinator</p>
+          </div>
           <a
-            href="https://www.fanshawec.ca/programs/idp3-interactive-media-design/next"
-            class="abt-idp-button">
-            Explore More
-          </a>
+            href="https://www.fanshawec.ca/programs/idp3-interactive-media-design/next#"
+            class="btn_style_3"
+            target="_blank"
+            >Join IDP</a
+          >
         </div>
-      </div>
-    </main>
+      </article>
+    </section>
 
-    <footer class="footer">
-      <div id="footer-logo" class="col-span-full">
-        <a href="https://www.fanshawec.ca/">
-          <img src="./images/fanshawe_icon_footer.png" alt="Fanshawe Logo" />
-        </a>
-      </div>
+    <footer class="grid-con full-width">
+      <div id="footer_container" class="col-span-full">
+        <div id="footer_logo">
+          <a href="#"></a
+          ><img src="images/fanshawe-logo-white.svg" alt="Fanshawe's Logo" />
+        </div>
 
-      <div class="social-media-m col-span-full">
-        <a href="https://www.instagram.com/fanshawecollege/?hl=en">
-          <img src="images/instagram_icon.png" alt="Fanshawe Instagram" />
-        </a>
-
-        <a href="https://www.youtube.com/myfanshawe">
-          <img src="images/youtube_icon.png" alt="Fanshawe youtube" />
-        </a>
-
-        <a href="https://www.facebook.com/FanshaweCollege/">
-          <img src="images/facebook_icon.png" alt="Fanshawe Facebook" />
-        </a>
-      </div>
-
-      <div class="col-span-full">
-        <p>&copy;2024 Fanshawe College</p>
+        <ul id="social_media">
+          <li>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/FanshaweCollege/"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/myfanshawe"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </li>
+        </ul>
+        <button class="cta">Get a ticket</button>
+        <span>&copy;2025 Fanshawe College</span>
       </div>
     </footer>
 
+    <!-- JS start here -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/main_n.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </body>
 </html>
