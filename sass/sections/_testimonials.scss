@@ -99,7 +99,7 @@
 .testimonial_card {
   animation-name: moveUp;
   animation-duration: 30s;
-  animation-iteration-count: 2;
+  animation-iteration-count: infinite;
 }
 
 @keyframes moveUp {

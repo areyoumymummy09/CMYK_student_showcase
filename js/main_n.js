@@ -1,13 +1,39 @@
+/* Industry Night JS main outline 📒
+
+* General Variable
+- Ticket Lightbox Controller
+
+* General Function
+
+* Plyr Controller 
+* Screen Tracking Events
+* Hero Section; Variable, Function, and Arrays
+* Industry Night Video Controller 
+* About IDP Section; Variabl, Functions, and Arrays
+
+* General Event Listener
+* Nominee Section; Variable, Functions, and Arrays
+- Carousel
+* Portfolio Section; Variable, Functions, and Arrays
+* Testimonial Section Variables, Function, and Arrays
+* Devs Section; Variables, Function, and Arrays
+
+
+!Graveyard
+
+*/
+
 (() => {
   console.log("Javascript Linked!");
 
-  // General Variables
-  const burgerMenu = document.querySelector("#burger_ic");
+  // * General Variables
+  const mobileMenu = document.querySelector("#burger_ic");
   const navBar = document.querySelector("#navbar > nav > ul");
   const studentList = document.querySelector("#student_list");
   const closeTicket = document.querySelector("#close_ticket_box");
   const cta = document.querySelectorAll(".cta");
 
+  // Ticket Lightbox Controller
   closeTicket.addEventListener("click", () => {
     document.querySelector("#ticket_box").classList.add("hidden");
     console.log("Hey!");
@@ -20,24 +46,103 @@
     });
   });
 
+  // * General Functions
+  function openBurger() {
+    if (navBar.style.transform === "translateX(-100vw)") {
+      navBar.style.transform = "translateX(0)";
+      mobileMenu.textContent = "Close";
+    } else {
+      navBar.style.transform = "translateX(-100vw)";
+      mobileMenu.textContent = "Menu";
+    }
+  }
+
+  function closeBurger() {
+    if (window.innerWidth <= 580) {
+      navBar.style.transform = "translateX(-100vw)";
+      mobileMenu.textContent = "Menu";
+      document.querySelector(
+        "#cooperation_text p:first-of-type"
+      ).innerHTML = `Transforming Communities, <br> Enhancing Lives`;
+      document.querySelector(
+        "#cooperation_text h3"
+      ).innerHTML = `Brother<br> in arms`;
+    }
+  }
+
+  function adjustNavBar() {
+    if (window.innerWidth > 768) {
+      navBar.style.transform = "translateX(0)";
+      navBar.style.zIndex = "0";
+    } else {
+      navBar.style.transform = "translateX(-100vw)";
+      navBar.style.zIndex = "9";
+      mobileMenu.textContent = "Menu";
+    }
+  }
+
+  // ?When Screen turn to Table size, these will be functioned
+  function changeETC() {
+    if (window.innerWidth <= 580) {
+      document.querySelector(
+        "#cooperation_text p:first-of-type"
+      ).innerHTML = `Transforming Communities, <br> Enhancing Lives`;
+      document.querySelector(
+        "#cooperation_text h3"
+      ).innerHTML = `Brother<br> in arms`;
+    }
+  }
+
   // * Plyr Controller
   const player = new Plyr("video", {});
 
-  // !Screen tracking general
-  function screenChecking() {
-    const screenSize = window.innerWidth;
-    const scrollPosition = window.scrollY.toFixed(1);
+  // *  Hero Section; Variable, Function, and Arrays
+  const textHero = [
+    `<p><b>Join us Industry Night 2025</b><br />April 18<sup>th</sup> Fanshawe, London, CA</p>`,
+    `<p>Interactive Media Design &amp; <br />User Experience Design Program<br />School of Media &amp; Design Arts</p>`,
+  ];
 
-    document.querySelector(
-      "#screen-size"
-    ).innerHTML = `${screenSize}, <br> ${scrollPosition}`;
+  let intervalID;
+  let isTextChangingActive = false;
+  function startTextChange() {
+    let index = 1;
+    if (window.innerWidth <= 768 && !isTextChangingActive) {
+      isTextChangingActive = true;
+      intervalID = setInterval(function () {
+        const textChange = document.querySelector(
+          "#hero_desc_box p:first-of-type"
+        );
+
+        textChange.classList.add("textChanging");
+        textChange.innerHTML = textHero[index];
+        index++;
+        if (index === textHero.length) {
+          index = 0;
+        }
+      }, 3000);
+    }
   }
-  screenChecking();
-  window.addEventListener("resize", screenChecking);
-  window.addEventListener("scroll", screenChecking);
+
+  function stopTextChange() {
+    if (isTextChangingActive) {
+      clearInterval(intervalID);
+      isTextChangingActive = false;
+      const textChange = document.querySelector(
+        "#hero_desc_box p:first-of-type"
+      );
+      textChange.innerHTML = textHero[0];
+    }
+  }
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) {
+      stopTextChange();
+    } else {
+      startTextChange();
+    }
+  });
 
   // * Industry Night Video controller
-
   const industryVid = document.querySelector("#industryVideo");
 
   industryVid.addEventListener("play", () => {
@@ -84,117 +189,9 @@
     industryVid.style.position = "unset";
   });
 
-  // * Nominee Section Variables
-  const toLinkBtn = document.querySelectorAll(".to_project_btn");
-
-  // * Portfolio Section Variables
-  const student = document.querySelector(".student");
-  const searchInput = document.querySelector("#search_portfolio");
-  const studentPortrait = document.querySelector("#student_portrait");
-  const portraitImg = document.querySelector("#portrait_img");
-  const studentIllustrate = document.querySelector("#student_abstract_image");
-  const illustrateImg = document.querySelector("#abstract_image");
-
-  // * Testimonial Section Variables
-  const testimonialBox = document.querySelector("#testimonial_box");
-
-  // * About IDP Section Variables
+  // * About IDP Section; Variables, Functions, and Arrays
   const idpCards = document.querySelectorAll(".idp_card");
   const lightbox = document.querySelector("#idp_text_lightbox");
-
-  // !Functions
-
-  function openBurger() {
-    if (navBar.style.transform === "translateX(-100vw)") {
-      navBar.style.transform = "translateX(0)";
-      burgerMenu.textContent = "Close";
-    } else {
-      navBar.style.transform = "translateX(-100vw)";
-      burgerMenu.textContent = "Menu";
-    }
-  }
-
-  function closeBurger() {
-    if (window.innerWidth <= 580) {
-      navBar.style.transform = "translateX(-100vw)";
-      burgerMenu.textContent = "Menu";
-      document.querySelector(
-        "#cooperation_text p:first-of-type"
-      ).innerHTML = `Transforming Communities, <br> Enhancing Lives`;
-      document.querySelector(
-        "#cooperation_text h3"
-      ).innerHTML = `Brother<br> in arms`;
-    }
-  }
-
-  function adjustNavBar() {
-    if (window.innerWidth > 768) {
-      navBar.style.transform = "translateX(0)";
-      navBar.style.zIndex = "0";
-    } else {
-      navBar.style.transform = "translateX(-100vw)";
-      navBar.style.zIndex = "9";
-      burgerMenu.textContent = "Menu";
-    }
-  }
-
-  function changeETC() {
-    if (window.innerWidth <= 580) {
-      document.querySelector(
-        "#cooperation_text p:first-of-type"
-      ).innerHTML = `Transforming Communities, <br> Enhancing Lives`;
-      document.querySelector(
-        "#cooperation_text h3"
-      ).innerHTML = `Brother<br> in arms`;
-    }
-  }
-
-  const textHero = [
-    `<p><b>Join us Industry Night 2025</b><br />April 18<sup>th</sup> Fanshawe, London, CA</p>`,
-    `<p>Interactive Media Design &amp; <br />User Experience Design Program<br />School of Media &amp; Design Arts</p>`,
-  ];
-
-  let intervalID;
-  let isTextChangingActive = false;
-  function startTextChange() {
-    let index = 1;
-    if (window.innerWidth <= 768 && !isTextChangingActive) {
-      isTextChangingActive = true;
-      intervalID = setInterval(function () {
-        const textChange = document.querySelector(
-          "#hero_desc_box p:first-of-type"
-        );
-
-        textChange.classList.add("textChanging");
-        textChange.innerHTML = textHero[index];
-        index++;
-        if (index === textHero.length) {
-          index = 0;
-        }
-      }, 3000);
-    }
-  }
-
-  function stopTextChange() {
-    if (isTextChangingActive) {
-      clearInterval(intervalID);
-      isTextChangingActive = false;
-      const textChange = document.querySelector(
-        "#hero_desc_box p:first-of-type"
-      );
-      textChange.innerHTML = textHero[0];
-    }
-  }
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 768) {
-      stopTextChange();
-    } else {
-      startTextChange();
-    }
-  });
-
-  // * About IDP section; Show lightbox
 
   idpCards.forEach((card) => {
     card.addEventListener("mouseenter", function () {
@@ -221,17 +218,15 @@
     });
   });
 
-  // Event Listener
-
-  burgerMenu.addEventListener("click", openBurger);
+  // * General Event Listener
+  mobileMenu.addEventListener("click", openBurger);
   window.addEventListener("scroll", closeBurger);
   window.addEventListener("resize", adjustNavBar);
   window.addEventListener("resize", changeETC);
-
   adjustNavBar();
 
-  // !Carousal Session
-  // !Finalist
+  // Carousal Session
+  // Finalist Carousel
   let currentSlide = 0;
   const slides = document.querySelectorAll(".finalist");
   const dots = document.querySelectorAll(".dot");
@@ -267,7 +262,6 @@
     startX = e.touches[0].pageX;
     isDragging = true;
   });
-
   carousel.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
     let moveX = e.pageX - startX;
@@ -299,8 +293,7 @@
   carousel.addEventListener("touchend", () => (isDragging = false));
   showSlide(currentSlide);
 
-  // !Honorable
-
+  // Honorable Carousel
   let currentSlideH = 0;
   const slidesH = document.querySelectorAll(".honorable");
   const dotsH = document.querySelectorAll("#pagination_honorable .dot");
@@ -312,8 +305,6 @@
     const slideWidthH = slidesH[0].clientWidth;
     const containerWidth =
       document.getElementById("honorable_section").clientWidth;
-
-    // คำนวณ offset ให้สไลด์อยู่ตรงกลาง
     const offsetH = -slideWidthH * index + (containerWidth - slideWidthH) / 2;
 
     slidesH.forEach((slide) => {
@@ -341,7 +332,6 @@
     startXH = e.touches[0].pageX;
     isDraggingH = true;
   });
-
   carouselH.addEventListener("mousemove", (e) => {
     if (!isDraggingH) return;
     let moveXH = e.pageX - startXH;
@@ -374,9 +364,12 @@
 
   showSlideH(currentSlideH);
 
-  // !End Carousal
-
-  // !Students Array and Searching features
+  // * Portfolio Section; Variable, Functions, and Arrays
+  const searchInput = document.querySelector("#search_portfolio");
+  const studentPortrait = document.querySelector("#student_portrait");
+  const portraitImg = document.querySelector("#portrait_img");
+  const studentIllustrate = document.querySelector("#student_abstract_image");
+  const illustrateImg = document.querySelector("#abstract_image");
 
   studentDetail = [
     {
@@ -712,8 +705,8 @@
       portrait: "images/student_48.webp",
       portfolio: "http://portolio.com/harnoorpreet-kaur-harnoorpreet-kaur",
       illustrate: "images/i_student_48.jpg",
-      firstName: "Harnoorpreet Kaur",
-      lastName: "Harnoorpreet Kaur",
+      firstName: "Harnoorpreet",
+      lastName: "Kaur",
     },
     {
       portrait: "images/student_49.webp",
@@ -915,21 +908,42 @@
         portfolioLink.textContent = `${each.firstName} ${each.lastName}`;
 
         li.appendChild(portfolioLink);
+        if (window.innerWidth <= 580) {
+          let isClicked = false;
 
-        li.addEventListener("mouseenter", () => {
-          studentPortrait.style.visibility = "visible";
-          studentIllustrate.style.visibility = "visible";
-          portraitImg.src = each.portrait;
-          illustrateImg.src = each.illustrate;
+          li.addEventListener("click", (e) => {
+            e.preventDefault();
 
-          const sound = new Audio("video/pop.wav");
-          sound.play();
-        });
+            if (!isClicked) {
+              studentPortrait.style.visibility = "visible";
+              studentIllustrate.style.visibility = "visible";
+              portraitImg.src = each.portrait;
+              illustrateImg.src = each.illustrate;
 
-        li.addEventListener("mouseleave", () => {
-          studentPortrait.style.visibility = "hidden";
-          studentIllustrate.style.visibility = "hidden";
-        });
+              const sound = new Audio("video/pop.wav");
+              sound.play();
+
+              isClicked = true;
+            } else {
+              window.location.href = each.portfolio;
+            }
+          });
+        } else {
+          li.addEventListener("mouseenter", () => {
+            studentPortrait.style.visibility = "visible";
+            studentIllustrate.style.visibility = "visible";
+            portraitImg.src = each.portrait;
+            illustrateImg.src = each.illustrate;
+
+            const sound = new Audio("video/pop.wav");
+            sound.play();
+          });
+
+          li.addEventListener("mouseleave", () => {
+            studentPortrait.style.visibility = "hidden";
+            studentIllustrate.style.visibility = "hidden";
+          });
+        }
         studentList.appendChild(li);
       });
   }
@@ -940,7 +954,8 @@
     filterStudents(searchInput.value);
   });
 
-  // !Testimonial Array
+  // * Testimonial Section Variables, Function, and Arrays
+  const testimonialBox = document.querySelector("#testimonial_box");
 
   testimonial = [
     {
@@ -1070,7 +1085,7 @@
     testimonialBox.appendChild(card);
   });
 
-  // !Array Devs and animation
+  // Devs Section
 
   const devsData = [
     {
@@ -1125,4 +1140,7 @@
     currentIndex = (currentIndex + 1) % devsData.length;
     updateContent();
   }, 4000);
+
+  // !Graveyard
+  // const toLinkBtn = document.querySelectorAll(".to_project_btn");
 })();
