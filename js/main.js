@@ -1,6 +1,15 @@
 (() => {
   console.log("Javascript Linked!");
   
+   // Get references to the video and the description div
+   const indusstryvideo = document.getElementById("video_container");
+   const promoDesc = document.getElementById("industry_night_promo_video_desc");
+ 
+   // Add click event listener to the video
+   indusstryvideo.addEventListener("click", () => {
+     // Set opacity of promo description to 0
+     promoDesc.style.opacity = 0;
+   });
   
   
   // Use requestAnimationFrame to continuously update the scroll
@@ -16,8 +25,8 @@
   
   gsap.to("#industry_night_section", {
     scrollTrigger: {
-      trigger: "#hero_desc_box",
-      start: "top 60%",
+      trigger: "#hero_section",
+      start: "top",
       end: "bottom top",
       scrub: true,
       pin: true,
@@ -154,22 +163,6 @@
       });
     }
     
-  
-  
-  gsap.registerPlugin(ScrollTrigger);
-  
-  // Scroll the student list horizontally
-  gsap.to("#student_list", {
-    scrollTrigger: {
-      trigger: "#search_portfolio",
-      start: "top top", // Start scrolling when the section hits the top
-      end: "+=0", // Continue scrolling for a specific distance
-      scrub: true, // Smooth scroll
-      pin: false, // Do not pin the list itself, just scroll it
-      markers: true // For debugging, remove if not needed
-    },
-    x: -1000 // Adjust this value based on how far you want the list to scroll
-  });
   
   
   //gallery
