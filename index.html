@@ -56,15 +56,15 @@
         <h2>Ticket Form</h2>
         <h3>Industry Night</h3>
         <p>Welcome! Tell us a little about you</p>
-        <form action="">
-          <label for="name">Name</label>
-          <input type="text" placeholder="Your name" required />
-          <label for="name">Guest(s)</label>
-          <input type="number" value="1" placeholder="1" />
-          <label for="email" required>Email</label>
-          <input type="text" placeholder="Your@mail" />
-          <label for="phonenum" required>Phone</label>
-          <input type="tel" />
+        <form action="#">
+          <label for="nameTC">Name</label>
+          <input id="nameTC" type="text" placeholder="Your name" required />
+          <label for="quautityTC">Guest(s)</label>
+          <input id="quautityTC" type="number" value="1" placeholder="1" />
+          <label for="emailTC">Email</label>
+          <input id="emailTC" type="text" placeholder="Your@mail" required />
+          <label for="phoneTC">Phone</label>
+          <input id="phoneTC" type="tel" required />
           <select name="userType" id="type">
             <option value="company" selected>
               Eh! Your company looking for new applicant?
@@ -97,7 +97,6 @@
           tone-mapping="neutral"
           poster="images/poster-2.webp"
           shadow-intensity="0"
-          poster=""
           autoplay
           exposure="1.43"
           shadow-softness="0"
@@ -129,7 +128,7 @@
           <video
             controls
             id="industryVideo"
-            src="video/Industry Night - video_1.mp4"></video>
+            src="video/IndustryNightvideo1.mp4"></video>
         </div>
 
         <div id="industry_night_promo_video">
@@ -439,7 +438,6 @@
           <div class="honorable_image_review">
             <img
               class="showcase_img_honor"
-              draggable="false"
               draggable="false"
               src="images/screen-landscape.png"
               alt="Honorable" />
