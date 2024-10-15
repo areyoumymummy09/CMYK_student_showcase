@@ -237,7 +237,7 @@
   // Finalist Carousel
   let currentSlide = 0;
   const slides = document.querySelectorAll(".finalist");
-  const dots = document.querySelectorAll(".dot");
+  const dots = document.querySelectorAll("#pagination_finalist .dot");
   const totalSlides = slides.length;
   let startX = 0;
   let isDragging = false;

@@ -85,8 +85,6 @@
   #cooperation_text {
     h3 {
       font-size: 11rem;
-      
-    
     }
   }
   #cooperation_text p:first-of-type {
@@ -110,6 +108,9 @@
     }
 
     .section_name {
+      position: absolute;
+      margin-bottom: 34%;
+      z-index: 1;
     }
     .section_subname {
       display: none;
