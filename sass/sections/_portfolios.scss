@@ -87,8 +87,9 @@
   column-gap: 16px;
   row-gap: 24px;
   flex-wrap: wrap;
-  overflow-y: scroll;
+  overflow-x: scroll;
   cursor: pointer;
+  font-size: small;
 }
 
 #student_list li {
