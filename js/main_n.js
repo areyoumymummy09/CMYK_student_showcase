@@ -189,6 +189,14 @@
     industryVid.style.position = "unset";
   });
 
+  window.addEventListener("resize", () => {
+    if (window.innerWidth <= 580) {
+      const industryVid = document.querySelector("#industryVideo");
+      industryVid.src = "video/IndustryNight-Vertical.mp4";
+      console.log("Hey!");
+    }
+  });
+
   // * About IDP Section; Variables, Functions, and Arrays
   const idpCards = document.querySelectorAll(".idp_card");
   const lightbox = document.querySelector("#idp_text_lightbox");
@@ -920,7 +928,7 @@
               portraitImg.src = each.portrait;
               illustrateImg.src = each.illustrate;
 
-              const sound = new Audio("video/pop.wav");
+              const sound = new Audio("audio/pop.wav");
               sound.play();
 
               isClicked = true;
