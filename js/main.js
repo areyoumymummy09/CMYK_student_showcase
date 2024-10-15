@@ -84,29 +84,31 @@
   gsap.registerPlugin(ScrollTrigger);
 
   // Create a timeline to synchronize the animations
-  const timeline_1 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#cooperation_title h2",
-      start: "top center",
-      end: "bottom 35%",
-      scrub: true,
-      pin: true,
-    },
-  });
+  if (window.innerWidth > 580) {
+    const timeline_1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#cooperation_title h2",
+        start: "top center",
+        end: "bottom 35%",
+        scrub: true,
+        pin: true,
+      },
+    });
 
-  //  Animate the h2 and p simultaneously
-  timeline_1
-    .fromTo(
-      "#cooperation_title h2",
-      { opacity: 0, x: 0, y: 150 },
-      { opacity: 1, y: -150, ease: "power1.inOut" }
-    )
-    .fromTo(
-      "#cooperation_title p",
-      { opacity: 0, x: 0, y: 0 },
-      { opacity: 1, x: 0, y: 0, ease: "power1.inOut" },
-      "<" // "<" means start this animation at the same time as the previous one
-    );
+    // Animate the h2 and p simultaneously
+    timeline_1
+      .fromTo(
+        "#cooperation_title h2",
+        { opacity: 0, x: 0, y: 150 },
+        { opacity: 1, y: -220, ease: "power1.inOut" }
+      )
+      .fromTo(
+        "#cooperation_title p",
+        { opacity: 0, x: 0, y: 0 },
+        { opacity: 1, x: 0, y: 0, ease: "power1.inOut" },
+        "<" // start at the same time as the previous one
+      );
+  }
 
   // Disable finalist and honorable animations on screens <= 580px
 
@@ -192,47 +194,4 @@
   });
 
   //Plyr video player//
-  const player = new Plyr("video");
-  const videoBox = document.getElementById("IndVideoBox");
-  const video = document.getElementById("indVideo");
-  const burgerMenu = document.getElementById("menuMobile");
-  const navBar = document.querySelector("#navbar");
-
-  console.log(burgerMenu);
-
-  function playNpause() {
-    if (video.paused) {
-      video.play();
-      video.setAttribute("controls", "controls");
-    } else {
-      video.pause();
-    }
-  }
-
-  function updateVideoPoster() {
-    const videoElement = document.getElementById("indVideo");
-    if (window.innerWidth <= 390) {
-      videoElement.poster = "images/Group538.png";
-    } else {
-      videoElement.poster = "images/video_placeholder.png";
-    }
-  }
-
-  function openBurger() {
-    if (navBar.style.transform === "translateX(-100vw)") {
-      navBar.style.transform = "translateX(0)";
-      burgerMenu.textContent = "Close";
-    } else {
-      navBar.style.transform = "translateX(-100vw)";
-      burgerMenu.textContent = "Menu";
-    }
-  }
-
-  function closeBurger() {
-    if (window.innerWidth <= 432) {
-      navBar.style.transform = "translateX(-100vw)";
-      burgerMenu.textContent = "Menu";
-    }
-  }
-
 })();

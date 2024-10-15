@@ -36,7 +36,6 @@
   // Ticket Lightbox Controller
   closeTicket.addEventListener("click", () => {
     document.querySelector("#ticket_box").classList.add("hidden");
-    console.log("Hey!");
   });
 
   cta.forEach((e) => {
