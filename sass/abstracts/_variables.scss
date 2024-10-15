@@ -33,13 +33,22 @@ $normal-trans: all 0.2s ease-in;
   border-radius: 36px;
   background-color: $sec-red;
   cursor: pointer;
+  transition: $normal-trans;
+}
+
+.cta:hover {
+  box-shadow: $box-shadow;
 }
 
 .btn_style_2 {
   border: 1px solid $black;
   color: $black;
-  background-color: transparent;
   transition: $normal-trans;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(188, 188, 188, 0.37);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-radius: 36px;
 }
 
 .btn_style_2:hover {

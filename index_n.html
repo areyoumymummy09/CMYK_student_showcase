@@ -52,6 +52,38 @@
       </div>
     </header>
 
+    <div id="ticket_box" class="grid-con hidden">
+      <div id="ticket_form" class="col-span-full">
+        <h2>Ticket Form</h2>
+        <h3>Industry Night</h3>
+        <p>Welcome! Tell us a little about you</p>
+        <form action="">
+          <label for="name">Name</label>
+          <input type="text" placeholder="Your name" required />
+          <label for="name">Guest(s)</label>
+          <input type="number" value="1" placeholder="1" />
+          <label for="email" required>Email</label>
+          <input type="text" placeholder="Your@mail" />
+          <label for="phonenum" required>Phone</label>
+          <input type="tel" />
+          <select name="userType" id="type">
+            <option value="company" selected>
+              Eh! Your company looking for new applicant?
+            </option>
+            <option value="seeking-talent">
+              Oh! You are seeking on the talents?
+            </option>
+            <option value="student">
+              Alright! You are student! just observing, Welcome!
+            </option>
+          </select>
+
+          <button type="submit" class="">Submit</button>
+        </form>
+        <i id="close_ticket_box" class="fa-thin fa-xmark"></i>
+      </div>
+    </div>
+
     <section id="hero_section" class="grid-con full-width">
       <h2 class="hidden">Fanshawe IDP - Hero Section</h2>
       <div id="hero_vid" class="col-span-full">
@@ -210,10 +242,10 @@
           <h3>Brothers In Arms</h3>
           <p>Transforming Communities, Enhancing Lives</p>
           <p>
-            Srishti Foundation, an Indian NGO supporting children and families
-            through education, healthcare, and empowerment. The foundation
-            collaborates with communities to rebrand and design their
-            communication.
+            <a href="https://srishti-foundation.org/">Srishti Foundation</a>, an
+            Indian NGO supporting children and families through education,
+            healthcare, and empowerment. The foundation collaborates with
+            communities to rebrand and design their communication.
           </p>
         </div>
       </article>
@@ -252,7 +284,7 @@
             <img
               class="showcase_img"
               draggable="false"
-              src="images/team-nominee_1.png"
+              src="images/screen-landscape.png"
               alt="Showcase" />
           </div>
 
@@ -280,7 +312,7 @@
             <img
               class="showcase_img"
               draggable="false"
-              src="images/team-nominee_2.png"
+              src="images/screen-landscape.png"
               alt="Showcase" />
           </div>
 
@@ -308,7 +340,7 @@
             <img
               class="showcase_img"
               draggable="false"
-              src="images/team-nominee_3.png"
+              src="images/screen-landscape.png"
               alt="Showcase" />
           </div>
 
@@ -343,7 +375,7 @@
             <img
               class="showcase_img_honor"
               draggable="false"
-              src="images/team-nominee_1.png"
+              src="images/screen-landscape.png"
               alt="Honorable" />
           </div>
           <div class="team_member">
@@ -365,7 +397,7 @@
             <img
               class="showcase_img_honor"
               draggable="false"
-              src="images/team-nominee_2.png"
+              src="images/screen-landscape.png"
               alt="Honorable" />
           </div>
           <div class="team_member">
@@ -387,7 +419,7 @@
             <img
               class="showcase_img_honor"
               draggable="false"
-              src="images/team-nominee_3.png"
+              src="images/screen-landscape.png"
               alt="Honorable" />
           </div>
           <div class="team_member">
@@ -410,7 +442,7 @@
               class="showcase_img_honor"
               draggable="false"
               draggable="false"
-              src="images/team-nominee_1.png"
+              src="images/screen-landscape.png"
               alt="Honorable" />
           </div>
           <div class="team_member">
@@ -432,7 +464,7 @@
             <img
               class="showcase_img_honor"
               draggable="false"
-              src="images/team-nominee_5.png"
+              src="images/screen-landscape.png"
               alt="Honorable" />
           </div>
           <div class="team_member">
@@ -623,7 +655,7 @@
           </div>
           <a
             href="https://www.fanshawec.ca/programs/idp3-interactive-media-design/next#"
-            class="cta"
+            class="btn_style_3"
             target="_blank"
             >Join IDP</a
           >

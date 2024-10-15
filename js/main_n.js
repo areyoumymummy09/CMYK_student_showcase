@@ -5,6 +5,20 @@
   const burgerMenu = document.querySelector("#burger_ic");
   const navBar = document.querySelector("#navbar > nav > ul");
   const studentList = document.querySelector("#student_list");
+  const closeTicket = document.querySelector("#close_ticket_box");
+  const cta = document.querySelectorAll(".cta");
+
+  closeTicket.addEventListener("click", () => {
+    document.querySelector("#ticket_box").classList.add("hidden");
+    console.log("Hey!");
+  });
+
+  cta.forEach((e) => {
+    e.addEventListener("click", function () {
+      console.log(this);
+      document.querySelector("#ticket_box").classList.remove("hidden");
+    });
+  });
 
   // * Plyr Controller
   const player = new Plyr("video", {});
@@ -907,6 +921,9 @@
           studentIllustrate.style.visibility = "visible";
           portraitImg.src = each.portrait;
           illustrateImg.src = each.illustrate;
+
+          const sound = new Audio("video/pop.wav");
+          sound.play();
         });
 
         li.addEventListener("mouseleave", () => {

@@ -96,22 +96,6 @@
 #testimonial-container {
 }
 
-#testimonial_box::before {
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0) 0%,
-    a.$sec-red 100%
-  );
-  pointer-events: none;
-  backdrop-filter: blur(16px);
-  z-index: 1;
-}
-
 .testimonial_card {
   animation-name: moveUp;
   animation-duration: 30s;

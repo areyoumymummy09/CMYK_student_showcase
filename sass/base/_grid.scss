@@ -21,7 +21,7 @@ Mobile screen less than px
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .show {
