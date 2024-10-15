@@ -12,7 +12,7 @@
 
 #bts_gallery-a,
 #bts_gallery-b {
-  width: 100;
+  width: 100%;
   transform: translateX(-100px);
 }
 
@@ -52,11 +52,14 @@
 }
 
 @media screen and (max-width: 768px) {
+  #bts_section {
+    height: auto;
+  }
   .gallery {
     height: 40vh;
     li {
-      width: 300px;
-      height: 250px;
+      width: 40%;
+      height: 100%;
     }
   }
 }

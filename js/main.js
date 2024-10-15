@@ -115,7 +115,6 @@
   // Clear any existing ScrollTriggers to avoid duplicating animations
 
   // Check if the screen width is larger than 580px
-  console.log("width: " + window.innerWidth);
   const finalists = document.querySelectorAll(".finalist");
   const honorable = document.querySelectorAll(".honorable");
 
