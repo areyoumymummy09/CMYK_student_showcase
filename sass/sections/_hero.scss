@@ -109,7 +109,7 @@ model-viewer {
 
   .textChanging {
     animation-name: textChanging;
-    animation-delay: 0;
+    animation-delay: 0s;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -119,11 +119,11 @@ model-viewer {
   @keyframes textChanging {
     0% {
       opacity: 0;
-      scale: 1.1;
+      transform: scale(1.1);
     }
     50% {
       opacity: 1;
-      scale: 1;
+      transform: scale(1);
     }
     100% {
       opacity: 0;

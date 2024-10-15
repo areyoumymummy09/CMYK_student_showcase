@@ -31,9 +31,9 @@
 .nominee_award {
   width: 100%;
   display: flex;
-  justify-content: baseline;
+  justify-content: start;
   font-weight: 600;
-  align-items: baseline;
+  align-items: center;
   i {
     font-size: 5rem;
   }
@@ -136,7 +136,7 @@
 }
 
 .honorable {
-  width: 100vh;
+  width: 100vw;
   padding: 0 24px;
   display: flex;
   flex-direction: column;
@@ -204,7 +204,6 @@
 
   .showcase_img {
     width: 100%;
-    height: 400;
   }
 
   .team_member {
