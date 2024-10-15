@@ -34,6 +34,7 @@
   flex-wrap: wrap;
   padding: 0 24px;
   gap: 24px;
+  overflow: hidden;
 }
 
 .testimonial_card {
@@ -89,6 +90,25 @@
     height: 50px;
     border-radius: 100px;
     object-fit: cover;
+  }
+}
+
+#testimonial-container {
+}
+
+.testimonial_card {
+  animation-name: moveUp;
+  animation-duration: 30s;
+  animation-iteration-count: 2;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-400px);
   }
 }
 

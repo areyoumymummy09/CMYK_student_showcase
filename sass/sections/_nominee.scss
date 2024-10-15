@@ -4,7 +4,6 @@
 @use "../base/typography" as t;
 
 #nominee_section {
-  border: 1px solid greenyellow;
   h3 {
     font-size: 5rem;
     text-align: left;
@@ -58,7 +57,6 @@
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  // *!
   gap: 0;
 }
 
@@ -77,24 +75,24 @@
 .finalist_image_review {
   height: 85%;
   position: relative;
+  background-color: a.$white;
 
   .bg_showcase {
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
-}
 
-.showcase_img {
-  width: 80%;
-  height: 75%;
-  object-fit: cover;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: center;
-  transition: all 2s ease-out;
+  .showcase_img {
+    width: 80%;
+    height: 80%;
+    object-fit: fill;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    transition: all 2s ease-out;
+  }
 }
 
 .showcase_img:hover {
@@ -199,6 +197,11 @@
     width: 100%;
   }
 
+  .showcase_img {
+    width: 100%;
+    height: 400;
+  }
+
   .team_member {
     align-items: start;
     row-gap: 10px;
@@ -228,6 +231,11 @@
 
   .honorable_image_review {
     height: 65vh;
+
+    img {
+      height: 80%;
+      user-select: none;
+    }
   }
 }
 
@@ -299,7 +307,16 @@
 
   .honorable_image_review {
     height: 55vh;
+
+    img {
+      height: 80%;
+      user-select: none;
+    }
   }
+}
+
+.honorable:last-child {
+  padding-right: 24px;
 }
 
 .to_project_btn {
@@ -311,9 +328,11 @@
 
 .finalist {
   flex: 0 0 100%;
+  transition: a.$normal-trans;
 }
 
 .pagination_dots {
+  display: block;
   text-align: center;
   margin-top: 20px;
 }
