@@ -1,0 +1,151 @@
+@use "../abstracts" as a;
+@use "../components" as b;
+@use "../base/" as c;
+@use "../base/typography" as t;
+
+#tesimonial_section {
+  height: 100vh;
+  background-color: a.$sec-red;
+  overflow: hidden;
+}
+
+#testimonial_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding: 48px 24px;
+
+  .section_name {
+    color: a.$white;
+  }
+
+  .section_subname {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-right: 96px;
+    color: a.$white;
+  }
+}
+
+#testimonial_box {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 24px;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.testimonial_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 30%;
+  width: 100%;
+  min-width: 250px;
+  height: auto;
+  padding: 24px;
+  background-color: a.$white;
+  border-radius: 24px;
+  box-shadow: a.$box-shadow;
+
+  blockquote {
+    padding: 24px 0;
+  }
+
+  .company_logo {
+    background-color: grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin-left: auto;
+  }
+
+  .client_details {
+    margin-top: 24px;
+    display: flex;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .cite {
+    display: flex;
+    flex-direction: column;
+
+    cite {
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    span {
+      font-size: 0.85rem;
+    }
+  }
+
+  .client_image {
+    background-color: grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    object-fit: cover;
+  }
+}
+
+#testimonial-container {
+}
+
+.testimonial_card {
+  animation-name: moveUp;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-400px);
+  }
+}
+
+// !Tablet Screen
+@media screen and (max-width: 768px) {
+  #tesimonial_section {
+    height: 65vh;
+  }
+
+  .testimonial_card {
+    flex: 1 1 40%;
+  }
+
+  #testimonial_title {
+    .section_name {
+      margin-right: auto;
+    }
+
+    .section_subname {
+      left: auto;
+      right: 0;
+      padding: 0 24px;
+    }
+  }
+
+  #testimonial_box {
+  }
+}
+
+// !Mobile Screen
+
+@media screen and (max-width: 580px) {
+  #tesimonial_section {
+    height: 65vh;
+  }
+
+  .testimonial_card {
+    flex: 1 1 100%;
+  }
+}
